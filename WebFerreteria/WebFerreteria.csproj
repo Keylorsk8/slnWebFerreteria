@@ -97,6 +97,8 @@
     <Content Include="Contacto.aspx" />
     <Content Include="css\estiloHeader.css" />
     <Content Include="css\estilofooter.css" />
+    <Content Include="css\LogIn.css" />
+    <Content Include="Inicio Sesion.aspx" />
     <Content Include="Productos.aspx" />
     <Content Include="default.aspx" />
     <Content Include="Images\logo.png" />
@@ -123,6 +125,13 @@
     </Compile>
     <Compile Include="Contacto.aspx.designer.cs">
       <DependentUpon>Contacto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio Sesion.aspx.cs">
+      <DependentUpon>Inicio Sesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inicio Sesion.aspx.designer.cs">
+      <DependentUpon>Inicio Sesion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Productos.aspx.cs">
       <DependentUpon>Productos.aspx</DependentUpon>

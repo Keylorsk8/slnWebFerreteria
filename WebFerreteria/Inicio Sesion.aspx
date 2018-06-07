@@ -10,9 +10,11 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"/>
         <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css'/>
         <link href="css/estiloHeader.css" rel="stylesheet"/>
-        <link href="css/estilofooter.css" rel="stylesheet" />
+        <link href="css/estilofooter.css" rel="stylesheet"/>
+        <link href="css/LogIn.css" rel="stylesheet" />
     </head>
     <body>
+        <form id="form1" runat="server">
         <header class="navbar nBar navbar-fixed-top" role="navigation">
             <nav class="container">
                 <div class="navbar-header">
@@ -28,27 +30,48 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="default.aspx">Inicio</a></li>
+                        <li><a href="default.aspx">Inicio</a></li>
                         <li><a href="Productos.aspx">Productos</a></li>
                         <li><a href="#">Nosotros</a></li>
-                        <li><a href="Contacto.aspx">Contacto</a></li>
-                        <li><a href="Inicio Sesion.aspx">Cuenta</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li class="active"><a href="#">Cuenta</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
         <section id="Content">
-       
+                <h1>Hola</h1>
+                <table id="LogIn">
+                    <tr>
+                        <th>
+                            Usuario
+                        </th>
+                        <td>
+                            <asp:TextBox ID="txtUser" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Contraseña
+                        </th>
+                        <td>
+                            <asp:TextBox ID="txtPass" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <asp:Button ID="btnIniciar" runat="server" Text="Iniciar Sesión"/>
+                        </td>
+                    </tr>
+                </table>
         </section>
         <div class="search-text"> 
             <div class="container">
                 <div class="row text-center">
                     <div class="form">
                         <h4>Suscribirse para recibir nuestrar nuevas promociones</h4>
-                        <form id="search-form" class="form-search form-horizontal">
                             <input type="text" class="input-search" placeholder="Correo Electrónico"/>
                             <button type="submit" class="btn-search">Suscribirse</button>
-                        </form>
                     </div> 
                 </div>         
             </div>     
@@ -83,5 +106,6 @@
         </footer>
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         <script src='http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js'></script> 
+        </form>
     </body>
 </html>

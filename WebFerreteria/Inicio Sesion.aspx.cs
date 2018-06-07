@@ -7,8 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace WebFerreteria
 {
-    public partial class _default : System.Web.UI.Page
+    public partial class Inicio_Sesion : System.Web.UI.Page
     {
+        protected void Page_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }
