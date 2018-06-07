@@ -28,36 +28,17 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="default.aspx">Inicio</a></li>
+                        <li><a href="default.aspx">Inicio</a></li>
                         <li><a href="Productos.aspx">Productos</a></li>
                         <li><a href="#">Nosotros</a></li>
-                        <li><a href="#">Contacto</a></li>
+                        <li class="active"><a href="#">Contacto</a></li>
                         <li><a href="#">Cuenta</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
         <section id="Content">
-            <h1>Ferreteria y Materiales JyR</h1>
-            <h1>Ferreteria y Materiales JyR</h1>
-            <h1>Ferreteria y Materiales JyR</h1>
-            <h1>Ferreteria y Materiales JyR</h1>
-            <h1>Ferreteria y Materiales JyR</h1>
-            <h1>Ferreteria y Materiales JyR</h1>
-            <h1>Ferreteria y Materiales JyR</h1>
-            <h1>Ferreteria y Materiales JyR</h1>
-            <h1>Ferreteria y Materiales JyR</h1>
-            <h1>Ferreteria y Materiales JyR</h1>
-            <h1>Ferreteria y Materiales JyR</h1>
-            <h1>Ferreteria y Materiales JyR</h1>
-            <h1>Ferreteria y Materiales JyR</h1>
-            <h1>Ferreteria y Materiales JyR</h1>
-            <h1>Ferreteria y Materiales JyR</h1>
-            <h1>Ferreteria y Materiales JyR</h1>
-            <h1>Ferreteria y Materiales JyR</h1>
-            <h1>Ferreteria y Materiales JyR</h1>
-            <h1>Ferreteria y Materiales JyR</h1>
-            <h1>Ferreteria y Materiales JyR</h1>
+            
         </section>
         <div class="search-text"> 
             <div class="container">

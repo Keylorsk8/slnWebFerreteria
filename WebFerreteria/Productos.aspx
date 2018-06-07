@@ -30,7 +30,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="default.aspx">Inicio</a></li>
                         <li class="active"><a href="Productos.aspx">Productos</a></li>
-                        <li><a href="#">Acerca de</a></li>
+                        <li><a href="#">Nosotros</a></li>
                         <li><a href="#">Contacto</a></li>
                         <li><a href="#">Cuenta</a></li>
                     </ul>
@@ -101,7 +101,7 @@ Tecnologías: Biotecnología – Exploración espacial – Informática – Inge
                         <span class="logo">Ferretería y Materiales JyR</span>
                     </div>
                     <div class="col-md-4 col-sm-6 col-xs-12">
-                        <span>Menu</span>
+                        <h3>Menu</h3>
                         <ul class="menu">        
                           <li><a href="#">Inicio</a></li>
                           <li><a href="#">Nosotros</a></li>
@@ -109,7 +109,7 @@ Tecnologías: Biotecnología – Exploración espacial – Informática – Inge
                         </ul>
                     </div>
                     <div class="col-md-4 col-sm-6 col-xs-12">
-                        <span>Contacto</span>
+                        <h3>Contacto</h3>
                         <ul class="address">       
                             <li><i class="fa fa-phone" aria-hidden="true"></i> <a href="#">Teléfonos</a></li>
                             <li><i class="fa fa-map-marker" aria-hidden="true"></i> <a href="#">Dirección</a></li> 
