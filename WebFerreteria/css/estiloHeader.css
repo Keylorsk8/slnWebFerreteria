@@ -4,6 +4,7 @@ html{
 /*Header & Navbar*/
 .nBar{
     background-color: teal;
+    width: auto;
 }
 
 .active{
@@ -28,6 +29,10 @@ html{
     color: rgb(232,156,12);
     text-decoration: none;
   }
+
+.navbar-collapse{
+    width: auto;
+}
 
 .navbar-collapse > ul > li >a{
     color:white;

@@ -95,10 +95,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Contacto.aspx" />
+    <Content Include="css\estilodefault.css" />
     <Content Include="css\estiloHeader.css" />
     <Content Include="css\estilofooter.css" />
     <Content Include="css\LogIn.css" />
+    <Content Include="Images\Inicio.jpg" />
     <Content Include="Inicio Sesion.aspx" />
+    <Content Include="js\parallax.js" />
     <Content Include="Productos.aspx" />
     <Content Include="default.aspx" />
     <Content Include="Images\logo.png" />
@@ -149,9 +152,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="js\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
