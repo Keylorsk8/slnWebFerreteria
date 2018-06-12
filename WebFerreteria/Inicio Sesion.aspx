@@ -34,7 +34,7 @@
                         <li><a href="Productos.aspx">Productos</a></li>
                         <li><a href="#">Nosotros</a></li>
                         <li><a href="#">Contacto</a></li>
-                        <li class="active"><a href="#">Cuenta</a></li>
+                        <li class="active"><a href="Inicio Sesion.aspx">Cuenta</a></li>
                     </ul>
                 </div>
             </nav>
