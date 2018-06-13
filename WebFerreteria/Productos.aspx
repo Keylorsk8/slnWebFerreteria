@@ -13,6 +13,7 @@
         <link href="css/estilofooter.css" rel="stylesheet" />
     </head>
     <body>
+        <form id="form2" runat="server">
         <header class="navbar nBar navbar-fixed-top" role="navigation">
             <nav class="container">
                 <div class="navbar-header">
@@ -121,6 +122,7 @@
                 <h4>@2018 , All rights reserved</h4>
             </div>
         </footer>
+        </form>
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         <script src='http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js'></script> 
     </body>

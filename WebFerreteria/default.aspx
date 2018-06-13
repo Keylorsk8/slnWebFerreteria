@@ -1,20 +1,21 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="WebFerreteria._default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="WebFerreteria.defaultcopia" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head runat="server">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <title>Ferretería JyR</title>
-        <meta name="viewport" content="width=device-width"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"/>
-        <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css'/>
-        <link href="css/estiloHeader.css" rel="stylesheet"/>
-        <link href="css/estilofooter.css" rel="stylesheet"/>
-        <link href="css/estilodefault.css" rel="stylesheet" />
-    </head>
-    <body>
-        <form id="form1" runat="server">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Ferretería JyR</title>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"/>
+    <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css'/>
+    <link href="css/estiloHeader.css" rel="stylesheet"/>
+    <link href="css/estilofooter.css" rel="stylesheet"/>
+    <link href="css/estilodefault.css" rel="stylesheet"/>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
             <header class="navbar nBar navbar-fixed-top" role="navigation">
                 <nav class="container">
                     <div class="navbar-header">
@@ -34,7 +35,9 @@
                             <li><a href="Productos.aspx">Productos</a></li>
                             <li><a href="#">Nosotros</a></li>
                             <li><a href="Contacto.aspx">Contacto</a></li>
-                            <li><a href="Inicio Sesion.aspx">Cuenta</a></li>
+                            <li>
+                                <asp:Button ID="btnCuenta" runat="server" Text="Cuenta" OnClick="btnCuenta_Click"/>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -133,9 +136,10 @@
                     <h4>@2018 , All rights reserved</h4>
                 </div>
             </footer>
-        </form>
-        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script src='http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js'></script>
-        <script src="js/parallax.js"></script>
-    </body>
+        </div>
+    </form>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js'></script>
+<script src="js/parallax.js"></script>
+</body>
 </html>

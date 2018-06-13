@@ -1,20 +1,21 @@
-﻿<%--<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="WebFerreteria._default" %>--%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Inicio Sesion.aspx.cs" Inherits="WebFerreteria.Inicio_Sesion_copia" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head runat="server">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <title>Ferretería JyR</title>
-        <meta name="viewport" content="width=device-width"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"/>
-        <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css'/>
-        <link href="css/estiloHeader.css" rel="stylesheet"/>
-        <link href="css/estilofooter.css" rel="stylesheet"/>
-        <link href="css/LogIn.css" rel="stylesheet" />
-    </head>
-    <body>
-        <form id="form1" runat="server">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Ferretería JyR</title>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"/>
+    <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css'/>
+    <link href="css/estiloHeader.css" rel="stylesheet"/>
+    <link href="css/estilofooter.css" rel="stylesheet"/>
+    <link href="css/LogIn.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
         <header class="navbar nBar navbar-fixed-top" role="navigation">
             <nav class="container">
                 <div class="navbar-header">
@@ -60,7 +61,7 @@
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <asp:Button ID="btnIniciar" runat="server" Text="Iniciar Sesión"/>
+                            <asp:Button ID="btnIniciar" runat="server" Text="Iniciar Sesión" OnClientClick="btnIniciar_Click()" OnClick="btnIniciar_Click1"/>
                         </td>
                     </tr>
                 </table>
@@ -104,8 +105,9 @@
                 <h4>@2018 , All rights reserved</h4>
             </div>
         </footer>
-        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script src='http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js'></script> 
-        </form>
-    </body>
+    </div>
+    </form>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js'></script> 
+</body>
 </html>

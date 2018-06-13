@@ -6,7 +6,7 @@
     margin-right: auto;
 }
 
-    #LogIn th,td{
-        text-align: left;
+    #LogIn tr > th, tr > td{
+        text-align: center;
     }
 

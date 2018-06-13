@@ -6,3 +6,4 @@
         document.getElementById("ImageInicio").style.backgroundPosition = x + 'px ' + y + 'px';
     };
 };
+

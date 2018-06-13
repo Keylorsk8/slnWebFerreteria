@@ -99,11 +99,11 @@
     <Content Include="css\estiloHeader.css" />
     <Content Include="css\estilofooter.css" />
     <Content Include="css\LogIn.css" />
+    <Content Include="default.aspx" />
     <Content Include="Images\Inicio.jpg" />
     <Content Include="Inicio Sesion.aspx" />
     <Content Include="js\parallax.js" />
     <Content Include="Productos.aspx" />
-    <Content Include="default.aspx" />
     <Content Include="Images\logo.png" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -129,6 +129,13 @@
     <Compile Include="Contacto.aspx.designer.cs">
       <DependentUpon>Contacto.aspx</DependentUpon>
     </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Inicio Sesion.aspx.cs">
       <DependentUpon>Inicio Sesion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -142,13 +149,6 @@
     </Compile>
     <Compile Include="Productos.aspx.designer.cs">
       <DependentUpon>Productos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="default.aspx.cs">
-      <DependentUpon>default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="default.aspx.designer.cs">
-      <DependentUpon>default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
