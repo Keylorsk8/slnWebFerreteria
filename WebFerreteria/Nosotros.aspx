@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="WebFerreteria._default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Nosotros.aspx.cs" Inherits="WebFerreteria._default" %>
 
 <!DOCTYPE html>
 
@@ -31,10 +31,10 @@
                     <a class="nav-link" href="Productos.aspx">Productos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Nosotros.aspx">Nosotros</a>
+                    <a class="nav-link" id="active" href="Nosotros.aspx">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="active" href="Contacto.aspx">Contacto</a>
+                    <a class="nav-link" href="Contacto.aspx">Contacto</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="Inicio Sesion.aspx">Cuenta</a>
@@ -48,6 +48,19 @@
     </nav>
     <section id="Content">
     </section>
+    <div class="search-text">
+        <div class="container">
+            <div class="row text-center">
+                <div class="form">
+                    <h4>Suscribirse para recibir nuestrar nuevas promociones</h4>
+                    <form id="search-form" class="form-search form-horizontal">
+                        <input type="text" class="input-search" placeholder="Correo Electrónico" />
+                        <button type="submit" class="btn-search">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="container">
             <div class="row">

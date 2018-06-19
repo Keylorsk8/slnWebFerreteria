@@ -1,43 +1,18 @@
-html{
-    border: 0px;
+.navbar {
+    background-color: seagreen !important;
 }
 
-/*Header & Navbar*/
-.nBar{
-    background-color: teal;
-    width: auto;
-}
-
-.active{
+ #active{
     background-color:black;
+    color: white;
 }
     .active a{
         color: white;
     }
 
-.small-logo-container {
-  height: 50px;
-}
-
-.small-logo {
-  color: white;
-  font-size: 2.5em;
-  padding-bottom: 2px;
-  text-decoration: none;
-  -webkit-transition: all 0.4s;
-}
-  .small-logo:hover{
-    color: rgb(232,156,12);
-    text-decoration: none;
-  }
-
-.navbar-collapse{
-    width: auto;
-}
-
-.navbar-collapse > ul > li >a{
+.navbar-collapse .navbar-nav .nav-item a{
+    display:block;
     color:white;
-    width: 100px;
     text-align: center;
     -webkit-transition: all 0.5s;
     font-weight: 500;
@@ -46,40 +21,11 @@ html{
 .navbar-collapse > ul > li > a:hover{
   background-color: rgb(232,156,12);
   color : white;
-  width: 110px;
   text-align: center;
 } 
 
-.nBar .small-logo-container > a > a:hover , .small-logo a:focus{
-  color: black; 
-}
-
-.nBar .navbar-toggle {
-  border: 1px solid #333;
-  border-color: white;
-}
-    .nBar .navbar-toggle:hover{
-        background-color: rgb(232,156,12);
-    }
-
-.nBar .navbar-toggle .icon-bar {
-    background-color: #fff;
-}
-
-.navbar-toggle .icon-bar {
-    display: block;
-    width: 22px;
-    height: 2px;
-    border-radius: 1px;
-}
-
-.nBar .navbar-collapse, .navbar-inverse .navbar-form {
-  border-color: white;
-}
-
 /*Body*/
 #Content{
-    margin-top: 50px;
     background-color: floralwhite;
 }
 

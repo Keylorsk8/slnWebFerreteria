@@ -1,57 +1,63 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="WebFerreteria.defaultcopia" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="WebFerreteria._default" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Ferretería JyR</title>
-    <meta name="viewport" content="width=device-width"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"/>
-    <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css'/>
-    <link href="css/estiloHeader.css" rel="stylesheet"/>
-    <link href="css/estilofooter.css" rel="stylesheet"/>
-    <link href="css/estilodefault.css" rel="stylesheet"/>
+    <meta name="viewport" content="=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="css/estiloHeader.css" rel="stylesheet" />
+    <link href="css/estilofooter.css" rel="stylesheet" />
+    <link href="css/estilodefault.css" rel="stylesheet" />
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
-            <header class="navbar nBar navbar-fixed-top" role="navigation">
-                <nav class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <div class="small-logo-container">
-                            <a class="small-logo" href="../default.aspx">Ferretería JyR</a>
-                        </div>
-                    </div>
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="default.aspx">Inicio</a></li>
-                            <li><a href="Productos.aspx">Productos</a></li>
-                            <li><a href="#">Nosotros</a></li>
-                            <li><a href="Contacto.aspx">Contacto</a></li>
-                            <li>
-                                <asp:Button ID="btnCuenta" runat="server" Text="Cuenta" OnClick="btnCuenta_Click"/>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
-            <section id="Content">
-                <div id="ImageInicio" class="content-wrap">
-                    <h1>Ferretería y Materiales JyR</h1>
-                    <p>La mejor opción para su Construcción</p>
-                    <a href="Productos.aspx" class="btn">Productos</a>
-                    <a href="Contacto.aspx" class="btn">Contáctenos</a>
-                </div>
-                <br />
-                <h1>Hola Mundo</h1>
-                <p>La loba Capitolina amamantando a Rómulo y Remo.
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="default.aspx">
+            <img src="Images/logo.png" style="width: 50px; height: 50px;" />
+            Ferretería JyR
+        </a>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" id="active" href="default.aspx">Inicio<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Productos.aspx">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Nosotros.aspx">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contacto.aspx">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Inicio Sesion.aspx">Cuenta</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" runat="server">
+                <input class="form-control mr-sm-2" type="search" placeholder="Producto..." aria-label="Search" />
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </nav>
+    <section id="Content">
+        <div id="ImageInicio" class="content-wrap">
+            <h1>Ferretería y Materiales JyR</h1>
+            <p>La mejor opción para su Construcción</p>
+            <a href="Productos.aspx" class="btn">Productos</a>
+            <a href="Contacto.aspx" class="btn">Contáctenos</a>
+        </div>
+        <br />
+        <h1>Hola Mundo</h1>
+        <p>
+            La loba Capitolina amamantando a Rómulo y Remo.
                 La monarquía romana (en latín, Regnum Romanum) fue la primera forma política de gobierno de la ciudad Estado de Roma. Abarcó desde el momento legendario de su fundación, el 21 de abril del 753 a. C., hasta su final en el 509 a. C. con la expulsión del último rey, Tarquinio el Soberbio. Su caída marcó el comienzo de la República romana.
 
                 Los orígenes de la monarquía son imprecisos, si bien parece claro que fue la primera forma de gobierno de la ciudad, un dato que parecen confirmar la arqueología y la lingüística. La mitología romana vincula el origen de Roma y de la institución monárquica al héroe troyano Eneas, quien huyendo de la destrucción de su ciudad, navegó hacia el Mediterráneo occidental hasta llegar a Italia. Allí fundó la ciudad de Lavinio. Posteriormente, su hijo Ascanio fundó Alba Longa, de cuya familia real descendieron los gemelos Rómulo y Remo, los fundadores de Roma.
@@ -93,53 +99,39 @@
                 Tecnologías: Biotecnología – Exploración espacial – Informática – Ingeniería – Software libre
 
                     Prueba de pagina
-            </p>
-            </section>
-            <div class="search-text"> 
-                <div class="container">
-                    <div class="row text-center">
-                        <div class="form">
-                            <h4>Suscribirse para recibir nuestrar nuevas promociones</h4>
-                            <div id="search-form" class="form-search form-horizontal">
-                                <input type="text" class="input-search" placeholder="Correo Electrónico"/>
-                                <button type="submit" class="btn-search">Suscribirse</button>
-                            </div>
-                        </div> 
-                    </div>         
-                </div>     
-	        </div>
-            <footer>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <span class="logo">Ferretería y Materiales JyR</span>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <h3>Menu</h3>
-                            <ul class="menu">        
-                                <li><a href="#">Inicio</a></li>
-                                <li><a href="#">Nosotros</a></li>
-                                <li><a href="#">Productos</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <h3>Contacto</h3>
-                            <ul class="address">       
-                                <li><i class="fa fa-phone" aria-hidden="true"></i> <a href="#">Teléfonos</a></li>
-                                <li><i class="fa fa-map-marker" aria-hidden="true"></i> <a href="#">Dirección</a></li> 
-                                <li><i class="fa fa-envelope" aria-hidden="true"></i> <a href="#">Correo Electrónico</a></li> 
-                            </ul>
-                        </div>
-                    </div>
+        </p>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <span class="logo">Ferretería y Materiales JyR</span>
                 </div>
-                <div id="Copyright">
-                    <h4>@2018 , All rights reserved</h4>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <h3>Menu</h3>
+                    <ul class="menu">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Productos</a></li>
+                    </ul>
                 </div>
-            </footer>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <h3>Contacto</h3>
+                    <ul class="address">
+                        <li><i class="fa fa-phone" aria-hidden="true"></i><a href="#">Teléfonos</a></li>
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i><a href="#">Dirección</a></li>
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#">Correo Electrónico</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </form>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js'></script>
-<script src="js/parallax.js"></script>
+        <div id="Copyright">
+            <h4>@2018 , All rights reserved</h4>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="js/parallax.js"></script>
 </body>
 </html>

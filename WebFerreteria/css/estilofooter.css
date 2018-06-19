@@ -1,12 +1,4 @@
-﻿/*Footer*/
-.search-text{
-	margin-top:50px;
-	background-color: teal;
-	padding-top:60px;
-	padding-bottom:60px;
-}
-	
-.search-text .input-search{
+﻿.search-text .input-search{
 	height:45px;
 	width:40%;
 	padding-left:20px;
@@ -86,7 +78,7 @@ footer{
 }
 
 #Copyright{
-    background-color: teal;
+    background-color: seagreen;
     padding: 10px;
 }
 

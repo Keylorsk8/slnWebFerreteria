@@ -103,6 +103,7 @@
     <Content Include="Images\Inicio.jpg" />
     <Content Include="Inicio Sesion.aspx" />
     <Content Include="js\parallax.js" />
+    <Content Include="Nosotros.aspx" />
     <Content Include="Productos.aspx" />
     <Content Include="Images\logo.png" />
     <Content Include="packages.config" />
@@ -142,6 +143,13 @@
     </Compile>
     <Compile Include="Inicio Sesion.aspx.designer.cs">
       <DependentUpon>Inicio Sesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nosotros.aspx.cs">
+      <DependentUpon>Nosotros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nosotros.aspx.designer.cs">
+      <DependentUpon>Nosotros.aspx</DependentUpon>
     </Compile>
     <Compile Include="Productos.aspx.cs">
       <DependentUpon>Productos.aspx</DependentUpon>

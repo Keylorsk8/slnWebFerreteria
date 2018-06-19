@@ -26,8 +26,8 @@
     }
 
     #ImageInicio .btn{
-        background-color: rgb(232,156,12);
-        color: white;
+        background-color: white;
+        color: black;
         font-size: 15px;
         padding: 20px;
         height: auto;
@@ -37,6 +37,6 @@
     }
 
         #ImageInicio .btn:hover{
-            background-color: rgb(232,100,20);
-            width: 175px;
+            background-color: black;
+            color: white;
         }
