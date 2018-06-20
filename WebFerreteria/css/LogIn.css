@@ -63,7 +63,7 @@ input{
 }
 
 .form-register .btn-registrar{
-    width: 120px;
+    width: 200px;
     background-color: coral;
     border-style: none;
     color: white;
@@ -75,7 +75,3 @@ input{
     .form-register .btn-registrar:hover{
         background-color: orangered;
     }
-
-body{
-    margin: 0;
-}
