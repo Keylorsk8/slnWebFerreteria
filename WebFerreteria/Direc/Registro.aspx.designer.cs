@@ -7,9 +7,9 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace WebFerreteria {
+namespace WebFerreteria.Direc {
     
     
-    public partial class _default {
+    public partial class Registro {
     }
 }

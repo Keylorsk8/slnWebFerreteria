@@ -26,8 +26,8 @@
     }
 
     #ImageInicio .btn{
-        background-color: white;
-        color: black;
+        background-color: black !important;
+        color: white !important;
         font-size: 15px;
         padding: 20px;
         height: auto;
@@ -37,6 +37,6 @@
     }
 
         #ImageInicio .btn:hover{
-            background-color: black;
-            color: white;
+            background-color: black !important;
+            color: white !important;
         }

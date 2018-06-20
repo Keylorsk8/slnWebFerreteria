@@ -9,11 +9,10 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link href="css/estiloHeader.css" rel="stylesheet" />
-    <link href="css/estilofooter.css" rel="stylesheet" />
+    <link href="css/estiloGeneral.css" rel="stylesheet" />
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light sticky-top">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -90,26 +89,13 @@
                 Tecnologías: Biotecnología – Exploración espacial – Informática – Ingeniería – Software libre
         </p>
     </section>
-    <div class="search-text">
-        <div class="container">
-            <div class="row text-center">
-                <div class="form">
-                    <h4>Suscribirse para recibir nuestrar nuevas promociones</h4>
-                    <form id="search-form" class="form-search form-horizontal">
-                        <input type="text" class="input-search" placeholder="Correo Electrónico" />
-                        <button type="submit" class="btn-search">Suscribirse</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <span class="logo">Ferretería y Materiales JyR</span>
+                <div class="col-md-4 col-xs-12">
+                    <img src="Images/logo.png" style="width:200px;height:200px;float:left;"/>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-md-4 col-xs-12">
                     <h3>Menu</h3>
                     <ul class="menu">
                         <li><a href="#">Inicio</a></li>
@@ -117,7 +103,7 @@
                         <li><a href="#">Productos</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-md-4 col-xs-12">
                     <h3>Contacto</h3>
                     <ul class="address">
                         <li><i class="fa fa-phone" aria-hidden="true"></i><a href="#">Teléfonos</a></li>

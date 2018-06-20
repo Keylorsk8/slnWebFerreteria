@@ -96,10 +96,10 @@
   <ItemGroup>
     <Content Include="Contacto.aspx" />
     <Content Include="css\estilodefault.css" />
-    <Content Include="css\estiloHeader.css" />
-    <Content Include="css\estilofooter.css" />
+    <Content Include="css\estiloGeneral.css" />
     <Content Include="css\LogIn.css" />
     <Content Include="default.aspx" />
+    <Content Include="Direc\Registro.aspx" />
     <Content Include="Images\Inicio.jpg" />
     <Content Include="Inicio Sesion.aspx" />
     <Content Include="js\parallax.js" />
@@ -136,6 +136,13 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Direc\Registro.aspx.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Direc\Registro.aspx.designer.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
     </Compile>
     <Compile Include="Inicio Sesion.aspx.cs">
       <DependentUpon>Inicio Sesion.aspx</DependentUpon>

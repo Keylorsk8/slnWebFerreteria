@@ -9,13 +9,12 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link href="css/estiloHeader.css" rel="stylesheet" />
-    <link href="css/estilofooter.css" rel="stylesheet" />
-    <link href="css/LogIn.css" rel="stylesheet" />
+    <link href="css/estiloGeneral.css" rel="stylesheet" />
+    <link href="css/LogIn.css?update=12102006" rel="stylesheet" />
 </head>
 <body>
     <form runat="server">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light sticky-top">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -49,36 +48,24 @@
         </div>
     </nav>
     <section id="Content">
-        <h1>Hola</h1>
-        <table id="LogIn">
-            <tr>
-                <th>Usuario
-                </th>
-                <td>
-                    <asp:TextBox ID="txtUser" runat="server"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <th>Contraseña
-                </th>
-                <td>
-                    <asp:TextBox ID="txtPass" runat="server"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <asp:Button ID="btnIniciar" runat="server" Text="Iniciar Sesión"/>
-                </td>
-            </tr>
-        </table>
+        <div class="form-register">
+            <h1>Cuenta JYR</h1>
+            <h2 class="form-tittle">Iniciar Sesión</h2>
+            <div class="contenedor-inputs">
+                <input type="email" name="correo" placeholder="Correo Electrónico" class="input-100" required/>
+                <input type="password" name="contraseña" placeholder="Constraseña" class="input-100" required/>
+                <input type="submit" name="" placeholder="Iniciar Sesión" class="btn-registrar"/>
+                <p class="form-link">¿No tienes una Cuenta?<a href="Direc/Registro.aspx">Registrate aquí</a></p>
+            </div>
+        </div>
     </section>
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <span class="logo">Ferretería y Materiales JyR</span>
+                <div class="col-md-4 col-xs-12">
+                    <img src="Images/logo.png" style="width:200px;height:200px;float:left;"/>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-md-4 col-xs-12">
                     <h3>Menu</h3>
                     <ul class="menu">
                         <li><a href="#">Inicio</a></li>
@@ -86,7 +73,7 @@
                         <li><a href="#">Productos</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-md-4 col-xs-12">
                     <h3>Contacto</h3>
                     <ul class="address">
                         <li><i class="fa fa-phone" aria-hidden="true"></i><a href="#">Teléfonos</a></li>
