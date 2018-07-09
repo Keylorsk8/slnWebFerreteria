@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using Entidades;
 
 namespace DataBase
 {
@@ -30,6 +31,38 @@ namespace DataBase
             {
                 String e = ex.Message;
                 return false;
+            }
+            finally
+            {
+                cn.getConexion().Close();
+            }
+        }
+
+        public Usuario iniciarSesion(string Usuario,string Contraseña)
+        {
+            Usuario us = new Entidades.Usuario();
+            Conexion cn = new Conexion();
+            try
+            {
+                string sql = "SP_InsertarUsuario";
+                SqlCommand cmd = new SqlCommand(sql, cn.getConexion());
+                cmd.Parameters.AddWithValue("@Usuario", Usuario);
+                cmd.Parameters.AddWithValue("@Contraseña", Contraseña);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    us.Nombre = reader["Nombre"].ToString();
+                    us.Apellidos = reader["Apellidos"].ToString();
+                    us.Email = reader["Email"].ToString();
+                    us.Contraseña = reader["Constraseña"].ToString();
+                    us.Telefono = reader["Telefono"].ToString();
+                }
+                return us;
+            }
+            catch (Exception)
+            {
+                return null;
             }
             finally
             {

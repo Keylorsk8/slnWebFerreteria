@@ -42,7 +42,7 @@
                 </li>
             </ul>
             <div class="form-inline my-2 my-lg-0" runat="server">
-                <input class="form-control mr-sm-2" type="search" placeholder="Producto..." aria-label="Search" />
+                <input class="form-control mr-sm-2" type="search" placeholder="Producto..." aria-label="Search" style="height: 7px" />
                 <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
             </div>
         </div>
@@ -54,7 +54,7 @@
             <div class="contenedor-inputs">
                 <input type="email" name="correo" placeholder="Correo Electrónico" class="input-100" required/>
                 <input type="password" name="contraseña" placeholder="Constraseña" class="input-100" required/>
-                <input type="submit" name="" placeholder="Iniciar Sesión" class="btn-registrar"/>
+                <asp:Button ID="btnIniciar" runat="server" Text="Iniciar Sesión" class="btn-registrar" type="submit" OnClick="btnIniciar_Click"/>
                 <p class="form-link">¿No tienes una Cuenta?<a href="Direc/Registro.aspx">Registrate aquí</a></p>
             </div>
         </div>

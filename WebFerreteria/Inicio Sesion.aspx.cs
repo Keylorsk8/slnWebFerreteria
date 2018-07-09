@@ -15,15 +15,5 @@ namespace WebFerreteria
         {
 
         }
-
-        protected void btnIniciar_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("www.google.com");
-        }
-
-        protected void btnIniciar_Click1(object sender, EventArgs e)
-        {
-            Session["username"] = "Keylor";
-        }
     }
 }
