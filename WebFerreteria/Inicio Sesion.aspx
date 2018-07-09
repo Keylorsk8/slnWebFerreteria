@@ -54,7 +54,7 @@
             <div class="contenedor-inputs">
                 <input type="email" name="correo" placeholder="Correo Electrónico" class="input-100" required/>
                 <input type="password" name="contraseña" placeholder="Constraseña" class="input-100" required/>
-                <asp:Button ID="btnIniciar" runat="server" Text="Iniciar Sesión" class="btn-registrar" type="submit" OnClick="btnIniciar_Click"/>
+                <asp:Button ID="btnIniciar" runat="server" Text="Iniciar Sesión" class="btn-registrar" type="submit"/>
                 <p class="form-link">¿No tienes una Cuenta?<a href="Direc/Registro.aspx">Registrate aquí</a></p>
             </div>
         </div>
