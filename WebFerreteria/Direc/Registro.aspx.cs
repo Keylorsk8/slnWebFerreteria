@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using DataBase;
 
 namespace WebFerreteria.Direc
 {
@@ -12,7 +11,7 @@ namespace WebFerreteria.Direc
     {
         protected void btnregistrarse_Click(object sender, EventArgs e)
         {
-            Procedimientos proc = new Procedimientos();
+            /*Procedimientos proc = new Procedimientos();
             string Nombre, Apellidos, Email, Contraseña, Telefono;
             Nombre = txtNombre.Text;
             Apellidos = txtApellidos.Text;
@@ -24,7 +23,7 @@ namespace WebFerreteria.Direc
             }else
             {
                 Response.Write("<script>window.alert('Usuario no Registrado,intentelo de nuevo')</script>");
-            }
+            }*/
         }
     }
 }

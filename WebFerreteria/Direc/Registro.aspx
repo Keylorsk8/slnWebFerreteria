@@ -4,8 +4,8 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Ferretería JyR</title>
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
+   <meta name="viewport" content="=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="../css/estiloGeneral.css" rel="stylesheet" />
     <link href="../css/LogIn.css?" rel="stylesheet" />
@@ -50,12 +50,12 @@
             <h1>Registrarse</h1>
             <h2 class="form-tittle">CREA UNA CUENTA</h2>
             <div class="contenedor-inputs">
-                <asp:TextBox ID="txtNombre" runat="server" type="text" name="nombre" placeholder="Nombre" class="input-50" required></asp:TextBox>
-                <asp:TextBox ID="txtApellidos" runat="server" type="text" name="apellidos" placeholder="Apellidos" class="input-50" required></asp:TextBox>
-                <asp:TextBox ID="txtEmail" runat="server" type="email" name="correo" placeholder="Correo Electrónico" class="input-100" required></asp:TextBox>
-                <asp:TextBox ID="txtContraseña" runat="server" type="password" name="contraseña" placeholder="Constraseña" class="input-50" required></asp:TextBox>
-                <asp:TextBox ID="txtContraseña2" runat="server" type="password" name="contraseña2" placeholder="Repetir Constraseña" class="input-50" required></asp:TextBox>
-                <asp:TextBox ID="txtTelefono" runat="server" type="text" name="telefono" placeholder="Teléfono" class="input-100" required></asp:TextBox>
+                <asp:TextBox ID="txtNombre" runat="server" type="text" name="nombre" placeholder="Nombre" class="input-50" required="required"></asp:TextBox>
+                <asp:TextBox ID="txtApellidos" runat="server" type="text" name="apellidos" placeholder="Apellidos" class="input-50" required="required"></asp:TextBox>
+                <asp:TextBox ID="txtEmail" runat="server" type="email" name="correo" placeholder="Correo Electrónico" class="input-100" required="required"></asp:TextBox>
+                <asp:TextBox ID="txtContraseña" runat="server" type="password" name="contraseña" placeholder="Constraseña" class="input-50" required="required"></asp:TextBox>
+                <asp:TextBox ID="txtContraseña2" runat="server" type="password" name="contraseña2" placeholder="Repetir Constraseña" class="input-50" required="required"></asp:TextBox>
+                <asp:TextBox ID="txtTelefono" runat="server" type="text" name="telefono" placeholder="Teléfono" class="input-100" required="required"></asp:TextBox>
                 <asp:Button ID="btnregistrarse" runat="server" Text="Registrarse" class="btn-registrar" type="submit" OnClick="btnregistrarse_Click"/>
                 <p class="form-link">¿Ya tienes una Cuenta?<a href="../Inicio Sesion.aspx">Ingresa aquí</a></p>
             </div>
@@ -90,9 +90,9 @@
         </div>
     </footer>
     </form>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/jquery-3.0.0.slim.min.js"></script>
 </body>
 </html>
 
