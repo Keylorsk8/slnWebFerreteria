@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Inicio Sesion.aspx.cs" Inherits="WebFerreteria._default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Inicio Sesion.aspx.cs" Inherits="WebFerreteria.Inicio_Sesion1" %>
 
 <!DOCTYPE html>
 
@@ -52,9 +52,10 @@
             <h1>Cuenta JYR</h1>
             <h2 class="form-tittle">Iniciar Sesión</h2>
             <div class="contenedor-inputs">
-                <input type="email" name="correo" placeholder="Correo Electrónico" class="input-100" required/>
-                <input type="password" name="contraseña" placeholder="Constraseña" class="input-100" required/>
-                <asp:Button ID="btnIniciar" runat="server" Text="Iniciar Sesión" class="btn-registrar" type="submit"/>
+                <asp:TextBox type="email" placeholder="Correo Electrónico" CssClass="input-100" required="required" ID="txtCorreo" runat="server"/>
+                <asp:TextBox type="password" placeholder="Constraseña" CssClass="input-100" required="required" ID="txtContraseña" runat="server"/>
+                <asp:Button ID="btnIniciar" runat="server" Text="Iniciar Sesión" class="btn-registrar" type="submit" OnClick="btnIniciar_click"/>
+                <asp:Label ID="lblError" CssClass="color:red;" runat="server" Text=" "></asp:Label>
                 <p class="form-link">¿No tienes una Cuenta?<a href="Direc/Registro.aspx">Registrate aquí</a></p>
             </div>
         </div>
@@ -93,3 +94,4 @@
     <script src="scripts/jquery-3.0.0.slim.min.js"></script>
 </body>
 </html>
+

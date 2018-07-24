@@ -106,7 +106,7 @@
     <Content Include="css\estilodefault.css" />
     <Content Include="css\estiloGeneral.css" />
     <Content Include="css\LogIn.css" />
-    <Content Include="default.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="Direc\Registro.aspx" />
     <Content Include="Images\Inicio.jpg" />
     <Content Include="Inicio Sesion.aspx" />
@@ -184,12 +184,12 @@
     <Compile Include="Contacto.aspx.designer.cs">
       <DependentUpon>Contacto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="default.aspx.cs">
-      <DependentUpon>default.aspx</DependentUpon>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="default.aspx.designer.cs">
-      <DependentUpon>default.aspx</DependentUpon>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Direc\Registro.aspx.cs">
       <DependentUpon>Registro.aspx</DependentUpon>
@@ -226,6 +226,16 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capa.Logica\Capa.Logica.csproj">
+      <Project>{6422c618-07bb-4a8a-bbf4-e7ee6587c39f}</Project>
+      <Name>Capa.Logica</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Capa.Entidades.csproj">
+      <Project>{52665bc3-a476-4c6c-ba0c-d3906aecb31b}</Project>
+      <Name>Capa.Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

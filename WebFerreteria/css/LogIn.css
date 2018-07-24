@@ -1,4 +1,4 @@
-﻿/*#LogIn{
+﻿#LogIn{
     padding: 20px 20px 20px 20px;
     width: 50%;
     height: 135px;
@@ -74,4 +74,4 @@ input{
 }
     .form-register .btn-registrar:hover{
         background-color: orangered;
-    }*/
+    }

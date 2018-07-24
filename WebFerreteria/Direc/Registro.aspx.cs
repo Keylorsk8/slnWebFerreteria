@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿using Capa.Logica;
+using Entidades;
+using System;
 
 namespace WebFerreteria.Direc
 {
@@ -11,19 +8,23 @@ namespace WebFerreteria.Direc
     {
         protected void btnregistrarse_Click(object sender, EventArgs e)
         {
-            /*Procedimientos proc = new Procedimientos();
-            string Nombre, Apellidos, Email, Contraseña, Telefono;
-            Nombre = txtNombre.Text;
-            Apellidos = txtApellidos.Text;
-            Email = txtEmail.Text;
-            Contraseña = txtContraseña.Text;
-            Telefono = txtTelefono.Text;
-            if (proc.AgregarUsuario(Nombre, Apellidos, Email, Contraseña, Telefono)){
-                Response.Redirect("../default.aspx");
+            Usuario Usuario = new Usuario()
+            {
+                Nombre = txtNombre.Text,
+                Apellidos = txtApellidos.Text,
+                Email = txtEmail.Text,
+                contraseña = txtContraseña.Text,
+                Rol = Rol.Usuario
+            };
+            UsuarioLogica logica = new UsuarioLogica();
+            if(logica.SeleccionarPorID(Usuario.Email) != null)
+            {
+                lblError.Text = "Este Usuario ya se encuentra Registrado";
             }else
             {
-                Response.Write("<script>window.alert('Usuario no Registrado,intentelo de nuevo')</script>");
-            }*/
+                logica.Insertar(Usuario);
+                Response.Redirect("../default.aspx");
+            }
         }
     }
 }

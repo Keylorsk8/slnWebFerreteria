@@ -57,6 +57,7 @@
                 <asp:TextBox ID="txtContraseña2" runat="server" type="password" name="contraseña2" placeholder="Repetir Constraseña" class="input-50" required="required"></asp:TextBox>
                 <asp:TextBox ID="txtTelefono" runat="server" type="text" name="telefono" placeholder="Teléfono" class="input-100" required="required"></asp:TextBox>
                 <asp:Button ID="btnregistrarse" runat="server" Text="Registrarse" class="btn-registrar" type="submit" OnClick="btnregistrarse_Click"/>
+                <asp:Label ID="lblError" runat="server" Text=" "></asp:Label>
                 <p class="form-link">¿Ya tienes una Cuenta?<a href="../Inicio Sesion.aspx">Ingresa aquí</a></p>
             </div>
         </div>

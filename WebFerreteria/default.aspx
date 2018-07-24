@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="WebFerreteria._default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebFerreteria.Default" %>
 
 <!DOCTYPE html>
 
@@ -13,11 +13,12 @@
     <link href="css/estilodefault.css" rel="stylesheet" />
 </head>
 <body>
+    <form runat="server">
     <nav class="navbar navbar-expand-lg navbar-dark bg-light sticky-top">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="default.aspx">
+        <a class="navbar-brand" href="defaultcopia.aspx">
             <img src="Images/logo.png" style="width: 50px; height: 50px;" />
             Ferretería JyR
         </a>
@@ -25,7 +26,7 @@
 
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" id="active" href="default.aspx">Inicio<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" id="active" href="defaultcopia.aspx">Inicio<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="Productos.aspx">Productos</a>
@@ -37,13 +38,13 @@
                     <a class="nav-link" href="Contacto.aspx">Contacto</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Inicio Sesion.aspx">Cuenta</a>
+                    <asp:LinkButton ID="lblUsuario" CssClass="nav-link" runat="server" OnClick="lblUsuario_Click">Cuenta</asp:LinkButton>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0" runat="server">
+            <div class="form-inline my-2 my-lg-0" runat="server">
                 <input class="form-control mr-sm-2" type="search" placeholder="Producto..." aria-label="Search" />
                 <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
-            </form>
+            </div>
         </div>
     </nav>
     <section id="Content">
@@ -128,6 +129,7 @@
             <h4>@2018 , All rights reserved</h4>
         </div>
     </footer>
+        </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
     <script src="scripts/jquery-3.0.0.slim.min.js"></script>
