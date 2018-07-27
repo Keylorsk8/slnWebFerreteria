@@ -18,7 +18,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="defaultcopia.aspx">
+        <a class="navbar-brand" href="default.aspx">
             <img src="Images/logo.png" style="width: 50px; height: 50px;" />
             Ferretería JyR
         </a>
@@ -26,7 +26,7 @@
 
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" id="active" href="defaultcopia.aspx">Inicio<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" id="active" href="default.aspx">Inicio<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="Productos.aspx">Productos</a>
@@ -38,7 +38,10 @@
                     <a class="nav-link" href="Contacto.aspx">Contacto</a>
                 </li>
                 <li class="nav-item">
-                    <asp:LinkButton ID="lblUsuario" CssClass="nav-link" runat="server" OnClick="lblUsuario_Click">Cuenta</asp:LinkButton>
+                     <asp:LinkButton ID="lblUsuario" CssClass="nav-link" runat="server" OnClick="lblUsuario_Click">Cuenta</asp:LinkButton>
+                </li>
+                <li class="nav-item">
+                     <asp:Label ID="lblAdministrador" CssClass="nav-link" runat="server"></asp:Label>
                 </li>
             </ul>
             <div class="form-inline my-2 my-lg-0" runat="server">

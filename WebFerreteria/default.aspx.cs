@@ -20,6 +20,10 @@ namespace WebFerreteria
                     UsuarioLogica logica = new UsuarioLogica();
                     Usuario Usuario = logica.SeleccionarPorID(Session["usuario"].ToString());
                     lblUsuario.Text = Usuario.Nombre;
+                    if(Usuario.Rol == Rol.Administrador)
+                    {
+                        lblAdministrador.Text = "<a href=\"Direc\\Administrador.aspx\" style=\"text-decoration:none;\">Administrador</a>";
+                    }
                 }
             }
             catch (Exception)
@@ -30,7 +34,20 @@ namespace WebFerreteria
 
         protected void lblUsuario_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                if(Session["usuario"] != null)
+                {
+
+                }else
+                {
+                    Response.Redirect("Inicio Sesion.aspx");
+                }
+            }
+            catch (Exception)
+            {
+                Response.Redirect("Inicio Sesion.aspx");
+            }
         }
     }
 }

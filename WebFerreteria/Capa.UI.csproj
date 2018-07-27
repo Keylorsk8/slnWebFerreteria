@@ -103,13 +103,16 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\administrador.css" />
     <Content Include="css\estilodefault.css" />
     <Content Include="css\estiloGeneral.css" />
     <Content Include="css\LogIn.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Direc\Administrador.aspx" />
     <Content Include="Direc\Registro.aspx" />
     <Content Include="Images\Inicio.jpg" />
     <Content Include="Inicio Sesion.aspx" />
+    <Content Include="js\administrador.js" />
     <Content Include="js\parallax.js" />
     <Content Include="Nosotros.aspx" />
     <Content Include="Productos.aspx" />
@@ -190,6 +193,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Direc\Administrador.aspx.cs">
+      <DependentUpon>Administrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Direc\Administrador.aspx.designer.cs">
+      <DependentUpon>Administrador.aspx</DependentUpon>
     </Compile>
     <Compile Include="Direc\Registro.aspx.cs">
       <DependentUpon>Registro.aspx</DependentUpon>

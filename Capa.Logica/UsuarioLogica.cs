@@ -35,5 +35,17 @@ namespace Capa.Logica
             UsuarioDatos datos = new UsuarioDatos();
             return datos.SeleccionarUsuarioPorId(Email);
         }
+
+        public List<Usuario> SeleccionarTodos()
+        {
+            UsuarioDatos datos = new UsuarioDatos();
+            return datos.SeleccionarTodos();
+        }
+
+        public void Eliminar(int IdUsuario)
+        {
+            UsuarioDatos datos = new UsuarioDatos();
+            datos.Eliminar(IdUsuario);
+        }
     }
 }

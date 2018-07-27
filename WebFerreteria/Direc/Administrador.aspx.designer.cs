@@ -7,19 +7,19 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace WebFerreteria {
+namespace WebFerreteria.Direc {
     
     
-    public partial class Nosotros1 {
+    public partial class Administrador {
         
         /// <summary>
-        /// Control lblUsuario2.
+        /// Control lblUsuario7.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lblUsuario2;
+        protected global::System.Web.UI.WebControls.LinkButton lblUsuario7;
         
         /// <summary>
         /// Control lblAdministrador2.
@@ -29,5 +29,14 @@ namespace WebFerreteria {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAdministrador2;
+        
+        /// <summary>
+        /// Control gridClientes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gridClientes;
     }
 }

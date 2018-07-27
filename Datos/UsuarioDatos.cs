@@ -50,16 +50,15 @@ namespace Datos
             {
                 conexion.Open();
 
-                string sql = "PA_ActualizarUsuario";
+                string sql = "SP_ActualizarUsuario";
 
                 SqlCommand comando = new SqlCommand(sql, conexion);
 
                 comando.Parameters.AddWithValue("@IdUsuario", Usuario.IdUsuario);
-                comando.Parameters.AddWithValue("@IdRol", (int)Usuario.Rol);
+                comando.Parameters.AddWithValue("@Rol", (int)Usuario.Rol);
                 comando.Parameters.AddWithValue("@Nombre", Usuario.Nombre);
                 comando.Parameters.AddWithValue("@Apellidos", Usuario.Apellidos);
                 comando.Parameters.AddWithValue("@Email", Usuario.Email);
-                comando.Parameters.AddWithValue("@Contraseña", Usuario.contraseña);
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
                 comando.ExecuteNonQuery();
             }
@@ -115,5 +114,73 @@ namespace Datos
                 conexion.Close();
             }
         }
+
+        public List<Usuario> SeleccionarTodos()
+        {
+            List<Usuario> usuarios = new List<Usuario>();
+            SqlConnection conexion = new SqlConnection(Conexion.Cadena);
+            try
+            {
+                conexion.Open();
+
+                string sql = "SP_SeleccionarUsuarios";
+
+                SqlCommand comando = new SqlCommand(sql, conexion);
+
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                SqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    Usuario usuario = new Usuario()
+                    {
+                        IdUsuario = Convert.ToInt32(reader["IDUsuario"]),
+                        Rol = Convert.ToInt32(reader["Rol"]) == 1 ? Rol.Administrador : Rol.Usuario,
+                        Nombre = reader["Nombre"].ToString(),
+                        Apellidos = reader["Apellidos"].ToString(),
+                        Email = reader["Email"].ToString(),
+                        contraseña = reader["Contraseña"].ToString()
+                    };
+                    usuarios.Add(usuario);
+                }
+                return usuarios;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+
+                conexion.Close();
+            }
+        }
+
+        public void Eliminar(int IdUsuario)
+        {
+            SqlConnection conexion = new SqlConnection(Conexion.Cadena);
+            try
+            {
+                conexion.Open();
+
+                string sql = "SP_EliminarUsuario";
+
+                SqlCommand comando = new SqlCommand(sql, conexion);
+                comando.Parameters.AddWithValue("@IdUsuario", IdUsuario);
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+
+                conexion.Close();
+            }
+        }
+    
     }
 }

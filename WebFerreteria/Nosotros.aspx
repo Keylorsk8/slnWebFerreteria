@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Nosotros.aspx.cs" Inherits="WebFerreteria._default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Nosotros.aspx.cs" Inherits="WebFerreteria.Nosotros1" %>
 
 <!DOCTYPE html>
 
@@ -12,6 +12,7 @@
     <link href="css/estiloGeneral.css" rel="stylesheet" />
 </head>
 <body>
+    <form runat="server">
     <nav class="navbar navbar-expand-lg navbar-dark bg-light sticky-top">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -36,13 +37,16 @@
                     <a class="nav-link" href="Contacto.aspx">Contacto</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Inicio Sesion.aspx">Cuenta</a>
+                     <asp:LinkButton ID="lblUsuario2" CssClass="nav-link" runat="server" OnClick="lblUsuario2_Click">Cuenta</asp:LinkButton>
+                </li>
+                <li class="nav-item">
+                     <asp:Label ID="lblAdministrador2" CssClass="nav-link" runat="server"></asp:Label>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0" runat="server">
+            <div class="form-inline my-2 my-lg-0" runat="server">
                 <input class="form-control mr-sm-2" type="search" placeholder="Producto..." aria-label="Search" />
                 <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
-            </form>
+            </div>
         </div>
     </nav>
     <section id="Content">
@@ -75,6 +79,7 @@
             <h4>@2018 , All rights reserved</h4>
         </div>
     </footer>
+        </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
     <script src="scripts/jquery-3.0.0.slim.min.js"></script>
