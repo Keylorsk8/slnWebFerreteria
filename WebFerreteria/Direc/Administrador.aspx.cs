@@ -1,5 +1,6 @@
 ﻿using Capa.Logica;
 using Entidades;
+using Entidades.clases;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -16,7 +17,7 @@ namespace WebFerreteria.Direc
         {
             if (!IsPostBack)
             {
-                LLenarGrid();
+                LLenarGridClientes();
             }
             try
             {
@@ -37,7 +38,7 @@ namespace WebFerreteria.Direc
             }
         }
 
-        public void LLenarGrid()
+        public void LLenarGridClientes()
         {
             UsuarioLogica logica = new UsuarioLogica();
             List<Usuario> usuarios = logica.SeleccionarTodos();
@@ -61,10 +62,30 @@ namespace WebFerreteria.Direc
             gridClientes.DataBind();
         }
 
+        public void LLenarGridCategorias()
+        {
+            CategoriaLogica logica = new CategoriaLogica();
+            List<Categoria> categorias = logica.SeleccionarTodos();
+            DataTable table = new DataTable();
+            table.Columns.Add("Id", typeof(int));
+            table.Columns.Add("Nombre", typeof(string));
+            table.Columns.Add("Descripción", typeof(string));
+            foreach (Categoria ca in categorias)
+            {
+                DataRow row = table.NewRow();
+                row["Id"] = ca.IdCategoria;
+                row["Nombre"] = ca.Nombre;
+                row["Descripcion"] = ca.Descripcion;
+                table.Rows.Add(row);
+            }
+            gridCategorias.DataSource = table;
+            gridCategorias.DataBind();
+        }
+
         protected void gridClientes_RowEditing(object sender, GridViewEditEventArgs e)
         {
             gridClientes.EditIndex = e.NewEditIndex;
-            this.LLenarGrid();
+            this.LLenarGridClientes();
         }
 
         protected void gridClientes_RowUpdating(object sender, GridViewUpdateEventArgs e)
@@ -87,13 +108,13 @@ namespace WebFerreteria.Direc
             UsuarioLogica logica = new UsuarioLogica();
             logica.Insertar(usuario);
             gridClientes.EditIndex = -1;
-            LLenarGrid();
+            LLenarGridClientes();
         }
 
         protected void gridClientes_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             gridClientes.EditIndex = -1;
-            LLenarGrid();
+            LLenarGridClientes();
         }
 
         protected void gridClientes_RowDeleting(object sender, GridViewDeleteEventArgs e)
@@ -101,7 +122,7 @@ namespace WebFerreteria.Direc
             int IdUsuario = Convert.ToInt32(gridClientes.DataKeys[e.RowIndex].Values[0]);
             UsuarioLogica logica = new UsuarioLogica();
             logica.Eliminar(IdUsuario);
-            LLenarGrid();
+            LLenarGridClientes();
         }
 
         protected void gridClientes_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -129,6 +150,17 @@ namespace WebFerreteria.Direc
             {
                 Response.Redirect("../Inicio Sesion.aspx");
             }
+        }
+
+        protected void gridCategorias_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            gridCategorias.EditIndex = e.NewEditIndex;
+            this.LLenarGridCategorias();
+        }
+
+        protected void gridCategorias_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+
         }
     }
 }

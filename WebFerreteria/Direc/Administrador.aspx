@@ -60,29 +60,46 @@
                 <a onclick="showPanel(3)">?</a>
             </div>
             <div class="tabPanel table-responsive">
-                <asp:GridView runat="server" ID="gridClientes" CssClass="table" DataKeyNames="Id" CellPadding="4" ForeColor="#333333" GridLines="None" 
+                <asp:GridView runat="server" ID="gridClientes" CssClass="table" DataKeyNames="Id" CellPadding="4" GridLines="Horizontal" 
                     AllowPaging="True" PageSize="5" OnRowEditing="gridClientes_RowEditing" OnRowUpdating="gridClientes_RowUpdating" 
                     OnRowCancelingEdit="gridClientes_RowCancelingEdit" OnRowDeleting="gridClientes_RowDeleting" 
-                    OnRowDataBound="gridClientes_RowDataBound" >
-                    <AlternatingRowStyle BackColor="White" />
+                    OnRowDataBound="gridClientes_RowDataBound" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" >
                     <Columns>
                         <asp:CommandField ShowEditButton="True"/>
                         <asp:CommandField ShowDeleteButton="True" />
                     </Columns>
-                    <EditRowStyle BackColor="#7C6F57" />
-                    <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
-                    <RowStyle BackColor="#E3EAEB" />
-                    <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
-                    <SortedAscendingCellStyle BackColor="#F8FAFA" />
-                    <SortedAscendingHeaderStyle BackColor="#246B61" />
-                    <SortedDescendingCellStyle BackColor="#D4DFE1" />
-                    <SortedDescendingHeaderStyle BackColor="#15524A" />
+                    <FooterStyle BackColor="White" ForeColor="#333333" />
+                    <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="White" ForeColor="#333333" />
+                    <SelectedRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                    <SortedAscendingHeaderStyle BackColor="#487575" />
+                    <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                    <SortedDescendingHeaderStyle BackColor="#275353" />
                 </asp:GridView>
             </div>
             <div class="tabPanel">Panel 2</div>
-            <div class="tabPanel">Panel 3</div>
+            <div class="tabPanel">
+                 <asp:GridView runat="server" ID="gridCategorias" CssClass="table" DataKeyNames="ID" CellPadding="4" GridLines="Horizontal" 
+                    AllowPaging="True" PageSize="5" OnRowEditing="gridCategorias_RowEditing" OnRowUpdating="gridCategorias_RowUpdating" 
+                    OnRowCancelingEdit="gridClientes_RowCancelingEdit" OnRowDeleting="gridClientes_RowDeleting" 
+                    OnRowDataBound="gridClientes_RowDataBound" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" >
+                    <Columns>
+                        <asp:CommandField ShowEditButton="True"/>
+                        <asp:CommandField ShowDeleteButton="True" />
+                    </Columns>
+                    <FooterStyle BackColor="White" ForeColor="#333333" />
+                    <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="White" ForeColor="#333333" />
+                    <SelectedRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                    <SortedAscendingHeaderStyle BackColor="#487575" />
+                    <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                    <SortedDescendingHeaderStyle BackColor="#275353" />
+                </asp:GridView>
+            </div>
             <div class="tabPanel">Panel 4</div>
         </div>
     </section>

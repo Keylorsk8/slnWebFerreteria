@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clases\Categoria.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Enumeradores\Rol.cs" />
     <Compile Include="clases\Usuario.cs" />
