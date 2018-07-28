@@ -59,3 +59,25 @@
 #gridClientes td{
     padding: 10px;
 }
+
+.tabsContainer .tabPanel #AgregarCategoria{
+    width: 90%;
+    margin-left:auto;
+    margin-right:auto;
+    padding:50px;
+    margin-bottom: 2%;
+}
+
+.tabsContainer .tabPanel #AgregarCategoria .titulo{
+    color:orange;  
+    font-size: 2em;   
+    width: 100%;
+    height:auto;
+    display:flex;
+    justify-content:center;
+}
+
+#lbl{
+    display: none;
+    margin-left: -5000px;
+}

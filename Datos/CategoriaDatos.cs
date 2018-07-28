@@ -124,7 +124,7 @@ namespace Datos
                 {
                     Categoria Categoria = new Categoria()
                     {
-                        IdCategoria = Convert.ToInt32(reader["IDCategoria"]),
+                        IdCategoria = Convert.ToInt32(reader["IdCategoria"]),
                         Nombre = reader["Nombre"].ToString(),
                         Descripcion = reader["Descripcion"].ToString()
                     };

@@ -1,4 +1,5 @@
-﻿using Entidades.clases;
+﻿using Datos;
+using Entidades.clases;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,7 +41,7 @@ namespace Capa.Logica
             return datos.SeleccionarTodos();
         }
 
-        public void Eliminar(int IdUCategoria)
+        public void Eliminar(int IdCategoria)
         {
             CategoriaDatos datos = new CategoriaDatos();
             datos.Eliminar(IdCategoria);

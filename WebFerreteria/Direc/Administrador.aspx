@@ -11,6 +11,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="../css/estiloGeneral.css" rel="stylesheet" />
     <link href="../css/administrador.css" rel="stylesheet" />
+    <script type="text/javascript">
+        window.onpageshow = function () {
+            var pagina = document.getElementById('lbl').textContent;
+            showPanel(pagina);
+        }
+    </script>
 </head>
 <body>
     <form runat="server">
@@ -50,6 +56,7 @@
             </div>
         </div>
     </nav>
+    <asp:Label ID="lbl" CssClass="page" runat="server">0</asp:Label>
     <section id="Content">
         <h1 class="title">Menu Administrador</h1>
         <div class="tabsContainer">
@@ -81,10 +88,25 @@
             </div>
             <div class="tabPanel">Panel 2</div>
             <div class="tabPanel">
+                 <div id="AgregarCategoria">
+                     <div class="titulo">
+                         <h3>Agregar una Categoría</h3>
+                     </div>
+                     <div class="InputCategoria1">
+                         <h4>Nombre</h4>
+                         <asp:TextBox ID="txtNombre"  CssClass="form-text form-control" runat="server" required="required"></asp:TextBox>
+                     </div>
+                     <div class="InputCategoria2">
+                         <h4>Descripción</h4>
+                         <asp:TextBox ID="txtDescripcion" CssClass="form-text form-control" runat="server" required="required"></asp:TextBox>
+                         <asp:Button ID="btnAgregarCategoria" CssClass="btn btn-success" runat="server" Text="Agregar" OnClick="btnAgregarCategoria_Click"/>
+                     </div>
+                 </div>
+                <div class="table-responsive">
                  <asp:GridView runat="server" ID="gridCategorias" CssClass="table" DataKeyNames="ID" CellPadding="4" GridLines="Horizontal" 
                     AllowPaging="True" PageSize="5" OnRowEditing="gridCategorias_RowEditing" OnRowUpdating="gridCategorias_RowUpdating" 
-                    OnRowCancelingEdit="gridClientes_RowCancelingEdit" OnRowDeleting="gridClientes_RowDeleting" 
-                    OnRowDataBound="gridClientes_RowDataBound" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" >
+                    OnRowCancelingEdit="gridCategorias_RowCancelingEdit" OnRowDeleting="gridCategorias_RowDeleting" 
+                    OnRowDataBound="gridCategorias_RowDataBound" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" >
                     <Columns>
                         <asp:CommandField ShowEditButton="True"/>
                         <asp:CommandField ShowDeleteButton="True" />
@@ -99,6 +121,7 @@
                     <SortedDescendingCellStyle BackColor="#E5E5E5" />
                     <SortedDescendingHeaderStyle BackColor="#275353" />
                 </asp:GridView>
+                    </div>
             </div>
             <div class="tabPanel">Panel 4</div>
         </div>
@@ -133,8 +156,8 @@
     </footer>
     </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="scripts/bootstrap.min.js"></script>
-    <script src="scripts/jquery-3.0.0.slim.min.js"></script>
+    <script src="../scripts/bootstrap.min.js"></script>
+    <script src="../scripts/jquery-3.0.0.slim.min.js"></script>
     <script src="../js/administrador.js"></script>
 </body>
 </html>

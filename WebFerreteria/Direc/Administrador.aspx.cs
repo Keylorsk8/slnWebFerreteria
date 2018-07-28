@@ -18,6 +18,7 @@ namespace WebFerreteria.Direc
             if (!IsPostBack)
             {
                 LLenarGridClientes();
+                LLenarGridCategorias();
             }
             try
             {
@@ -75,7 +76,7 @@ namespace WebFerreteria.Direc
                 DataRow row = table.NewRow();
                 row["Id"] = ca.IdCategoria;
                 row["Nombre"] = ca.Nombre;
-                row["Descripcion"] = ca.Descripcion;
+                row["Descripción"] = ca.Descripcion;
                 table.Rows.Add(row);
             }
             gridCategorias.DataSource = table;
@@ -86,6 +87,7 @@ namespace WebFerreteria.Direc
         {
             gridClientes.EditIndex = e.NewEditIndex;
             this.LLenarGridClientes();
+            lbl.Text = "0";
         }
 
         protected void gridClientes_RowUpdating(object sender, GridViewUpdateEventArgs e)
@@ -109,12 +111,14 @@ namespace WebFerreteria.Direc
             logica.Insertar(usuario);
             gridClientes.EditIndex = -1;
             LLenarGridClientes();
+            lbl.Text = "0";
         }
 
         protected void gridClientes_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             gridClientes.EditIndex = -1;
             LLenarGridClientes();
+            lbl.Text = "0";
         }
 
         protected void gridClientes_RowDeleting(object sender, GridViewDeleteEventArgs e)
@@ -123,6 +127,7 @@ namespace WebFerreteria.Direc
             UsuarioLogica logica = new UsuarioLogica();
             logica.Eliminar(IdUsuario);
             LLenarGridClientes();
+            lbl.Text = "0";
         }
 
         protected void gridClientes_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -131,6 +136,7 @@ namespace WebFerreteria.Direc
             {
                 (e.Row.Cells[1].Controls[0] as LinkButton).Attributes["onclick"] = "return confirm('¿Desea eliminar este Usuario?');";
             }
+            lbl.Text = "0";
         }
 
         protected void lblUsuario7_Click(object sender, EventArgs e)
@@ -156,11 +162,79 @@ namespace WebFerreteria.Direc
         {
             gridCategorias.EditIndex = e.NewEditIndex;
             this.LLenarGridCategorias();
+            lbl.Text = "2";
         }
 
         protected void gridCategorias_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
+            GridViewRow row = gridCategorias.Rows[e.RowIndex];
+            int Id = Convert.ToInt32(gridCategorias.DataKeys[e.RowIndex].Values[0]);
+            string Nombre = (row.Cells[3].Controls[0] as TextBox).Text;
+            string Descripcion = (row.Cells[4].Controls[0] as TextBox).Text;
+            Categoria Categoria = new Categoria()
+            {
+                IdCategoria = Id,
+                Nombre = Nombre,
+                Descripcion = Descripcion
+            };
 
+            CategoriaLogica logica = new CategoriaLogica();
+            logica.Insertar(Categoria);
+            gridCategorias.EditIndex = -1;
+            LLenarGridCategorias();
+            lbl.Text = "2";
+        }
+
+        protected void gridCategorias_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            gridCategorias.EditIndex = -1;
+            LLenarGridCategorias();
+            lbl.Text = "2";
+        }
+
+        protected void gridCategorias_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            int IdCategoria = Convert.ToInt32(gridCategorias.DataKeys[e.RowIndex].Values[0]);
+            CategoriaLogica logica = new CategoriaLogica();
+            try
+            {
+                logica.Eliminar(IdCategoria);
+                LLenarGridCategorias();
+            }
+            catch (Exception ex)
+            {
+                string script = @"<script type='text/javascript'>
+                            alert('Esta Categoría no puede ser eliminada');
+                        </script>";
+
+                script = string.Format(script, ex.Message);
+
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+            }
+            lbl.Text = "2";
+        }
+
+        protected void gridCategorias_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow && e.Row.RowIndex != gridCategorias.EditIndex)
+            {
+                (e.Row.Cells[1].Controls[0] as LinkButton).Attributes["onclick"] = "return confirm('¿Desea eliminar esta Categoría?');";
+            }
+            lbl.Text = "2";
+        }
+
+        protected void btnAgregarCategoria_Click(object sender, EventArgs e)
+        {
+            Categoria Categoria = new Categoria()
+            {
+                Nombre = txtNombre.Text,
+                Descripcion = txtDescripcion.Text
+            };
+            CategoriaLogica logica = new CategoriaLogica();
+            logica.Insertar(Categoria);
+            LLenarGridCategorias();
+            txtNombre.Text = "";
+            txtDescripcion.Text = "";
         }
     }
 }
