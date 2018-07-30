@@ -4,10 +4,11 @@ using Entidades.clases;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
+using System.IO;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace WebFerreteria.Direc
 {
@@ -19,6 +20,8 @@ namespace WebFerreteria.Direc
             {
                 LLenarGridClientes();
                 LLenarGridCategorias();
+                LLenarGridProductos();
+                lbl.Text = "0";
             }
             try
             {
@@ -81,6 +84,32 @@ namespace WebFerreteria.Direc
             }
             gridCategorias.DataSource = table;
             gridCategorias.DataBind();
+        }
+
+        public void LLenarGridProductos()
+        {
+            ProductoLogica logica = new ProductoLogica();
+            List<Producto> productos = logica.SeleccionarTodos();
+            DataTable table = new DataTable();
+            table.Columns.Add("Id", typeof(int));
+            table.Columns.Add("Nombre", typeof(string));
+            table.Columns.Add("Descripción", typeof(string));
+            table.Columns.Add("Categoria", typeof(string));
+            table.Columns.Add("Imagen", typeof(System.Drawing.Image));
+            table.Columns.Add("Precio", typeof(double));
+            foreach(Producto pro in productos)
+            {
+                DataRow row = table.NewRow();
+                row["Id"] = pro.IdProducto;
+                row["Nombre"] = pro.Nombre;
+                row["Descripción"] = pro.Descripcion;
+                row["Categoria"] = pro.Categoria.Nombre;
+                row["Imagen"] = ByteArrayToImage(pro.Imagen);
+                row["Precio"] = pro.Precio;
+                table.Rows.Add(row);
+            }
+            gridProductos.DataSource = table;
+            gridProductos.DataBind();
         }
 
         protected void gridClientes_RowEditing(object sender, GridViewEditEventArgs e)
@@ -235,6 +264,78 @@ namespace WebFerreteria.Direc
             LLenarGridCategorias();
             txtNombre.Text = "";
             txtDescripcion.Text = "";
+        }
+
+        protected void gridProductos_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            gridProductos.EditIndex = e.NewEditIndex;
+            this.LLenarGridProductos();
+            lbl.Text = "1";
+        }
+
+        protected void gridProductos_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            GridViewRow row = gridProductos.Rows[e.RowIndex];
+            int Id = Convert.ToInt32(gridProductos.DataKeys[e.RowIndex].Values[0]);
+            string Nombre = (row.Cells[3].Controls[0] as TextBox).Text;
+            string Descripcion = (row.Cells[4].Controls[0] as TextBox).Text;
+            //Image imagen = (row.Cells[5].Controls[0] as FileUpload).PostedFile;
+            Categoria Categoria = new Categoria()
+            {
+                IdCategoria = Id,
+                Nombre = Nombre,
+                Descripcion = Descripcion
+            };
+        }
+
+        protected void gridProductos_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+
+        }
+
+        protected void gridProductos_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+
+        }
+
+        protected void gridProductos_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+
+        }
+
+        protected void btnAgregarProducto_Click(object sender, EventArgs e)
+        {
+            ProductoLogica logica = new ProductoLogica();
+            byte[] imagen = null;
+            using (BinaryReader reader = new BinaryReader(fluImagen.PostedFile.InputStream))
+            {
+                byte[] image = reader.ReadBytes(fluImagen.PostedFile.ContentLength);
+                imagen = image;
+            }
+            Producto producto = new Producto()
+            {
+                Nombre = txtNombreProducto.Text,
+                Descripcion = txtDescripcionProducto.Text,
+                Categoria = new Categoria() { IdCategoria = 5 },
+                Imagen = imagen,
+                Precio = Convert.ToDouble(NudPrecio.Text)
+            };
+            logica.Insertar(producto);
+            LLenarGridProductos();
+            lbl.Text = "1";
+        }
+
+        public static System.Drawing.Image ByteArrayToImage(byte[] byteArrayIn)
+        {
+            MemoryStream ms = new MemoryStream(byteArrayIn);
+            return System.Drawing.Image.FromStream(ms);
+        }
+
+        public static byte[] ImageToByteArray(System.Drawing.Image imageIn)
+        {
+            MemoryStream ms = new MemoryStream();
+            imageIn.Save(ms, ImageFormat.Jpeg);
+            return ms.ToArray();
         }
     }
 }
