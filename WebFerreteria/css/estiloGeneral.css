@@ -13,6 +13,9 @@ body{
 /*HEADER*/
 .navbar {
     background-color: seagreen !important;
+    top: 0px;
+    left: 0px;
+    height: 311px;
 }
 
 .navbar-collapse .navbar-nav .nav-item a{
@@ -59,6 +62,7 @@ body{
 .navbar-collapse .form-inline{
     display: block;
     text-align:center;
+    height: 55px;
 }
     
  #active{

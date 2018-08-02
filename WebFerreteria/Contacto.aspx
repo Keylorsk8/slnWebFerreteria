@@ -10,6 +10,12 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="css/estiloGeneral.css" rel="stylesheet" />
+
+
+    <link rel="stylesheet" type="text/css" href="css/contacto.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"/>
+
 </head>
 <body>
     <form runat="server">
@@ -52,6 +58,26 @@
         </div>
     </nav>
     <section id="Content">
+        <div aria-orientation="horizontal" id="cont">
+            <br />
+            <br />
+            <label for="first_name">Nombre</label> <input id="nombrec" type="text" name="Nombre_contacto" />
+            <br />
+            <label for="last_name">Apellido</label> <input id="apellidoc" type="text" size="36" name="last_name"/>
+            <br /> 
+            <label for="email">E-mail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label><input id="correoc" type="text" size="36" name="email"/> 
+            <br />
+            <label for="telephone">Teléfono</label> <input id="telefono" type="number" name="telephone"/>
+            <br />                
+            <label for="message">Mensaje</label><br />
+            <textarea id="mensajec" name="message" ></textarea><br />
+            <br />
+            <input type="reset" value="Borrar"/>&nbsp;
+            <asp:Button ID="EnviarCorreo" runat="server" OnClick="Button1_Click" Text="Enviar" />
+            <br />
+            <br />
+        </div>
+
     </section>
     <footer>
         <div class="container">
