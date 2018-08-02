@@ -43,11 +43,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="../Contacto.aspx">Contacto</a>
                     </li>
+                   <li class="nav-item">
+                     <asp:LinkButton ID="lblAdministrador4" CssClass="nav-link" runat="server"></asp:LinkButton>
+                </li>
+                </ul>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="cuenta"> 
                     <li class="nav-item">
-                        <asp:LinkButton ID="lblUsuario7" CssClass="nav-link" runat="server" Style="height: 24px" OnClick="lblUsuario7_Click">Cuenta</asp:LinkButton>
-                    </li>
-                    <li class="nav-item">
-                        <asp:Label ID="lblAdministrador2" CssClass="nav-link" runat="server"></asp:Label>
+                        <asp:LinkButton ID="lblUsuario4" CssClass="nav-link" runat="server" OnClick="lblUsuario7_Click">Cuenta  <i class="fa fa-user-circle"></i></asp:LinkButton>
                     </li>
                 </ul>
                 <div class="form-inline my-2 my-lg-0" runat="server">

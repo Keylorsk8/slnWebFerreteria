@@ -13,22 +13,22 @@ namespace WebFerreteria.Direc {
     public partial class Administrador {
         
         /// <summary>
-        /// Control lblUsuario7.
+        /// Control lblAdministrador4.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lblUsuario7;
+        protected global::System.Web.UI.WebControls.LinkButton lblAdministrador4;
         
         /// <summary>
-        /// Control lblAdministrador2.
+        /// Control lblUsuario4.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAdministrador2;
+        protected global::System.Web.UI.WebControls.LinkButton lblUsuario4;
         
         /// <summary>
         /// Control lbl.

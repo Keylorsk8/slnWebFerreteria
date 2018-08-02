@@ -107,6 +107,7 @@
     <Content Include="css\estilodefault.css" />
     <Content Include="css\estiloGeneral.css" />
     <Content Include="css\LogIn.css" />
+    <Content Include="css\main.css" />
     <Content Include="Default.aspx" />
     <Content Include="Direc\Administrador.aspx" />
     <Content Include="Direc\Registro.aspx" />

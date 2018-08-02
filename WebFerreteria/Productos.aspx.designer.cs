@@ -13,6 +13,15 @@ namespace WebFerreteria {
     public partial class _default {
         
         /// <summary>
+        /// Control lblAdministrador3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lblAdministrador3;
+        
+        /// <summary>
         /// Control lblUsuario3.
         /// </summary>
         /// <remarks>
@@ -20,14 +29,5 @@ namespace WebFerreteria {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lblUsuario3;
-        
-        /// <summary>
-        /// Control lblAdministrador3.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAdministrador3;
     }
 }

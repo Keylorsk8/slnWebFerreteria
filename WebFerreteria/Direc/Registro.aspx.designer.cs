@@ -13,6 +13,24 @@ namespace WebFerreteria.Direc {
     public partial class Registro {
         
         /// <summary>
+        /// Control lblAdministrador5.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lblAdministrador5;
+        
+        /// <summary>
+        /// Control active.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton active;
+        
+        /// <summary>
         /// Control txtNombre.
         /// </summary>
         /// <remarks>

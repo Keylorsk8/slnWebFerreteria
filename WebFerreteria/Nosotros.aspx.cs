@@ -19,10 +19,10 @@ namespace WebFerreteria
                 {
                     UsuarioLogica logica = new UsuarioLogica();
                     Usuario Usuario = logica.SeleccionarPorID(Session["usuario"].ToString());
-                    lblUsuario2.Text = Usuario.Nombre;
+                    lblUsuario2.Text = Usuario.Nombre + "  <i class=\"fa fa-user-circle\"></i>";
                     if (Usuario.Rol == Rol.Administrador)
                     {
-                        lblAdministrador2.Text = "<a href=\"Direc\\Administrador.aspx\" style=\"text-decoration:none;\">Administrador</a>";
+                        lblAdministrador2.Text = "<a href=\"Direc\\Administrador.aspx\" style=\"text-decoration:none;margin-top:8px;\">Administrador</a>";
                     }
                 }
             }

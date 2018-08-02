@@ -1,3 +1,15 @@
+/*
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Fredoka One', cursive;
+    font-family: 'Bungee Inline', cursive;
+    font-family: 'Syncopate', sans-serif;
+*/
+
+body{
+
+}
 /*HEADER*/
 .navbar {
     background-color: seagreen !important;
@@ -9,10 +21,40 @@
     text-align: center;
     font-weight: 500;
 }
+
+.navbar-collapse .navbar-nav .nav-item LinkButton{
+    display: block;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+}
+
+#lblAdministrador{
+    display: none;
+}
+
+#lblAdministrador2{
+    display: none;
+}
     .navbar-collapse > ul > li > a:hover{
         color : black !important;
-        text-align: center;
     }
+
+    .navbar-collapse > ul > li > Label:hover{
+        color: black !important;
+    }
+
+    .navbar-collapse > ul > li > LinkButton:hover{
+        color: black !important;
+    }
+
+#cuenta{
+    margin-right: 2px !important;
+}
+
+#cuenta > li > LinkButton{
+    color: black !important;
+}
 
 .navbar-collapse .form-inline{
     display: block;
@@ -20,9 +62,8 @@
 }
     
  #active{
-    font-weight: 900;
     font-size: 18px;
-    color: orange;
+    color: orange !important;
 }
 
 /*BODY*/

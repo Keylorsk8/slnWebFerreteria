@@ -6,6 +6,26 @@ namespace WebFerreteria.Direc
 {
     public partial class Registro : System.Web.UI.Page
     {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Session["usuario"] != null)
+                {
+                    UsuarioLogica logica = new UsuarioLogica();
+                    Usuario Usuario = logica.SeleccionarPorID(Session["usuario"].ToString());
+                    if (Usuario.Rol == Rol.Administrador)
+                    {
+                        lblAdministrador5.Text = "<a href=\"Direc\\Administrador.aspx\" style=\"text-decoration:none;margin-top:8px;\">Administrador</a>";
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
         protected void btnregistrarse_Click(object sender, EventArgs e)
         {
             Usuario Usuario = new Usuario()
@@ -24,6 +44,25 @@ namespace WebFerreteria.Direc
             {
                 logica.Insertar(Usuario);
                 Response.Redirect("../default.aspx");
+            }
+        }
+
+        protected void lblUsuario5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Session["usuario"] != null)
+                {
+
+                }
+                else
+                {
+                    Response.Redirect("Inicio Sesion.aspx");
+                }
+            }
+            catch (Exception)
+            {
+                Response.Redirect("Inicio Sesion.aspx");
             }
         }
     }

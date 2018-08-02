@@ -15,7 +15,7 @@
 </head>
 <body>
     <form runat="server">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-light sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-light sticky-top">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,12 +38,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="Contacto.aspx">Contacto</a>
                 </li>
+            </ul>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="cuenta"> 
                 <li class="nav-item">
-                    <a class="nav-link" id="active" href="Inicio Sesion.aspx">Cuenta</a>
+                     <asp:LinkButton CssClass="nav-link" id="active"  runat="server" OnClick="Unnamed_Click">Cuenta  <i class="fa fa-user-circle"></i></asp:LinkButton>
                 </li>
             </ul>
             <div class="form-inline my-2 my-lg-0" runat="server">
-                <input class="form-control mr-sm-2" type="search" placeholder="Producto..." aria-label="Search"/>
+                <input class="form-control mr-sm-2" type="search" placeholder="Producto..." aria-label="Search" />
                 <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
             </div>
         </div>
