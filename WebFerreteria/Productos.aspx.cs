@@ -19,10 +19,10 @@ namespace WebFerreteria
                 {
                     UsuarioLogica logica = new UsuarioLogica();
                     Usuario Usuario = logica.SeleccionarPorID(Session["usuario"].ToString());
-                    lblUsuario3.Text = Usuario.Nombre;
+                    lblUsuario3.Text = Usuario.Nombre + "  <i class=\"fa fa-user-circle\"></i>";
                     if (Usuario.Rol == Rol.Administrador)
                     {
-                        lblAdministrador3.Text = "<a href=\"Direc\\Administrador.aspx\" style=\"text-decoration:none;\">Administrador</a>";
+                        lblAdministrador3.Text = "<a href=\"Direc\\Administrador.aspx\" style=\"text-decoration:none;margin-top:8px;\">Administrador</a>";
                     }
                 }
             }
@@ -32,7 +32,7 @@ namespace WebFerreteria
             }
         }
 
-        protected void lblUsuario_Click(object sender, EventArgs e)
+        protected void lblUsuario3_Click(object sender, EventArgs e)
         {
             try
             {

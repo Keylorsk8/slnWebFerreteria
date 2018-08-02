@@ -36,5 +36,10 @@ namespace WebFerreteria
             }
             
         }
+
+        protected void Unnamed_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Inicio Sesion.aspx");
+        }
     }
 }
