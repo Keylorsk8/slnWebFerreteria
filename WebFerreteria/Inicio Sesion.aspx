@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Inicio Sesion.aspx.cs" Inherits="WebFerreteria.Inicio_Sesion1" %>
+﻿
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Inicio Sesion.aspx.cs" Inherits="WebFerreteria.Inicio_Sesion1" %>
 
 <!DOCTYPE html>
 
