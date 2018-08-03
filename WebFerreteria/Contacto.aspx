@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Contacto.aspx.cs" Inherits="WebFerreteria.Contacto1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Contacto.aspx.cs" Inherits="WebFerreteria.Contacto" %>
 
 <!DOCTYPE html>
 
@@ -61,19 +61,19 @@
         <div aria-orientation="horizontal" id="cont">
             <br />
             <br />
-            <label for="first_name">Nombre</label> <input id="nombrec" type="text" name="Nombre_contacto" />
+            <label for="first_name">Nombre</label> <input id="txtnombrec" type="text" runat="server"  />
             <br />
-            <label for="last_name">Apellido</label> <input id="apellidoc" type="text" size="36" name="last_name"/>
+            <label for="last_name">Apellido</label> <input id="txtapellidoc" type="text" size="36" runat="server" />
             <br /> 
-            <label for="email">E-mail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label><input id="correoc" type="text" size="36" name="email"/> 
+            <label for="email">E-mail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label><input id="txtcorreoc" type="text" size="36" runat="server"/> 
             <br />
-            <label for="telephone">Teléfono</label> <input id="telefono" type="number" name="telephone"/>
+            <label for="telephone">Teléfono</label> <input id="txttelefonoc" type="number" runat="server"/>
             <br />                
             <label for="message">Mensaje</label><br />
-            <textarea id="mensajec" name="message" ></textarea><br />
+            <textarea id="txtmensajec"  runat="server"></textarea><br />
             <br />
             <input type="reset" value="Borrar"/>&nbsp;
-            <asp:Button ID="EnviarCorreo" runat="server" OnClick="Button1_Click" Text="Enviar" />
+            <asp:Button ID="EnviarCorreo" runat="server" OnClick="EnviarCorreo_Click" Text="Enviar" />
             <br />
             <br />
         </div>
@@ -113,4 +113,3 @@
     <script src="scripts/jquery-3.0.0.slim.min.js"></script>
 </body>
 </html>
-

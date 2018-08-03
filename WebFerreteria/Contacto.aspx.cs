@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 
 namespace WebFerreteria
 {
-    public partial class Contacto1 : System.Web.UI.Page
+    public partial class Contacto : System.Web.UI.Page
     {
         char[] delimitador_cc = { ',' };
         char[] delimitador_adjunto = { '|' };
@@ -35,7 +35,7 @@ namespace WebFerreteria
 
             }
         }
-          
+
 
         protected void lblUsuario1_Click(object sender, EventArgs e)
         {
@@ -56,25 +56,7 @@ namespace WebFerreteria
             }
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-
-            try
-            {
-                enviar_correo("smtp-mail.outlook.com", 587, 
-                    "pmora0813@hotmail.com", 
-                    "Pabl0m0ra0813", "Pablo", 
-                    nombrec.value , apellidoc.value , 
-                    correoc.value , telefono.value, 
-                    mensajec.value);
-                //Cursor = Cursors.WaitCursor;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
+       
 
         public void enviar_correo(string host, int puerto, string remitente, string contraseña, string nombre, string nombrec, string apellidoc, string correoc, string telefonoc, string mensajec)
         {
@@ -84,7 +66,7 @@ namespace WebFerreteria
                 MailMessage correo = new MailMessage();
 
                 correo.From = new MailAddress(remitente, nombre);
-                correo.Body = nombrec+" "+apellidoc+" "+telefonoc+" "+ mensajec;
+                correo.Body = nombrec + " " + apellidoc + " " + telefonoc + " " + mensajec;
                 if (correoc == "") { }
                 else
                 {
@@ -93,7 +75,7 @@ namespace WebFerreteria
                         correo.To.Add(word.Trim());
                 }
 
-                
+
                 cliente.Credentials = new NetworkCredential(remitente, contraseña);
                 cliente.EnableSsl = true;
                 cliente.Send(correo);
@@ -105,7 +87,30 @@ namespace WebFerreteria
             {
                 //MessageBox.Show(ex.Message);
             }
-           // Cursor = Cursors.Arrow;
+            // Cursor = Cursors.Arrow;
         }
+
+        protected void EnviarCorreo_Click(object sender, EventArgs e)
+        {
+            
+            
+
+            try
+            {
+                enviar_correo("smtp-mail.outlook.com", 587,
+                    "pmora0813@hotmail.com",
+                    "Pabl0m0ra0813", "Pablo",
+                    txtnombrec.Value, txtapellidoc.Value,
+                    txtcorreoc.Value, txttelefonoc.Value,
+                    txtmensajec.Value);
+                //Cursor = Cursors.WaitCursor;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        
     }
     }
+}
