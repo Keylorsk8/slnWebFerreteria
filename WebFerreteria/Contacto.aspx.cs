@@ -67,14 +67,14 @@ namespace WebFerreteria
 
                 correo.From = new MailAddress(remitente, nombre);
                 correo.Body = nombrec + " " + apellidoc + " " + telefonoc + " " + mensajec;
-                if (correoc == "") { }
-                else
-                {
-                    string[] cadena = correoc.Split(delimitador_cc);
-                    foreach (string word in cadena)
-                        correo.To.Add(word.Trim());
-                }
-
+                //if (correoc == "") { }
+                //else
+                //{
+                //    string[] cadena = correoc.Split(delimitador_cc);
+                //    foreach (string word in cadena)
+                //        correo.To.Add(remitente);
+                //}
+                correo.To.Add(remitente);
 
                 cliente.Credentials = new NetworkCredential(remitente, contraseña);
                 cliente.EnableSsl = true;
@@ -83,8 +83,9 @@ namespace WebFerreteria
                 //MessageBox.Show("El correo se ha enviado correctamente");
                 //Close();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                throw;
                 //MessageBox.Show(ex.Message);
             }
             // Cursor = Cursors.Arrow;
