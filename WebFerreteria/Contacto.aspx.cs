@@ -66,7 +66,7 @@ namespace WebFerreteria
                 MailMessage correo = new MailMessage();
 
                 correo.From = new MailAddress(remitente, nombre);
-                correo.Body = nombrec + " " + apellidoc + " " + telefonoc + " " + mensajec;
+                correo.Body = nombrec + " " + apellidoc + " " + telefonoc + " "+ correoc + " " + mensajec;
                 //if (correoc == "") { }
                 //else
                 //{
