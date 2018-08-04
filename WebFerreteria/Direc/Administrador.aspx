@@ -8,7 +8,7 @@
     <title>Ferretería JyR</title>
     <meta name="viewport" content="=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
     <link href="../css/estiloGeneral.css" rel="stylesheet" />
     <link href="../css/administrador.css" rel="stylesheet" />
     <script type="text/javascript">
@@ -190,17 +190,17 @@
                     <div class="col-md-4 col-xs-12">
                         <h3>Menu</h3>
                         <ul class="menu">
-                            <li><a href="#">Inicio</a></li>
-                            <li><a href="#">Nosotros</a></li>
-                            <li><a href="#">Productos</a></li>
+                            <li><i class="fa fa-home" aria-hidden="true"></i><a href="../Default.aspx">Inicio</a></li>
+                            <li><i class="fa fa-users" aria-hidden="true"></i><a href="../Nosotros.aspx">Nosotros</a></li>
+                            <li><i class="fa fa-box-open" aria-hidden="true"></i><a href="../Productos.aspx">Productos</a></li>
                         </ul>
                     </div>
                     <div class="col-md-4 col-xs-12">
                         <h3>Contacto</h3>
                         <ul class="address">
-                            <li><i class="fa fa-phone" aria-hidden="true"></i><a href="#">Teléfonos</a></li>
-                            <li><i class="fa fa-map-marker" aria-hidden="true"></i><a href="#">Dirección</a></li>
-                            <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#">Correo Electrónico</a></li>
+                            <li><i class="fa fa-phone" aria-hidden="true"></i><a href="../Contacto.aspx">Teléfonos</a></li>
+                            <li><i class="fa fa-map-marker" aria-hidden="true"></i><a href="../Contacto.aspx">Dirección</a></li>
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="../Contacto.aspx">Correo Electrónico</a></li>
                         </ul>
                     </div>
                 </div>
@@ -210,9 +210,9 @@
             </div>
         </footer>
     </form>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="../scripts/bootstrap.min.js"></script>
-    <script src="../scripts/jquery-3.0.0.slim.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="../Scripts/popper.min.js"></script>
     <script src="../js/administrador.js"></script>
 </body>
 </html>

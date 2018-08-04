@@ -1,17 +1,15 @@
-@import url("font-awesome.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
-
-/*
-    font-family: 'Indie Flower', cursive;
-    font-family: 'Josefin Sans', sans-serif;
-    font-family: 'Quicksand', sans-serif;
-*/
 .box {
-    background: #fff;
+    background-color:white;
     border-radius: 6px;
     box-shadow: 0 2px 0 0 #e5e5e5;
     margin: 0 0 2em 0;
     padding: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    -webkit-box-shadow: -3px 12px 60px 3px rgba(174,196,175,1);
+    -moz-box-shadow: -3px 12px 60px 3px rgba(174,196,175,1);
+    box-shadow: -3px 12px 60px 3px rgba(174,196,175,1);
 }
 
     .box > :last-child {
@@ -22,7 +20,6 @@
         background: none !important;
         border-radius: 0 !important;
         box-shadow: none !important;
-        margin: 0 0 2em 0;
         padding: 0 !important;
     }
 
@@ -37,34 +34,53 @@
             display: block;
         }
 
-        .box.features .features-row section {
-            float: left;
-            padding: 3em;
-            width: 50%;
+        .box.featured .features-row.title{
+            background-color:seagreen;
+            border-radius:15px;
         }
 
-            .box.features .features-row section :last-child {
+        .box.featured.features-row .htitle{
+            color:white;
+            font-weight:600;
+            width:auto;
+            font-family:'Comic Sans MS';
+            padding:10px;
+            margin-left:auto;
+            margin-right:auto;
+            margin-top:10px;
+        }
+
+        .box.features .features-row div {
+            float: left;
+            padding: 3em;
+        }
+
+            .box.features .features-row div {
                 margin-bottom: 0;
             }
 
-            .box.features .features-row section:nth-child(2n) {
-                padding-right: 0;
+            .box.features .features-row div{
+                padding-right: 3em;
             }
 
-                .box.features .features-row section:nth-child(2n):before {
-                    background: #e5e5e5;
-                    content: '';
-                    display: block;
-                    height: 100%;
-                    margin-left: -3em;
-                    position: absolute;
-                    top: 0;
-                    width: 2px;
-                }
-
-            .box.features .features-row section:nth-child(2n-1) {
-                padding-left: 0;
+            .box.features .features-row div > h3{
+                color: black;
             }
+
+        .box.features .features-row section{
+            background: #e5e5e5;
+            content: '';
+            display: block;
+            height: 100%;
+            margin-left: -3em;
+            position: absolute;
+            top: 0;
+            width: 2px;
+        }
+
+        .box.features .features-row section {
+            padding-left: 0;
+        }
 
         .box.features .features-row:first-child {
             border-top: 0;
@@ -154,28 +170,55 @@
             font-size: 2.5em;
         }
 
-        .icon.major.accent1 {
-            background: #666;
-            color: #ffffff;
-        }
-
         .icon.major.accent2 {
-            background: #e89980;
+            background-color: lightcoral;
             color: #ffffff;
         }
+        .icon.major.accent2:hover{
+            background-color: red;
+        }
+            .icon.major.accent2 > i {
+                font-size: 30px;
+                margin-top: 30px;
+                justify-content: center;
+            }
 
         .icon.major.accent3 {
-            background: #7fcdb8;
+            background-color: coral;
             color: #ffffff;
         }
+        .icon.major.accent3:hover{
+            background-color: orange;
+        }
+            .icon.major.accent3 > i {
+                font-size: 30px;
+                margin-top: 30px;
+                justify-content: center;
+            }
 
         .icon.major.accent4 {
-            background: #90b0ba;
+            background: lightblue;
             color: #ffffff;
         }
+        .icon.major.accent4:hover{
+            background-color: dodgerblue;
+        }
+
+            .icon.major.accent4 > i {
+                font-size: 30px;
+                margin-top: 30px;
+                justify-content: center;
+            }
 
         .icon.major.accent5 {
-            background: #e5cb95;
-            color: #ffffff;
+            background-color: darkseagreen;
+            color: white;
         }
-
+        .icon.major.accent5:hover{
+            background-color: green;
+        }
+            .icon.major.accent5 > i {
+                font-size: 30px;
+                margin-top: 30px;
+                justify-content: center;
+            }

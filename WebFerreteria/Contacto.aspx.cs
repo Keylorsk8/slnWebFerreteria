@@ -83,7 +83,7 @@ namespace WebFerreteria
                 //MessageBox.Show("El correo se ha enviado correctamente");
                 //Close();
             }
-            catch (Exception )
+            catch (Exception ex)
             {
                 throw;
                 //MessageBox.Show(ex.Message);
@@ -93,9 +93,6 @@ namespace WebFerreteria
 
         protected void EnviarCorreo_Click(object sender, EventArgs e)
         {
-            
-            
-
             try
             {
                 enviar_correo("smtp-mail.outlook.com", 587,
@@ -112,6 +109,6 @@ namespace WebFerreteria
                 throw;
             }
         
-    }
+        }
     }
 }
