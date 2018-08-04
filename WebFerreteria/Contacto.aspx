@@ -61,7 +61,7 @@
                 <label for="last_name">Apellido</label>
                 <input id="txtapellidoc" type="text" size="36" runat="server" />
                 <br />
-                <label for="email">E-mail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+                <label for="email">E-mail&nbsp;&nbsp;&nbsp; </label>
                 <input id="txtcorreoc" type="text" size="36" runat="server" />
                 <br />
                 <label for="telephone">Teléfono</label>
