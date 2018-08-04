@@ -9,9 +9,9 @@
     <title>Ferretería JyR</title>
     <meta name="viewport" content="=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
     <link href="css/estiloGeneral.css" rel="stylesheet" />
-    <link href="css/LogIn.css?update=12102006" rel="stylesheet" />
+    <link href="css/LogIn.css" rel="stylesheet" />
 </head>
 <body>
     <form runat="server">
@@ -29,25 +29,12 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="default.aspx">Inicio<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Productos.aspx">Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Nosotros.aspx">Nosotros</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Contacto.aspx">Contacto</a>
-                </li>
             </ul>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="cuenta"> 
                 <li class="nav-item">
                      <asp:LinkButton CssClass="nav-link" id="active"  runat="server" OnClick="Unnamed_Click">Cuenta  <i class="fa fa-user-circle"></i></asp:LinkButton>
                 </li>
             </ul>
-            <div class="form-inline my-2 my-lg-0" runat="server">
-                <input class="form-control mr-sm-2" type="search" placeholder="Producto..." aria-label="Search" />
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
-            </div>
         </div>
     </nav>
     <section id="Content">
@@ -64,37 +51,37 @@
         </div>
     </section>
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-xs-12">
-                    <img src="Images/logo.png" style="width:200px;height:200px;float:left;"/>
-                </div>
-                <div class="col-md-4 col-xs-12">
-                    <h3>Menu</h3>
-                    <ul class="menu">
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Nosotros</a></li>
-                        <li><a href="#">Productos</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 col-xs-12">
-                    <h3>Contacto</h3>
-                    <ul class="address">
-                        <li><i class="fa fa-phone" aria-hidden="true"></i><a href="#">Teléfonos</a></li>
-                        <li><i class="fa fa-map-marker" aria-hidden="true"></i><a href="#">Dirección</a></li>
-                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#">Correo Electrónico</a></li>
-                    </ul>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-xs-12">
+                        <img src="Images/logo.png" style="width: 200px; height: 200px; float: left;" />
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <h3>Menu</h3>
+                        <ul class="menu">
+                            <li><i class="fa fa-home" aria-hidden="true"></i><a href="Default.aspx">Inicio</a></li>
+                            <li><i class="fa fa-users" aria-hidden="true"></i><a href="Nosotros.aspx">Nosotros</a></li>
+                            <li><i class="fa fa-box-open" aria-hidden="true"></i><a href="Productos.aspx">Productos</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <h3>Contacto</h3>
+                        <ul class="address">
+                            <li><i class="fa fa-phone" aria-hidden="true"></i><a href="Contacto.aspx">Teléfonos</a></li>
+                            <li><i class="fa fa-map-marker" aria-hidden="true"></i><a href="Contacto.aspx">Dirección</a></li>
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="Contacto.aspx">Correo Electrónico</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
         <div id="Copyright">
             <h4>@2018 , All rights reserved</h4>
         </div>
     </footer>
     </form>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="scripts/bootstrap.min.js"></script>
-    <script src="scripts/jquery-3.0.0.slim.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="Scripts/popper.min.js"></script>
 </body>
 </html>
 

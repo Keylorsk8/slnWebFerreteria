@@ -14,10 +14,6 @@ namespace WebFerreteria.Direc
                 {
                     UsuarioLogica logica = new UsuarioLogica();
                     Usuario Usuario = logica.SeleccionarPorID(Session["usuario"].ToString());
-                    if (Usuario.Rol == Rol.Administrador)
-                    {
-                        lblAdministrador5.Text = "<a href=\"Direc\\Administrador.aspx\" style=\"text-decoration:none;margin-top:8px;\">Administrador</a>";
-                    }
                 }
             }
             catch (Exception)

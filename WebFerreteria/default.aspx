@@ -8,11 +8,9 @@
     <title>Ferretería JyR</title>
     <meta name="viewport" content="=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
     <link href="css/estiloGeneral.css" rel="stylesheet" />
     <link href="css/estilodefault.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Fredoka+One|Indie+Flower|Josefin+Sans|Quicksand|Syncopate" rel="stylesheet"/>
-    <link href="css/main.css" rel="stylesheet" />
 </head>
 <body>
     <form runat="server">
@@ -61,29 +59,32 @@
             </div>
             <br />
             <section class="box special features">
-                <div class="features-row">
-                    <section>
-                        <span class="icon major fa-bolt accent2"></span>
-                        <h3>Magna etiam</h3>
-                        <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-                    </section>
-                    <section>
-                        <span class="icon major fa-area-chart accent3"></span>
-                        <h3>Ipsum dolor</h3>
-                        <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-                    </section>
+                <div class="row" id="titleMain">
+                    <h1 id="htitle">Nuestros Servicios</h1>
                 </div>
-                <div class="features-row">
-                    <section>
-                        <span class="icon major fa-cloud accent4"></span>
-                        <h3>Sed feugiat</h3>
-                        <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-                    </section>
-                    <section>
-                        <span class="icon major fa-lock accent5"></span>
-                        <h3>Enim phasellus</h3>
-                        <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-                    </section>
+                <div class="row features-row">
+                    <div class="col-sm-12 col-lg-6">
+                        <span class="icon major accent2"><i class="fa fa-truck"></i></span>
+                        <h3>Servicio de Transporte</h3>
+                        <p>Contamos con un rápido y seguro servicio de Transporte hasta la puerta de su hogar o proyecto</p>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <span class="icon major accent3"><i class="fa fa-calendar"></i></span>
+                        <h3>Excelentes Horarios de Atención</h3>
+                        <p>Lunes a Viernes de 7 am a 5 pm y Sábados de 6:30 am a 12 pm</p>
+                    </div>
+                </div>
+                <div class="row features-row">
+                    <div class="col-sm-12 col-lg-6">
+                        <span class="icon major accent4"><i class="fa fa-phone"></i></span>
+                        <h3>Inmediata Asesoría Telefónica</h3>
+                        <p>¿Tiene alguna consulta? No dude en llamarnos, su llamada séra asesorada en segundos<a href="Contacto.aspx">Contáctenos</a></p>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <span class="icon major accent5"><i class="fa fa-dollar-sign"></i></span>
+                        <h3>Precios Competitivos</h3>
+                        <p>Tenemos los precios mas bajos, ¿No nos cree? Vealo usted mismo  <a href="Productos.aspx">Ver Productos</a></p>
+                    </div>
                 </div>
             </section>
         </section>
@@ -96,17 +97,17 @@
                     <div class="col-md-4 col-xs-12">
                         <h3>Menu</h3>
                         <ul class="menu">
-                            <li><a href="#">Inicio</a></li>
-                            <li><a href="#">Nosotros</a></li>
-                            <li><a href="#">Productos</a></li>
+                            <li><i class="fa fa-home" aria-hidden="true"></i><a href="Default.aspx">Inicio</a></li>
+                            <li><i class="fa fa-users" aria-hidden="true"></i><a href="Nosotros.aspx">Nosotros</a></li>
+                            <li><i class="fa fa-box-open" aria-hidden="true"></i><a href="Productos.aspx">Productos</a></li>
                         </ul>
                     </div>
                     <div class="col-md-4 col-xs-12">
                         <h3>Contacto</h3>
                         <ul class="address">
-                            <li><i class="fa fa-phone" aria-hidden="true"></i><a href="#">Teléfonos</a></li>
-                            <li><i class="fa fa-map-marker" aria-hidden="true"></i><a href="#">Dirección</a></li>
-                            <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#">Correo Electrónico</a></li>
+                            <li><i class="fa fa-phone" aria-hidden="true"></i><a href="Contacto.aspx">Teléfonos</a></li>
+                            <li><i class="fa fa-map-marker" aria-hidden="true"></i><a href="Contacto.aspx">Dirección</a></li>
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="Contacto.aspx">Correo Electrónico</a></li>
                         </ul>
                     </div>
                 </div>
@@ -116,9 +117,9 @@
             </div>
         </footer>
     </form>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="scripts/bootstrap.min.js"></script>
-    <script src="scripts/jquery-3.0.0.slim.min.js"></script>
     <script src="js/parallax.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="Scripts/popper.min.js"></script>
 </body>
 </html>
