@@ -8,8 +8,19 @@
     <title>Ferretería JyR</title>
     <meta name="viewport" content="=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
     <link href="css/estiloGeneral.css" rel="stylesheet" />
+    <style>
+        .list-group-item.active {
+            background-color: seagreen;
+            border-color: transparent;
+            padding: 2%;
+        }
+
+        .list-group {
+            margin: 3%;
+        }
+    </style>
 </head>
 <body>
     <form runat="server">
@@ -51,60 +62,79 @@
                 </div>
             </div>
         </nav>
-        <section id="Content">
-            <div aria-orientation="horizontal" id="cont">
-                <br />
-                <br />
-                <label for="first_name">Nombre</label>
-                <input id="txtnombrec" type="text" runat="server" />
-                <br />
-                <label for="last_name">Apellido</label>
-                <input id="txtapellidoc" type="text" size="36" runat="server" />
-                <br />
-                <label for="email">E-mail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
-                <input id="txtcorreoc" type="text" size="36" runat="server" />
-                <br />
-                <label for="telephone">Teléfono</label>
-                <input id="txttelefonoc" type="number" runat="server" />
-                <br />
-                <label for="message">Mensaje</label><br />
-                <textarea id="txtmensajec" runat="server"></textarea><br />
-                <br />
-                <input type="reset" value="Borrar" />&nbsp;
-            <asp:Button ID="EnviarCorreo" runat="server" OnClick="EnviarCorreo_Click" Text="Enviar" />
-                <br />
-                <br />
+        <div class="container">
+            <h1 style="margin: 3%">Opciones de Contacto</h1>
+        </div>
+        <div class="container">
+            <div class="list-group">
+                <div class="list-group-item list-group-item-action flex-column align-items-start active">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Números Telefónicos</h5>
+                    </div>
+                </div>
+                <div class="list-group-item flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <ul>
+                            <li><a>2430-11-31</a></li>
+                            <li><a>2430-48-78</a></li>
+                            <li><a>7298-70-33</a></li>
+                        </ul>
+                    </div>
+                    <p class="mb-1">Horario : Lunes a Viernes de 7 am a 5 pm y Sábados de 6:30 am a 12 pm</p>
+                </div>
+
             </div>
-             <section class="box special features">
-                <div class="row" id="titleMain">
-                    <h1 id="htitle">Nuestros Servicios</h1>
-                </div>
-                <div class="row features-row">
-                    <div class="col-sm-12 col-lg-6">
-                        <span class="icon major accent2"><i class="fa fa-truck"></i></span>
-                        <h3>Servicio de Transporte</h3>
-                        <p>Contamos con un rápido y seguro servicio de Transporte hasta la puerta de su hogar o proyecto</p>
-                    </div>
-                    <div class="col-sm-12 col-lg-6">
-                        <span class="icon major accent3"><i class="fa fa-calendar"></i></span>
-                        <h3>Excelentes Horarios de Atención</h3>
-                        <p>Lunes a Viernes de 7 am a 5 pm y Sábados de 6:30 am a 12 pm</p>
+            <div class="list-group">
+                <div class="list-group-item flex-column align-items-start active">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Dirección</h5>
                     </div>
                 </div>
-                <div class="row features-row">
-                    <div class="col-sm-12 col-lg-6">
-                        <span class="icon major accent4"><i class="fa fa-phone"></i></span>
-                        <h3>Inmediata Asesoría Telefónica</h3>
-                        <p>¿Tiene alguna consulta? No dude en llamarnos, su llamada séra asesorada en segundos<a href="Contacto.aspx">Contáctenos</a></p>
-                    </div>
-                    <div class="col-sm-12 col-lg-6">
-                        <span class="icon major accent5"><i class="fa fa-dollar-sign"></i></span>
-                        <h3>Precios Competitivos</h3>
-                        <p>Tenemos los precios mas bajos, ¿No nos cree? Vealo usted mismo  <a href="Productos.aspx">Ver Productos</a></p>
+                <div class="list-group-item flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <div class="row" style="width:100%">
+                            <div class="col-lg-6">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.56089566127!2d-84.19726498574846!3d10.039926175101555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0f7501522726b%3A0xabfd0292074a09df!2sFerreter%C3%ADa+y+Materiales+J+y+R!5e1!3m2!1ses!2scr!4v1533800638347" width="100%" height="430px" frameborder="2" style="border:0" allowfullscreen></iframe>                       
+                            </div>
+                            <div class="col-lg-6">
+                                 <h3>Guadalupe de Alajuela, 25 metros antes de entrada a Calle La Flory.</h3>
+                                <img src="Images/Ferreteria.jpg" style="width:100%; border: 2px solid black"/>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
-        </section>
+
+            </div>
+            <div class="list-group">
+                <div class="list-group-item list-group-item-action flex-column align-items-start active">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Correo Electrónico</h5>
+                    </div>
+                </div>
+                <div class="list-group-item flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Nuestro Correo Electrónico es :  <a href="#">Ferreymatjyr@hotmail.com</a></h5>
+                    </div>
+                        <h3 style="margin-top:2%;color:seagreen;">O contactanos desde aquí</h3>
+            <div id="cont">
+                <label for="txtnombrec">Nombre</label>
+                <input id="txtnombrec" class="form-control" type="text" runat="server" required/>
+                <label for="txtapellidoc">Apellido</label>
+                <input id="txtapellidoc" class="form-control" type="text" size="36" runat="server" required/>
+                <label for="txtcorreoc">E-mail</label>
+                <input id="txtcorreoc" class="form-control" type="text" size="36" runat="server" required/>
+                <label for="txttelefonoc">Teléfono</label>
+                <input id="txttelefonoc" class="form-control" type="number" runat="server" required/>
+                <label for="txtmensajec">Mensaje</label><br />
+                <textarea id="txtmensajec" class="form-control" runat="server" requireda></textarea><br />
+                <input id="Reset" runat="server" type="reset" value="Borrar" class="btn btn-danger"/>
+                <asp:Button ID="EnviarCorreo" type="button" CssClass="btn btn-success" runat="server" OnClick="EnviarCorreo_Click" Text="Enviar" />
+            </div>
+                </div>
+
+            </div>
+        </div>
+        
         <footer>
             <div class="container">
                 <div class="row">
@@ -134,7 +164,7 @@
             </div>
         </footer>
     </form>
-   <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/jquery-3.3.1.slim.min.js"></script>
     <script src="Scripts/popper.min.js"></script>
 </body>

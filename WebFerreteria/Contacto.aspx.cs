@@ -56,8 +56,6 @@ namespace WebFerreteria
             }
         }
 
-       
-
         public void enviar_correo(string host, int puerto, string remitente, string contraseña, string nombre, string nombrec, string apellidoc, string correoc, string telefonoc, string mensajec)
         {
             try
@@ -67,28 +65,21 @@ namespace WebFerreteria
 
                 correo.From = new MailAddress(remitente, nombre);
                 correo.Body = nombrec + " " + apellidoc + " " + telefonoc + " " + mensajec;
-                //if (correoc == "") { }
-                //else
-                //{
-                //    string[] cadena = correoc.Split(delimitador_cc);
-                //    foreach (string word in cadena)
-                //        correo.To.Add(remitente);
-                //}
                 correo.To.Add(remitente);
 
                 cliente.Credentials = new NetworkCredential(remitente, contraseña);
                 cliente.EnableSsl = true;
                 cliente.Send(correo);
-
-                //MessageBox.Show("El correo se ha enviado correctamente");
-                //Close();
+                txtnombrec.Value = "";
+                txtapellidoc.Value = "";
+                txtcorreoc.Value = "";
+                txttelefonoc.Value = "";
+                txtmensajec.Value = "";
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw;
-                //MessageBox.Show(ex.Message);
             }
-            // Cursor = Cursors.Arrow;
         }
 
         protected void EnviarCorreo_Click(object sender, EventArgs e)
@@ -101,14 +92,11 @@ namespace WebFerreteria
                     txtnombrec.Value, txtapellidoc.Value,
                     txtcorreoc.Value, txttelefonoc.Value,
                     txtmensajec.Value);
-                //Cursor = Cursors.WaitCursor;
             }
             catch (Exception)
             {
-
                 throw;
             }
-        
         }
     }
 }

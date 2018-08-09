@@ -1,5 +1,4 @@
-﻿using System.Configuration;
-
+﻿
 namespace Datos
 {
     public class Conexion
