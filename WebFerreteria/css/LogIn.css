@@ -42,6 +42,13 @@
    justify-content: space-between;
 }
 
+form{
+    background-color: seagreen;
+}
+
+body{
+    background-color: seagreen;
+}
     .contenedor-inputs .input-50{
         width: 50%
     }

@@ -7,18 +7,23 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Ferretería JyR</title>
     <meta name="viewport" content="=device-width, initial-scale=1, shrink-to-fit=no" />
+    <script src="Scripts/jquery-3.3.1.slim.min.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
     <link href="css/estiloGeneral.css" rel="stylesheet" />
     <style>
         .list-group-item.active {
-            background-color: seagreen;
+            background-color: coral;
             border-color: transparent;
             padding: 2%;
         }
 
         .list-group {
             margin: 3%;
+        }
+
+        body{
+            background-color: seagreen;
         }
     </style>
 </head>
@@ -33,7 +38,6 @@
                 Ferretería JyR
             </a>
             <div class="collapse navbar-collapse" id="navbarToggler">
-
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
                         <a class="nav-link" href="default.aspx">Inicio<span class="sr-only">(current)</span></a>
@@ -62,10 +66,8 @@
                 </div>
             </div>
         </nav>
-        <div class="container">
-            <h1 style="margin: 3%">Opciones de Contacto</h1>
-        </div>
-        <div class="container">
+        <div id="Content">
+        <div class="container-fluid">
             <div class="list-group">
                 <div class="list-group-item list-group-item-action flex-column align-items-start active">
                     <div class="d-flex w-100 justify-content-between">
@@ -94,11 +96,11 @@
                     <div class="d-flex w-100 justify-content-between">
                         <div class="row" style="width:100%">
                             <div class="col-lg-6">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.56089566127!2d-84.19726498574846!3d10.039926175101555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0f7501522726b%3A0xabfd0292074a09df!2sFerreter%C3%ADa+y+Materiales+J+y+R!5e1!3m2!1ses!2scr!4v1533800638347" width="100%" height="430px" frameborder="2" style="border:0" allowfullscreen></iframe>                       
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.56089566127!2d-84.19726498574846!3d10.039926175101555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0f7501522726b%3A0xabfd0292074a09df!2sFerreter%C3%ADa+y+Materiales+J+y+R!5e1!3m2!1ses!2scr!4v1533800638347" width="100%" height="100%" frameborder="2" style="border:0" allowfullscreen></iframe>                       
                             </div>
                             <div class="col-lg-6">
                                  <h3>Guadalupe de Alajuela, 25 metros antes de entrada a Calle La Flory.</h3>
-                                <img src="Images/Ferreteria.jpg" style="width:100%; border: 2px solid black"/>
+                                <img src="Images/Ferreteria.jpg" style="width:100%; border: 2px solid black; height:auto" />
                             </div>
                         </div>
                     </div>
@@ -115,18 +117,30 @@
                     <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">Nuestro Correo Electrónico es :  <a href="#">Ferreymatjyr@hotmail.com</a></h5>
                     </div>
-                        <h3 style="margin-top:2%;color:seagreen;">O contactanos desde aquí</h3>
+                        <h3 style="margin-top:2%;color:seagreen;">Contáctanos desde aquí</h3>
             <div id="cont">
-                <label for="txtnombrec">Nombre</label>
-                <input id="txtnombrec" class="form-control" type="text" runat="server" required/>
-                <label for="txtapellidoc">Apellido</label>
-                <input id="txtapellidoc" class="form-control" type="text" size="36" runat="server" required/>
-                <label for="txtcorreoc">E-mail</label>
-                <input id="txtcorreoc" class="form-control" type="text" size="36" runat="server" required/>
-                <label for="txttelefonoc">Teléfono</label>
-                <input id="txttelefonoc" class="form-control" type="number" runat="server" required/>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for="txtnombrec">Nombre</label>
+                        <input id="txtnombrec" class="form-control" type="text" runat="server" required/>
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="txtapellidoc">Apellido</label>
+                        <input id="txtapellidoc" class="form-control" type="text" size="36" runat="server" required/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for="txtcorreoc">E-mail</label>
+                        <input id="txtcorreoc" class="form-control" type="text" size="36" runat="server" required/>
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="txttelefonoc">Teléfono</label>
+                        <input id="txttelefonoc" class="form-control" type="number" runat="server" required/>
+                    </div>
+                </div>
                 <label for="txtmensajec">Mensaje</label><br />
-                <textarea id="txtmensajec" class="form-control" runat="server" requireda></textarea><br />
+                <textarea id="txtmensajec" class="form-control" runat="server" required></textarea><br />
                 <input id="Reset" runat="server" type="reset" value="Borrar" class="btn btn-danger"/>
                 <asp:Button ID="EnviarCorreo" type="button" CssClass="btn btn-success" runat="server" OnClick="EnviarCorreo_Click" Text="Enviar" />
             </div>
@@ -134,7 +148,7 @@
 
             </div>
         </div>
-        
+        </div>
         <footer>
             <div class="container">
                 <div class="row">
@@ -165,7 +179,6 @@
         </footer>
     </form>
     <script src="Scripts/bootstrap.min.js"></script>
-    <script src="Scripts/jquery-3.3.1.slim.min.js"></script>
     <script src="Scripts/popper.min.js"></script>
 </body>
 </html>

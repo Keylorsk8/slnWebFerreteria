@@ -7,6 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Ferretería JyR</title>
     <meta name="viewport" content="width=device-width" />
+    <script src="Scripts/jquery-3.3.1.slim.min.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
     <link href="css/estiloGeneral.css" rel="stylesheet" />
@@ -51,50 +52,48 @@
                 </div>
             </div>
         </nav>
-        <section id="Content">
-            <p>
-                La loba Capitolina amamantando a Rómulo y Remo.
-                La monarquía romana (en latín, Regnum Romanum) fue la primera forma política de gobierno de la ciudad Estado de Roma. Abarcó desde el momento legendario de su fundación, el 21 de abril del 753 a. C., hasta su final en el 509 a. C. con la expulsión del último rey, Tarquinio el Soberbio. Su caída marcó el comienzo de la República romana.
-
-                Los orígenes de la monarquía son imprecisos, si bien parece claro que fue la primera forma de gobierno de la ciudad, un dato que parecen confirmar la arqueología y la lingüística. La mitología romana vincula el origen de Roma y de la institución monárquica al héroe troyano Eneas, quien huyendo de la destrucción de su ciudad, navegó hacia el Mediterráneo occidental hasta llegar a Italia. Allí fundó la ciudad de Lavinio. Posteriormente, su hijo Ascanio fundó Alba Longa, de cuya familia real descendieron los gemelos Rómulo y Remo, los fundadores de Roma.
-
-                Leer más...
-                Anteriores: Luis I de Hungría, Máximo térmico del Paleoceno-Eoceno, Vulcanismo en Ío.
-                Artículo bueno Artículo bueno
-                5jo1.gif
-                La Carta de juramento (五箇条の御誓文 Gokajō no Goseimon?, literalmente, el Juramento en cinco artículos) fue promulgada en la entronización de Meiji Tennō como emperador de Japón el 7 de abril de 1868. El juramento delineaba las principales metas y el curso de acción del reinado de Meiji Tennō, preparando el marco legal para la modernización del Japón, buscando dejar atrás el período del bakumatsu y el Shogunato Tokugawa, pero tratando de incluir a su vez a aquellos territorios que apoyaban al régimen anterior. Continuó influyendo durante la era Meiji y principios del siglo xx, y se la puede considerar como la primera constitución del Japón moderno.
-                Leer más...
-                Anteriores: Pigmento, Dioscoreales, Anexo:Aeronaves y armamento del Ejército del Aire de España.
-                Recurso del día Recurso del día
-                Puente de madera
-                Puente de madera que une el barrio de Punta del Caimán con la Playa de la Gaviota, en Isla Cristina, Huelva.
-                Archivo
-                Portales
-                Artes
-                Artes: Arquitectura – Cine – Danza – Literatura – Música – Música clásica – Pintura – Teatro
-
-                Ciencias sociales
-                Ciencias sociales: Comunicación – Derecho – Economía – Filosofía – Lingüística – Psicología – Sociología
-
-                Ciencias naturales
-                Ciencias naturales: Astronomía – Biología – Botánica – Física – Medicina – Matemática – Química
-
-                Geografía
-                Geografía: África – América – Antártida – Asia – Europa – Oceanía – Países
-
-                Historia
-                Historia: Prehistoria – Edad Antigua – Edad Media – Edad Moderna – Edad Contemporánea
-
-                Política
-                Política: Feminismo – LGBT – Marxismo – Nacionalismo – Socialismo – Terrorismo
-
-                Religión
-                Religión: Ateísmo – Budismo – Cristianismo – Iglesia católica – Islam – Judaísmo – Mitología
-
-                Tecnologías
-                Tecnologías: Biotecnología – Exploración espacial – Informática – Ingeniería – Software libre
-            </p>
-        </section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 form-group" style="height: auto;margin:1%;background-color:coral;">
+                <button class="navbar-toggler btn btn-outline-light my-2 my-sm-0" type="button" data-toggle="collapse" data-target="#Filter" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation" style="border:1px solid white">
+                    <i class="fa fa-arrow-down"></i>
+                </button>
+                    <h2 class="navbar-brand" style="color:white">Filtros</h2>    
+                    <div id="Filter" class="collapse navbar-collapse container-fluid" style="background-color:white;height:99%;border-radius:5px">
+                    <label for="txtBusqueda" class="col-form-label;" style="display:block">Nombre</label>
+                    <input runat="server" id="txtBusqueda" class="form-control" placeholder="Producto..."  style="display:block"/>
+                    <label for="ddlCategoria" class="col-form-label" style="display:block">Categoria</label>
+                    <asp:DropDownList runat="server" ID="ddlCategoria" CssClass="form-control" style="display:block"></asp:DropDownList>
+                    <label for="min" style="display:block">Mínimo</label>
+                    <input type="number" runat="server" id="max" max="999999" value="999999" step="100" class="form-control"  style="display:block"/>
+                    <div class="form-group" style="margin-top: 5px;padding-bottom:10px;">
+                        <asp:Button runat="server" OnClick="Borrar_Click" ID="Borrar" CssClass="btn btn-outline-danger" Text="Borrar"  style="display:inline-block;"/>
+                        <asp:Button runat="server" ID="Filtrar" CssClass="btn btn-outline-success" Text="Filtrar"  style="display:inline-block;"/>
+                    </div>
+                </div>
+                    </div>
+             </div>
+             <div class="row navbar-expand-lg">
+                <div class="col-lg-12" style="min-height: 400px; margin: 1%;margin-right: 0px; height: auto;background-color:white;">
+                    <div class="card mb-1 col-lg-3" style="display: inline-block; margin: 1%; border-radius: 5px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Saco de Cemento Cemex</h5>
+                            <img style="height: 200px; width: 100%; display: block;" alt="Card image" src="Images/Inicio.jpg" />
+                            <h3>$6500,00</h3>
+                            <asp:Button Text="Añadir" runat="server" CssClass="btn btn-outline-success  form-control"/> 
+                        </div>
+                    </div>
+                    <div class="card mb-1 col-lg-3" style="display: inline-block; margin: 1%; border-radius: 5px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Saco de Cemento Cemex</h5>
+                            <img style="height: 200px; width: 100%; display: block;" alt="Card image" src="Images/Inicio.jpg" />
+                            <h3>$6500,00</h3>
+                            <asp:Button Text="Añadir" runat="server" CssClass="btn btn-outline-success  form-control"/> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <footer>
             <div class="container">
                 <div class="row">
@@ -125,7 +124,6 @@
         </footer>
     </form>
     <script src="Scripts/bootstrap.min.js"></script>
-    <script src="Scripts/jquery-3.3.1.slim.min.js"></script>
     <script src="Scripts/popper.min.js"></script>
 </body>
 </html>

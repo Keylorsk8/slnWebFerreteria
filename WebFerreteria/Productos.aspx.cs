@@ -50,5 +50,12 @@ namespace WebFerreteria
                 Response.Redirect("Inicio Sesion.aspx");
             }
         }
+        protected void Borrar_Click(object sender, EventArgs e)
+        {
+            txtBusqueda.Value = "";
+            ddlCategoria.SelectedValue = "0";
+            min.Value = "1";
+            max.Value = "9999999";
+        }
     }
 }

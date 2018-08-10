@@ -8,6 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Ferretería JyR</title>
     <meta name="viewport" content="=device-width, initial-scale=1, shrink-to-fit=no" />
+    <script src="Scripts/jquery-3.3.1.slim.min.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
     <link href="css/estiloGeneral.css" rel="stylesheet" />
@@ -45,7 +46,7 @@
                 <asp:TextBox type="email" placeholder="Correo Electrónico" CssClass="input-100" required="required" ID="txtCorreo" runat="server"/>
                 <asp:TextBox type="password" placeholder="Constraseña" CssClass="input-100" required="required" ID="txtContraseña" runat="server"/>
                 <asp:Button ID="btnIniciar" runat="server" Text="Iniciar Sesión" class="btn-registrar" type="submit" OnClick="btnIniciar_click"/>
-                <asp:Label ID="lblError" CssClass="color:red;" runat="server" Text=" "></asp:Label>
+                <asp:Label ID="lblError" CssClass="color:red" runat="server" Text=" "></asp:Label>
                 <p class="form-link">¿No tienes una Cuenta?<a href="Direc/Registro.aspx">Registrate aquí</a></p>
             </div>
         </div>
@@ -80,7 +81,6 @@
     </footer>
     </form>
     <script src="Scripts/bootstrap.min.js"></script>
-    <script src="Scripts/jquery-3.3.1.slim.min.js"></script>
     <script src="Scripts/popper.min.js"></script>
 </body>
 </html>
