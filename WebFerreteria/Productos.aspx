@@ -38,7 +38,7 @@
                         <a class="nav-link" href="Contacto.aspx">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <asp:LinkButton ID="lblAdministrador3" CssClass="nav-link" runat="server"></asp:LinkButton>
+                        <asp:LinkButton ID="lblAdministrador3" CssClass="nav-link" runat="server" Style="display:none"></asp:LinkButton>
                     </li>
                 </ul>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="cuenta">
@@ -52,45 +52,30 @@
                 </div>
             </div>
         </nav>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12 form-group" style="height: auto;margin:1%;background-color:coral;">
+                <div class="col-lg-12 form-group" style="height: auto;margin-bottom:0px; background-color:coral;padding-bottom:20px;">
                 <button class="navbar-toggler btn btn-outline-light my-2 my-sm-0" type="button" data-toggle="collapse" data-target="#Filter" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation" style="border:1px solid white">
                     <i class="fa fa-arrow-down"></i>
                 </button>
-                    <h2 class="navbar-brand" style="color:white">Filtros</h2>    
+                    <h2 class="navbar-brand" style="color:white">Busqueda Avanzada</h2>    
                     <div id="Filter" class="collapse navbar-collapse container-fluid" style="background-color:white;height:99%;border-radius:5px">
                     <label for="txtBusqueda" class="col-form-label;" style="display:block">Nombre</label>
                     <input runat="server" id="txtBusqueda" class="form-control" placeholder="Producto..."  style="display:block"/>
                     <label for="ddlCategoria" class="col-form-label" style="display:block">Categoria</label>
                     <asp:DropDownList runat="server" ID="ddlCategoria" CssClass="form-control" style="display:block"></asp:DropDownList>
-                    <label for="min" style="display:block">Mínimo</label>
-                    <input type="number" runat="server" id="max" max="999999" value="999999" step="100" class="form-control"  style="display:block"/>
+                    <label for="min" style="display:block">Precio Máximo</label>
+                    <input type="number" runat="server" id="max" min="1" max="999999" value="999999" class="form-control"  style="display:block"/>
                     <div class="form-group" style="margin-top: 5px;padding-bottom:10px;">
-                        <asp:Button runat="server" OnClick="Borrar_Click" ID="Borrar" CssClass="btn btn-outline-danger" Text="Borrar"  style="display:inline-block;"/>
-                        <asp:Button runat="server" ID="Filtrar" CssClass="btn btn-outline-success" Text="Filtrar"  style="display:inline-block;"/>
+                        <asp:LinkButton runat="server" OnClick="Borrar_Click" ID="Borrar" CssClass="btn btn-outline-danger" Text="Borrar"  style="display:inline-block;"/>
+                        <asp:LinkButton runat="server" OnClick="Filtrar_Click" ID="Filtrar" CssClass="btn btn-outline-success" Text="Buscar"  style="display:inline-block;"/>
                     </div>
                 </div>
                     </div>
              </div>
-             <div class="row navbar-expand-lg">
-                <div class="col-lg-12" style="min-height: 400px; margin: 1%;margin-right: 0px; height: auto;background-color:white;">
-                    <div class="card mb-1 col-lg-3" style="display: inline-block; margin: 1%; border-radius: 5px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Saco de Cemento Cemex</h5>
-                            <img style="height: 200px; width: 100%; display: block;" alt="Card image" src="Images/Inicio.jpg" />
-                            <h3>$6500,00</h3>
-                            <asp:Button Text="Añadir" runat="server" CssClass="btn btn-outline-success  form-control"/> 
-                        </div>
-                    </div>
-                    <div class="card mb-1 col-lg-3" style="display: inline-block; margin: 1%; border-radius: 5px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Saco de Cemento Cemex</h5>
-                            <img style="height: 200px; width: 100%; display: block;" alt="Card image" src="Images/Inicio.jpg" />
-                            <h3>$6500,00</h3>
-                            <asp:Button Text="Añadir" runat="server" CssClass="btn btn-outline-success  form-control"/> 
-                        </div>
-                    </div>
+             <div class="row">
+                <div class="col-lg-12" style="min-height: 400px;margin-right: 0px; height: auto;background-color:white;" runat="server" id="DivProductos">
+                    <asp:Label runat="server" id="lblProductos"></asp:Label>
                 </div>
             </div>
         </div>

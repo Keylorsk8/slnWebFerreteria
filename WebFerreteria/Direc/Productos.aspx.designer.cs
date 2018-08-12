@@ -7,90 +7,126 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace WebFerreteria {
+namespace WebFerreteria.Direc {
     
     
-    public partial class _default {
+    public partial class Productos {
         
         /// <summary>
-        /// Control lblAdministrador3.
+        /// Control lblAdministrador4.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lblAdministrador3;
+        protected global::System.Web.UI.WebControls.LinkButton lblAdministrador4;
         
         /// <summary>
-        /// Control lblUsuario3.
+        /// Control lblUsuario6.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lblUsuario3;
+        protected global::System.Web.UI.WebControls.LinkButton lblUsuario6;
         
         /// <summary>
-        /// Control txtBusqueda.
+        /// Control divIdProducto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtBusqueda;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divIdProducto;
         
         /// <summary>
-        /// Control ddlCategoria.
+        /// Control txtIdProducto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCategoria;
+        protected global::System.Web.UI.WebControls.TextBox txtIdProducto;
         
         /// <summary>
-        /// Control max.
+        /// Control txtNombreProducto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl max;
+        protected global::System.Web.UI.WebControls.TextBox txtNombreProducto;
         
         /// <summary>
-        /// Control Borrar.
+        /// Control txtDescripcionProducto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton Borrar;
+        protected global::System.Web.UI.WebControls.TextBox txtDescripcionProducto;
         
         /// <summary>
-        /// Control Filtrar.
+        /// Control cmbCategoria.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton Filtrar;
+        protected global::System.Web.UI.WebControls.DropDownList cmbCategoria;
         
         /// <summary>
-        /// Control DivProductos.
+        /// Control fluImagen.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DivProductos;
+        protected global::System.Web.UI.WebControls.FileUpload fluImagen;
         
         /// <summary>
-        /// Control lblProductos.
+        /// Control NudPrecio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProductos;
+        protected global::System.Web.UI.WebControls.TextBox NudPrecio;
+        
+        /// <summary>
+        /// Control btnBorrarProducto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnBorrarProducto;
+        
+        /// <summary>
+        /// Control btnActualizarProducto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnActualizarProducto;
+        
+        /// <summary>
+        /// Control btnAgregarProducto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAgregarProducto;
+        
+        /// <summary>
+        /// Control gridProductos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gridProductos;
     }
 }

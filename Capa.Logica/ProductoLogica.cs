@@ -41,6 +41,12 @@ namespace Capa.Logica
             return datos.SeleccionarTodos();
         }
 
+        public List<Producto> SeleccionarConFiltro(string nombre,int IdCategoria, double PrecioMaximo)
+        {
+            ProductoDatos datos = new ProductoDatos();
+            return datos.SeleccionarProductosConFiltro(nombre,IdCategoria,PrecioMaximo);
+        }
+
         public void Eliminar(int IdProducto)
         {
             ProductoDatos datos = new ProductoDatos();

@@ -159,6 +159,48 @@ namespace Datos
             }
         }
 
+        public List<Producto> SeleccionarProductosConFiltro(string nombre,int IdCategoria,double PrecioMaximo)
+        {
+            List<Producto> lista = new List<Producto>();
+            SqlConnection conexion = new SqlConnection(Conexion.Cadena);
+            try
+            {
+                conexion.Open();
+
+                string sql = "SP_SeleccionarProductosPorFiltro";
+
+                SqlCommand comando = new SqlCommand(sql, conexion);
+                comando.Parameters.AddWithValue("@Nombre", nombre);
+                comando.Parameters.AddWithValue("@IdCategoria", IdCategoria);
+                comando.Parameters.AddWithValue("@PrecioMaximo", PrecioMaximo);
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                SqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    Producto Producto = new Producto()
+                    {
+                        IdProducto = Convert.ToInt32(reader["IdProducto"]),
+                        Nombre = reader["Nombre"].ToString(),
+                        Descripcion = reader["Descripcion"].ToString(),
+                        Imagen = (byte[])reader["Imagen"],
+                        Categoria = new CategoriaDatos().SeleccionarUsuarioPorId(Convert.ToInt32(reader["Categoria"])),
+                        Precio = Convert.ToDouble(reader["Precio"])
+                    };
+                    lista.Add(Producto);
+                }
+                return lista;
+            }
+            catch (Exception)
+            {
+
+               throw;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+
         public void Eliminar(int IdProducto)
         {
             SqlConnection conexion = new SqlConnection(Conexion.Cadena);

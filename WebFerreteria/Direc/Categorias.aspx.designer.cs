@@ -7,90 +7,108 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace WebFerreteria {
+namespace WebFerreteria.Direc {
     
     
-    public partial class _default {
+    public partial class Categorias {
         
         /// <summary>
-        /// Control lblAdministrador3.
+        /// Control lblAdministrador4.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lblAdministrador3;
+        protected global::System.Web.UI.WebControls.LinkButton lblAdministrador4;
         
         /// <summary>
-        /// Control lblUsuario3.
+        /// Control lblUsuario8.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lblUsuario3;
+        protected global::System.Web.UI.WebControls.LinkButton lblUsuario8;
         
         /// <summary>
-        /// Control txtBusqueda.
+        /// Control msg.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtBusqueda;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl msg;
         
         /// <summary>
-        /// Control ddlCategoria.
+        /// Control divIdCategoria.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCategoria;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divIdCategoria;
         
         /// <summary>
-        /// Control max.
+        /// Control txtIdCategoria.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl max;
+        protected global::System.Web.UI.WebControls.TextBox txtIdCategoria;
         
         /// <summary>
-        /// Control Borrar.
+        /// Control txtNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton Borrar;
+        protected global::System.Web.UI.WebControls.TextBox txtNombre;
         
         /// <summary>
-        /// Control Filtrar.
+        /// Control txtDescripcion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton Filtrar;
+        protected global::System.Web.UI.WebControls.TextBox txtDescripcion;
         
         /// <summary>
-        /// Control DivProductos.
+        /// Control btnBorrarCategoria.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DivProductos;
+        protected global::System.Web.UI.WebControls.Button btnBorrarCategoria;
         
         /// <summary>
-        /// Control lblProductos.
+        /// Control btnActualizarCategoria.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProductos;
+        protected global::System.Web.UI.WebControls.Button btnActualizarCategoria;
+        
+        /// <summary>
+        /// Control btnAgregarCategoria.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAgregarCategoria;
+        
+        /// <summary>
+        /// Control gridCategorias.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gridCategorias;
     }
 }

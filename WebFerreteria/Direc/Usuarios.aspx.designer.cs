@@ -10,7 +10,7 @@
 namespace WebFerreteria.Direc {
     
     
-    public partial class Administrador {
+    public partial class Usuarios {
         
         /// <summary>
         /// Control lblAdministrador4.
@@ -22,12 +22,21 @@ namespace WebFerreteria.Direc {
         protected global::System.Web.UI.WebControls.LinkButton lblAdministrador4;
         
         /// <summary>
-        /// Control lblUsuario4.
+        /// Control lblUsuario5.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lblUsuario4;
+        protected global::System.Web.UI.WebControls.LinkButton lblUsuario5;
+        
+        /// <summary>
+        /// Control gridClientes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gridClientes;
     }
 }

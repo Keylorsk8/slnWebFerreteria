@@ -52,7 +52,7 @@
                         <a class="nav-link" id="active" href="Contacto.aspx">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <asp:LinkButton ID="lblAdministrador1" CssClass="nav-link" runat="server"></asp:LinkButton>
+                        <asp:LinkButton ID="lblAdministrador1" CssClass="nav-link" runat="server" Style="display:none"></asp:LinkButton>
                     </li>
                 </ul>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="cuenta">

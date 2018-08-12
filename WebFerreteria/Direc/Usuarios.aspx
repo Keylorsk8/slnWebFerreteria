@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Administrador.aspx.cs" EnableEventValidation="true" Inherits="WebFerreteria.Direc.Administrador" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Usuarios.aspx.cs" Inherits="WebFerreteria.Direc.Usuarios" %>
 
 <!DOCTYPE html>
 
@@ -26,7 +26,7 @@
 
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="../default.aspx">Inicio</a>
+                        <a class="nav-link" href="../default.aspx">Inicio<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../Productos.aspx">Productos</a>
@@ -37,13 +37,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="../Contacto.aspx">Contacto</a>
                     </li>
-                    <li class="nav-item active">
-                        <asp:LinkButton ID="lblAdministrador4" CssClass="nav-link" runat="server" Style="display:none"><span class="sr-only">(current)</span></asp:LinkButton>
+                    <li class="nav-item">
+                        <asp:LinkButton ID="lblAdministrador4" CssClass="nav-link" runat="server" Style="display:none"></asp:LinkButton>
                     </li>
                 </ul>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="cuenta">
                     <li class="nav-item">
-                        <asp:LinkButton ID="lblUsuario4" CssClass="nav-link" runat="server" OnClick="lblUsuario7_Click">Cuenta  <i class="fa fa-user-circle"></i></asp:LinkButton>
+                        <asp:LinkButton ID="lblUsuario5" CssClass="nav-link" runat="server" OnClick="lblUsuario5_Click">Cuenta  <i class="fa fa-user-circle"></i></asp:LinkButton>
                     </li>
                 </ul>
                 <div class="form-inline my-2 my-lg-0" runat="server">
@@ -53,10 +53,28 @@
             </div>
         </nav>
         <section id="Content">
-            <h1 class="title" style="color: white">Menu Administrador</h1>
-            <a href="Usuarios.aspx">Usuarios</a>
-            <a href="Productos.aspx">Productos</a>
-            <a href="Categorias.aspx">Categorías</a>
+            <div class="container" style="background-color:white;padding:0px;margin-bottom:2%;">
+                <h1 style="color: white;background-color:coral;padding:10px;">Usuarios</h1>
+                <div class="container">
+                <asp:GridView runat="server" ID="gridClientes" CssClass="table" DataKeyNames="Id" CellPadding="4" GridLines="None"
+                    AllowPaging="True" PageSize="5" OnRowDeleting="gridClientes_RowDeleting" OnRowDataBound="gridClientes_RowDataBound" AutoGenerateSelectButton="True" ForeColor="#333333">
+                    <AlternatingRowStyle BackColor="White" />
+                    <Columns>
+                        <asp:CommandField ShowDeleteButton="True" />
+                    </Columns>
+                    <EditRowStyle BackColor="#7C6F57" />
+                    <FooterStyle BackColor="#1C5E55" ForeColor="White" Font-Bold="True" />
+                    <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#E3EAEB" />
+                    <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#F8FAFA" />
+                    <SortedAscendingHeaderStyle BackColor="#246B61" />
+                    <SortedDescendingCellStyle BackColor="#D4DFE1" />
+                    <SortedDescendingHeaderStyle BackColor="#15524A" />
+                </asp:GridView>
+            </div>
+                </div>
         </section>
         <footer>
             <div class="container">
@@ -92,4 +110,5 @@
     <script src="../js/administrador.js"></script>
 </body>
 </html>
+
 

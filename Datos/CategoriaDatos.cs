@@ -23,7 +23,7 @@ namespace Datos
                 SqlCommand comando = new SqlCommand(sql, conexion);
 
                 comando.Parameters.AddWithValue("@Nombre",  Categoria.Nombre);
-                comando.Parameters.AddWithValue("@Descripcion", Categoria.Descripcion);
+                comando.Parameters.AddWithValue("@Descripción", Categoria.Descripcion);
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
                 comando.ExecuteNonQuery();
             }
@@ -51,7 +51,7 @@ namespace Datos
 
                 SqlCommand comando = new SqlCommand(sql, conexion);
 
-                comando.Parameters.AddWithValue("@IdUCategoria", Categoria.IdCategoria);
+                comando.Parameters.AddWithValue("@IdCategoria", Categoria.IdCategoria);
                 comando.Parameters.AddWithValue("@Nombre", Categoria.Nombre);
                 comando.Parameters.AddWithValue("@Descripcion", Categoria.Descripcion);
                 comando.CommandType = System.Data.CommandType.StoredProcedure;

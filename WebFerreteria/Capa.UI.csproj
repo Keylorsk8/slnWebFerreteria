@@ -103,17 +103,19 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="css\administrador.css" />
     <Content Include="css\estilodefault.css" />
     <Content Include="css\estiloGeneral.css" />
     <Content Include="css\LogIn.css" />
     <Content Include="Default.aspx" />
     <Content Include="Direc\Administrador.aspx" />
+    <Content Include="Direc\Categorias.aspx" />
+    <Content Include="Direc\Productos.aspx" />
     <Content Include="Direc\Registro.aspx" />
+    <Content Include="Direc\Usuarios.aspx" />
     <Content Include="Images\Ferreteria.jpg" />
+    <Content Include="Images\No disponible.png" />
     <Content Include="Images\Inicio.jpg" />
     <Content Include="Inicio Sesion.aspx" />
-    <Content Include="js\administrador.js" />
     <Content Include="js\parallax.js" />
     <Content Include="Nosotros.aspx" />
     <Content Include="Productos.aspx" />
@@ -200,12 +202,33 @@
     <Compile Include="Direc\Administrador.aspx.designer.cs">
       <DependentUpon>Administrador.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Direc\Categorias.aspx.cs">
+      <DependentUpon>Categorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Direc\Categorias.aspx.designer.cs">
+      <DependentUpon>Categorias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Direc\Productos.aspx.cs">
+      <DependentUpon>Productos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Direc\Productos.aspx.designer.cs">
+      <DependentUpon>Productos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Direc\Registro.aspx.cs">
       <DependentUpon>Registro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Direc\Registro.aspx.designer.cs">
       <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Direc\Usuarios.aspx.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Direc\Usuarios.aspx.designer.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Inicio Sesion.aspx.cs">
       <DependentUpon>Inicio Sesion.aspx</DependentUpon>
