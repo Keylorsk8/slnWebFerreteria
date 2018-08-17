@@ -303,6 +303,42 @@ form{
                 justify-content: center;
             }
 
+#DivProductos .card:hover{
+    box-shadow: rgba(0,0,0,.10) 1px 1px 15px 3px;
+    cursor: pointer;
+}
+
+
+@media (min-width: 1000px) {
+    #DivProductos .card{
+    display: inline-block; 
+    margin: 1%; 
+    border-radius: 5px;
+    text-align:center;
+    width: 23%
+}
+}
+
+@media (max-width: 1000px) {
+    #DivProductos .card{
+    display: inline-block; 
+    margin: 1%; 
+    border-radius: 5px;
+    text-align:center;
+    width: 47%
+}
+}
+
+@media (max-width: 500px) {
+    #DivProductos .card{
+    display: inline-block; 
+    margin: 1%; 
+    border-radius: 5px;
+    text-align:center;
+    width: 98%
+}
+}
+
 
 /*FOOTER*/
 footer {

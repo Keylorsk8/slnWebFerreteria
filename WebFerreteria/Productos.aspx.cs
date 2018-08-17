@@ -83,11 +83,11 @@ namespace WebFerreteria
         {
             string Img = Imagen != null ? Imagen : "Images/No%20disponible.png";
             string HtmlCode = "";
-            HtmlCode = "<div class=\"card mb-1 col-lg-2\" style=\"display: inline-block; margin: 1%; border-radius: 5px;text-align:center\">"+
+            HtmlCode = "<div class=\"card mb-1 Cp\" id=\""+Producto.IdProducto+"\" runat=\"server\">"+
                             "<div class=\"card-body\">"+
-                                "<h5 class=\"card-title\">"+ Producto.Nombre +"</h5>"+
-                                "<img src=\""+Img+"\" width=\"200px\" height=\"200px\" runat=\"server\" id=\""+ Producto.IdProducto +"\"></img>" +
-                                "<h3>$"+ Producto.Precio +",00</h3>"+
+                                "<h5 class=\"card-title\" style=\"height:40px\" Onclick=\"showCard()\">" + Producto.Nombre +"</h5>"+
+                                "<img src=\""+Img+"\" style=\"width:100%; max-width:200px\" height=\"200px\" runat=\"server\" id=\""+ Producto.IdProducto + "\"></img>" +
+                                "<h3>₡ " + Producto.Precio +",00</h3>"+
                                 "<Button runat=\"server\" class=\"btn btn-outline-success\"/>Añadir</Button>" +
                             "</div>"+
                         "</div>";
@@ -114,6 +114,11 @@ namespace WebFerreteria
         protected void Filtrar_Click(object sender, EventArgs e)
         {
             MostrarProductos();
+        }
+
+        protected void Unnamed_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Hola.com");
         }
     }
 }

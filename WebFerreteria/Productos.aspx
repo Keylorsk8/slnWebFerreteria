@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width" />
     <script src="Scripts/jquery-3.3.1.slim.min.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"/>
     <link href="css/estiloGeneral.css" rel="stylesheet" />
 </head>
 <body>
@@ -73,9 +73,10 @@
                 </div>
                     </div>
              </div>
-             <div class="row">
-                <div class="col-lg-12" style="min-height: 400px;margin-right: 0px; height: auto;background-color:white;" runat="server" id="DivProductos">
+             <div class="container-fluid">
+                <div style="min-height: 400px; height: auto; background-color: white;" runat="server" id="DivProductos">
                     <asp:Label runat="server" id="lblProductos"></asp:Label>
+                    <asp:LinkButton Text="text" runat="server" OnClick="Unnamed_Click"/>
                 </div>
             </div>
         </div>
