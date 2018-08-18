@@ -107,6 +107,7 @@
     <Content Include="css\estiloGeneral.css" />
     <Content Include="css\LogIn.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Direc\Acceso No Autorizado.aspx" />
     <Content Include="Direc\Administrador.aspx" />
     <Content Include="Direc\Categorias.aspx" />
     <Content Include="Direc\Cuenta.aspx" />
@@ -195,6 +196,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Direc\Acceso No Autorizado.aspx.cs">
+      <DependentUpon>Acceso No Autorizado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Direc\Acceso No Autorizado.aspx.designer.cs">
+      <DependentUpon>Acceso No Autorizado.aspx</DependentUpon>
     </Compile>
     <Compile Include="Direc\Administrador.aspx.cs">
       <DependentUpon>Administrador.aspx</DependentUpon>

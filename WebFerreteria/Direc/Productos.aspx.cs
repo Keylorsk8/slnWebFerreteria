@@ -50,7 +50,7 @@ namespace WebFerreteria.Direc
             {
                 if (Session["usuario"] != null)
                 {
-
+                    Response.Redirect("../Cuenta.aspx");
                 }
                 else
                 {

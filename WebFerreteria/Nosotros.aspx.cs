@@ -38,7 +38,7 @@ namespace WebFerreteria
             {
                 if (Session["usuario"] != null)
                 {
-
+                    Response.Redirect("Direc/Cuenta.aspx", false);
                 }
                 else
                 {

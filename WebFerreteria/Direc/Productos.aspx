@@ -93,7 +93,7 @@
                 </div>
                 <div class="table-responsive">
                     <asp:GridView runat="server" ID="gridProductos" CssClass="table" DataKeyNames="ID" CellPadding="4" GridLines="None"
-                        AllowPaging="True" PageSize="5" OnRowDeleting="gridProductos_RowDeleting" OnRowDataBound="gridProductos_RowDataBound" AutoGenerateSelectButton="True" ForeColor="#333333" OnSelectedIndexChanged="gridProductos_SelectedIndexChanged">
+                        AllowPaging="True" PageSize="99999" OnRowDeleting="gridProductos_RowDeleting" OnRowDataBound="gridProductos_RowDataBound" AutoGenerateSelectButton="True" ForeColor="#333333" OnSelectedIndexChanged="gridProductos_SelectedIndexChanged">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
                             <asp:CommandField ShowDeleteButton="True" />

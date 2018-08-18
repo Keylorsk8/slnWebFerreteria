@@ -53,10 +53,12 @@
             </div>
         </nav>
         <section id="Content">
-            <h1 class="title" style="color: white">Menu Administrador</h1>
-            <a href="Usuarios.aspx">Usuarios</a>
-            <a href="Productos.aspx">Productos</a>
-            <a href="Categorias.aspx">Categorías</a>
+            <div class="container">
+                <h1 class="title" style="color: white">Menu Administrador</h1>
+                    <a href="Usuarios.aspx" class="btn btn-block">Usuarios<i class="fa fa-user"></i></a>
+                    <a href="Productos.aspx" class="btn btn-block">Productos<i class="fa fa-box-open"></i></a>
+                    <a href="Categorias.aspx" class="btn btn-block">Categorías<i class="fa fa-archive"></i></a>
+            </div>
         </section>
         <footer>
             <div class="container">
