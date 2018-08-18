@@ -10,12 +10,8 @@
     <script src="Scripts/jquery-3.3.1.slim.min.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
-    <link href="css/estiloGeneral.css" rel="stylesheet" />
-    <script type="text/javascript">
-        function change(Id) {
-            Producto.value = Id;
-        }
-    </script>
+    <script src="js/Products.js"></script>
+    <link href="css/estiloGeneral.css" rel="stylesheet" />       
 </head>
 <body>
     <form runat="server">
@@ -80,11 +76,30 @@
             </div>
             <div class="container-fluid">
                 <div style="min-height: 400px; height: auto" runat="server" id="DivProductos" onserverclick="Unnamed_Click()">
-                    <label style="display: none" runat="server" id="Producto"></label>
                     <asp:Label runat="server" ID="lblProductos"></asp:Label>
                 </div>
             </div>
         </div>
+        <asp:Label Text="Hola" runat="server" ID="Producto"/>
+        <div id="myModal" class="modal fade" role="dialog" runat="server">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
         <footer>
             <div class="container">
                 <div class="row">

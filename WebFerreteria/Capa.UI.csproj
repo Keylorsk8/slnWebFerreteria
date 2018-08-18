@@ -119,6 +119,7 @@
     <Content Include="Images\Inicio.jpg" />
     <Content Include="Inicio Sesion.aspx" />
     <Content Include="js\parallax.js" />
+    <Content Include="js\Products.js" />
     <Content Include="Nosotros.aspx" />
     <Content Include="Productos.aspx" />
     <Content Include="Images\logo.png" />

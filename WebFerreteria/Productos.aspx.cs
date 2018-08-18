@@ -17,6 +17,10 @@ namespace WebFerreteria
             {
                 LlenarCategorias();
                 MostrarProductos();
+                Session["Producto"] = "";
+            }else
+            {
+
             }
             try
             {
@@ -111,10 +115,7 @@ namespace WebFerreteria
 
             Button btnInfo = new Button();
             btnInfo.CssClass = "btn btn-outline-dark";
-            btnInfo.Text = "Info";
-            btnInfo.Attributes.Add("data-toggle", "modal");
-            btnInfo.Attributes.Add("data-target", "#myModal");
-            btnInfo.OnClientClick = "return false";
+            btnInfo.Text = "Info"; 
 
             Button btnAñadir = new Button();
             btnAñadir.CssClass = "btn btn-outline-success";
@@ -153,12 +154,6 @@ namespace WebFerreteria
         protected void Filtrar_Click(object sender, EventArgs e)
         {
             MostrarProductos();
-        }
-        
-        private bool MostrarProducto()
-        {
-
-            return false;
         }
     }
 }
