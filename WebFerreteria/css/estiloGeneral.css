@@ -303,11 +303,41 @@ form{
                 justify-content: center;
             }
 
-#DivProductos .card:hover{
-    box-shadow: rgba(0,0,0,.10) 1px 1px 15px 3px;
-    cursor: pointer;
+#DivProductos .card > .card-title > .CarImg {
+    width: 100%;
+    max-width: 200px;
+    max-height: 200px;
+    cursor: default;
 }
 
+#DivProductos .card > .TituloC{
+    height:75px;
+    align-items: center;
+    padding-top: 30px;
+    color: black;
+    font-weight: 400;
+}
+
+#DivProductos .card > .ImgC{
+    min-height: 250px;
+}
+
+#DivProductos .card > .ButtonsC > input{
+    margin: 2%;
+    width: 45%;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+
+#DivProductos .card:hover{
+    box-shadow: rgba(0,0,0,.10) 1px 1px 15px 3px;
+    cursor: default;
+}
+
+#DivProductos .card{
+    background-color: whitesmoke;
+}
 
 @media (min-width: 1000px) {
     #DivProductos .card{

@@ -36,15 +36,16 @@ namespace WebFerreteria
         {
             try
             {
-                if(Session["usuario"] != null)
+                if(Session["usuario"].ToString() != "")
                 {
-
-                }else
+                    Response.Redirect("Direc/Cuenta.aspx",false);
+                }
+                else
                 {
                     Response.Redirect("Inicio Sesion.aspx");
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 Response.Redirect("Inicio Sesion.aspx");
             }

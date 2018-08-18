@@ -9,8 +9,13 @@
     <meta name="viewport" content="width=device-width" />
     <script src="Scripts/jquery-3.3.1.slim.min.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
     <link href="css/estiloGeneral.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function change(Id) {
+            Producto.value = Id;
+        }
+    </script>
 </head>
 <body>
     <form runat="server">
@@ -38,7 +43,7 @@
                         <a class="nav-link" href="Contacto.aspx">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <asp:LinkButton ID="lblAdministrador3" CssClass="nav-link" runat="server" Style="display:none"></asp:LinkButton>
+                        <asp:LinkButton ID="lblAdministrador3" CssClass="nav-link" runat="server" Style="display: none"></asp:LinkButton>
                     </li>
                 </ul>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="cuenta">
@@ -54,29 +59,29 @@
         </nav>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12 form-group" style="height: auto;margin-bottom:0px; background-color:coral;padding-bottom:20px;">
-                <button class="navbar-toggler btn btn-outline-light my-2 my-sm-0" type="button" data-toggle="collapse" data-target="#Filter" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation" style="border:1px solid white">
-                    <i class="fa fa-arrow-down"></i>
-                </button>
-                    <h2 class="navbar-brand" style="color:white">Busqueda Avanzada</h2>    
-                    <div id="Filter" class="collapse navbar-collapse container-fluid" style="background-color:white;height:99%;border-radius:5px">
-                    <label for="txtBusqueda" class="col-form-label;" style="display:block">Nombre</label>
-                    <input runat="server" id="txtBusqueda" class="form-control" placeholder="Producto..."  style="display:block"/>
-                    <label for="ddlCategoria" class="col-form-label" style="display:block">Categoria</label>
-                    <asp:DropDownList runat="server" ID="ddlCategoria" CssClass="form-control" style="display:block"></asp:DropDownList>
-                    <label for="min" style="display:block">Precio Máximo</label>
-                    <input type="number" runat="server" id="max" min="1" max="999999" value="999999" class="form-control"  style="display:block"/>
-                    <div class="form-group" style="margin-top: 5px;padding-bottom:10px;">
-                        <asp:LinkButton runat="server" OnClick="Borrar_Click" ID="Borrar" CssClass="btn btn-outline-danger" Text="Borrar"  style="display:inline-block;"/>
-                        <asp:LinkButton runat="server" OnClick="Filtrar_Click" ID="Filtrar" CssClass="btn btn-outline-success" Text="Buscar"  style="display:inline-block;"/>
+                <div class="col-lg-12 form-group" style="height: auto; margin-bottom: 0px; background-color: coral; padding-bottom: 20px;">
+                    <button class="navbar-toggler btn btn-outline-light my-2 my-sm-0" type="button" data-toggle="collapse" data-target="#Filter" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation" style="border: 1px solid white">
+                        <i class="fa fa-arrow-down"></i>
+                    </button>
+                    <h2 class="navbar-brand" style="color: white">Busqueda Avanzada</h2>
+                    <div id="Filter" class="collapse navbar-collapse container-fluid" style="background-color: white; height: 99%; border-radius: 5px">
+                        <label for="txtBusqueda" class="col-form-label;" style="display: block">Nombre</label>
+                        <input runat="server" id="txtBusqueda" class="form-control" placeholder="Producto..." style="display: block" />
+                        <label for="ddlCategoria" class="col-form-label" style="display: block">Categoria</label>
+                        <asp:DropDownList runat="server" ID="ddlCategoria" CssClass="form-control" Style="display: block"></asp:DropDownList>
+                        <label for="min" style="display: block">Precio Máximo</label>
+                        <input type="number" runat="server" id="max" min="1" max="999999" value="999999" class="form-control" style="display: block" />
+                        <div class="form-group" style="margin-top: 5px; padding-bottom: 10px;">
+                            <asp:LinkButton runat="server" OnClick="Borrar_Click" ID="Borrar" CssClass="btn btn-outline-danger" Text="Borrar" Style="display: inline-block;" />
+                            <asp:LinkButton runat="server" OnClick="Filtrar_Click" ID="Filtrar" CssClass="btn btn-outline-success" Text="Buscar" Style="display: inline-block;" />
+                        </div>
                     </div>
                 </div>
-                    </div>
-             </div>
-             <div class="container-fluid">
-                <div style="min-height: 400px; height: auto; background-color: white;" runat="server" id="DivProductos">
-                    <asp:Label runat="server" id="lblProductos"></asp:Label>
-                    <asp:LinkButton Text="text" runat="server" OnClick="Unnamed_Click"/>
+            </div>
+            <div class="container-fluid">
+                <div style="min-height: 400px; height: auto" runat="server" id="DivProductos" onserverclick="Unnamed_Click()">
+                    <label style="display: none" runat="server" id="Producto"></label>
+                    <asp:Label runat="server" ID="lblProductos"></asp:Label>
                 </div>
             </div>
         </div>

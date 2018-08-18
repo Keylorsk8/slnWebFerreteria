@@ -109,6 +109,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Direc\Administrador.aspx" />
     <Content Include="Direc\Categorias.aspx" />
+    <Content Include="Direc\Cuenta.aspx" />
     <Content Include="Direc\Productos.aspx" />
     <Content Include="Direc\Registro.aspx" />
     <Content Include="Direc\Usuarios.aspx" />
@@ -208,6 +209,13 @@
     </Compile>
     <Compile Include="Direc\Categorias.aspx.designer.cs">
       <DependentUpon>Categorias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Direc\Cuenta.aspx.cs">
+      <DependentUpon>Cuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Direc\Cuenta.aspx.designer.cs">
+      <DependentUpon>Cuenta.aspx</DependentUpon>
     </Compile>
     <Compile Include="Direc\Productos.aspx.cs">
       <DependentUpon>Productos.aspx</DependentUpon>
