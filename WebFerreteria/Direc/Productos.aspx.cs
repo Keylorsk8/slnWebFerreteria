@@ -138,8 +138,8 @@ namespace WebFerreteria.Direc
             {
                 Nombre = txtNombreProducto.Text,
                 Descripcion = txtDescripcionProducto.Text,
-                Categoria = new CategoriaLogica().SeleccionarPorID(Convert.ToInt32(cmbCategoria.SelectedItem.Value)),
-                Imagen = imagen,
+                //Categoria = new CategoriaLogica().SeleccionarPorID(Convert.ToInt32(cmbCategoria.SelectedItem.Value)),
+                //Imagen = imagen,
                 Precio = Convert.ToDouble(NudPrecio.Text)
             };
             logica.Insertar(producto);
@@ -181,8 +181,8 @@ namespace WebFerreteria.Direc
                 IdProducto = Convert.ToInt32(txtIdProducto.Text),
                 Nombre = txtNombreProducto.Text,
                 Descripcion = txtDescripcionProducto.Text,
-                Categoria = new CategoriaLogica().SeleccionarPorID(Convert.ToInt32(cmbCategoria.SelectedItem.Value.ToString())),
-                Imagen = imagen,
+                //Categoria = new CategoriaLogica().SeleccionarPorID(Convert.ToInt32(cmbCategoria.SelectedItem.Value.ToString())),
+                //Imagen = imagen,
                 Precio = Convert.ToDouble(NudPrecio.Text)
             };
             logica.Insertar(producto);
@@ -219,7 +219,7 @@ namespace WebFerreteria.Direc
             txtDescripcionProducto.Text = Producto.Descripcion;
             for(int i = 0; i < cmbCategoria.Items.Count; i++)
             {
-                if((new CategoriaLogica().SeleccionarPorID(Convert.ToInt32(cmbCategoria.Items[i].Value)).IdCategoria == Producto.Categoria.IdCategoria))
+                //if((new CategoriaLogica().SeleccionarPorID(Convert.ToInt32(cmbCategoria.Items[i].Value)).IdCategoria == Producto.Categoria.IdCategoria))
                 {
                     cmbCategoria.SelectedIndex = i;
                     break;

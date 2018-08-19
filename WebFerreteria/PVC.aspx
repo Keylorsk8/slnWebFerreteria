@@ -1,7 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Productos.aspx.cs" Inherits="WebFerreteria._default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PVC.aspx.cs" Inherits="WebFerreteria.PVC" %>
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -45,7 +44,7 @@
                 </ul>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="cuenta">
                     <li class="nav-item">
-                        <asp:LinkButton ID="lblUsuario3" CssClass="nav-link" runat="server" OnClick="lblUsuario3_Click">Cuenta  <i class="fa fa-user-circle"></i></asp:LinkButton>
+                        <%--<asp:LinkButton ID="lblUsuario3" CssClass="nav-link" runat="server" OnClick="lblUsuario3_Click">Cuenta  <i class="fa fa-user-circle"></i></asp:LinkButton>--%>
                     </li>
                 </ul>
                 <div class="form-inline my-2 my-lg-0" runat="server">
@@ -55,26 +54,6 @@
             </div>
         </nav>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12 form-group" style="height: auto; margin-bottom: 0px; background-color: coral; padding-bottom: 20px;">
-                    <button class="navbar-toggler btn btn-outline-light my-2 my-sm-0" type="button" data-toggle="collapse" data-target="#Filter" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation" style="border: 1px solid white">
-                        <i class="fa fa-arrow-down"></i>
-                    </button>
-                    <h2 class="navbar-brand" style="color: white">Busqueda Avanzada</h2>
-                    <div id="Filter" class="collapse navbar-collapse container-fluid" style="background-color: white; height: 99%; border-radius: 5px">
-                        <label for="txtBusqueda" class="col-form-label;" style="display: block">Nombre</label>
-                        <input runat="server" id="txtBusqueda" class="form-control" placeholder="Producto..." style="display: block" />
-                        <label for="ddlCategoria" class="col-form-label" style="display: block">Categoria</label>
-                        <asp:DropDownList runat="server" ID="ddlCategoria" CssClass="form-control" Style="display: block"></asp:DropDownList>
-                        <label for="min" style="display: block">Precio Máximo</label>
-                        <input type="number" runat="server" id="max" min="1" max="999999" value="999999" class="form-control" style="display: block" />
-                        <div class="form-group" style="margin-top: 5px; padding-bottom: 10px;">
-                            <asp:LinkButton runat="server" OnClick="Borrar_Click" ID="Borrar" CssClass="btn btn-outline-danger" Text="Borrar" Style="display: inline-block;" />
-                            <asp:LinkButton runat="server" OnClick="Filtrar_Click" ID="Filtrar" CssClass="btn btn-outline-success" Text="Buscar" Style="display: inline-block;" />
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="container">
     <div class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -116,10 +95,11 @@
         </div>
     </div>
 </div>
+            </div>
 
 
 
-            
+
             <div class="container-fluid">
             
                 <div style="min-height: 400px; height: auto" runat="server" id="DivProductos" onserverclick="Unnamed_Click()"> 
@@ -128,12 +108,10 @@
 
 
                      
-
+                    <a id="nombre" runat="server"  ></a>
                 </div>
             </div>
-        
-            
-        
+
         <div id="myModal" class="modal fade" role="dialog" runat="server">
   <div class="modal-dialog">
 
@@ -146,7 +124,7 @@
         <p>Some text in the modal.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
       </div>
     </div>
 

@@ -10,7 +10,7 @@
 namespace WebFerreteria {
     
     
-    public partial class _default {
+    public partial class MantProductos {
         
         /// <summary>
         /// Control carousel.
@@ -31,67 +31,85 @@ namespace WebFerreteria {
         protected global::System.Web.UI.WebControls.LinkButton lblAdministrador3;
         
         /// <summary>
-        /// Control lblUsuario3.
+        /// Control fileUpload.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lblUsuario3;
+        protected global::System.Web.UI.WebControls.FileUpload fileUpload;
         
         /// <summary>
-        /// Control txtBusqueda.
+        /// Control imagen.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtBusqueda;
+        protected global::System.Web.UI.WebControls.Image imagen;
         
         /// <summary>
-        /// Control ddlCategoria.
+        /// Control Button1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCategoria;
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// Control max.
+        /// Control txtnombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl max;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtnombre;
         
         /// <summary>
-        /// Control Borrar.
+        /// Control txtDescripcion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton Borrar;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtDescripcion;
         
         /// <summary>
-        /// Control Filtrar.
+        /// Control ddlCate.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton Filtrar;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCate;
         
         /// <summary>
-        /// Control DivProductos.
+        /// Control txtPrecio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DivProductos;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtPrecio;
+        
+        /// <summary>
+        /// Control btnRegistrar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRegistrar;
+        
+        /// <summary>
+        /// Control Producto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Producto;
         
         /// <summary>
         /// Control myModal.

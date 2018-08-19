@@ -52,6 +52,12 @@ namespace Capa.Logica
             ProductoDatos datos = new ProductoDatos();
             datos.Eliminar(IdProducto);
         }
+
+        public List<Producto> SeleccionarProductoIDCategoira(int idcate)
+        {
+            ProductoDatos datos = new ProductoDatos();
+            return datos.SeleccionarProductoIdCategoria(idcate);
+        }
     }
 }
 

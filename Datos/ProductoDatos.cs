@@ -1,6 +1,7 @@
 ﻿using Entidades.clases;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
@@ -23,9 +24,8 @@ namespace Datos
 
                 comando.Parameters.AddWithValue("@Nombre", Producto.Nombre);
                 comando.Parameters.AddWithValue("@Descripcion", Producto.Descripcion);
-                comando.Parameters.AddWithValue("@Categoria", Producto.Categoria.IdCategoria);
-                SqlParameter image = comando.Parameters.Add("@Imagen", System.Data.SqlDbType.Image);
-                image.Value = Producto.Imagen;
+                comando.Parameters.AddWithValue("@Categoria", Producto.Categoria);
+                comando.Parameters.Add("@Imagen", SqlDbType.NVarChar).Value = Producto.Imagen;
                 comando.Parameters.AddWithValue("@Precio", Producto.Precio);
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
                 comando.ExecuteNonQuery();
@@ -57,9 +57,8 @@ namespace Datos
                 comando.Parameters.AddWithValue("@IdProducto", Producto.IdProducto);
                 comando.Parameters.AddWithValue("@Nombre", Producto.Nombre);
                 comando.Parameters.AddWithValue("@Descripcion", Producto.Descripcion);
-                comando.Parameters.AddWithValue("@Categoria", Producto.Categoria.IdCategoria);
-                SqlParameter image = comando.Parameters.Add("@Imagen", System.Data.SqlDbType.Image);
-                image.Value = Producto.Imagen;
+                comando.Parameters.AddWithValue("@Categoria", Producto.Categoria);
+                comando.Parameters.AddWithValue("@Imagen", Producto.Imagen);
                 comando.Parameters.AddWithValue("@Precio", Producto.Precio);
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
                 comando.ExecuteNonQuery();
@@ -98,8 +97,8 @@ namespace Datos
                         IdProducto = Convert.ToInt32(reader["IDProducto"]),
                         Nombre = reader["Nombre"].ToString(),
                         Descripcion = reader["Descripcion"].ToString(),
-                        Imagen = (Byte[])reader["Imagen"],
-                        Categoria = datos.SeleccionarUsuarioPorId((int)reader["Categoria"]),
+                        Imagen = reader["Imagen"].ToString(),
+                        Categoria = Convert.ToInt32(reader["Categoria"]),
                         Precio = Convert.ToDouble(reader["Precio"])
                     };
                 }
@@ -139,8 +138,8 @@ namespace Datos
                         IdProducto = Convert.ToInt32(reader["IdProducto"]),
                         Nombre = reader["Nombre"].ToString(),
                         Descripcion = reader["Descripcion"].ToString(),
-                        Imagen = (byte[])reader["Imagen"],
-                        Categoria = datos.SeleccionarUsuarioPorId((int)reader["Categoria"]),
+                        Imagen = reader["Imagen"].ToString(),
+                        Categoria = Convert.ToInt32(reader["Categoria"]),
                         Precio = Convert.ToDouble(reader["Precio"])
                     };
                     Productos.Add(Producto);
@@ -182,8 +181,8 @@ namespace Datos
                         IdProducto = Convert.ToInt32(reader["IdProducto"]),
                         Nombre = reader["Nombre"].ToString(),
                         Descripcion = reader["Descripcion"].ToString(),
-                        Imagen = (byte[])reader["Imagen"],
-                        Categoria = new CategoriaDatos().SeleccionarUsuarioPorId(Convert.ToInt32(reader["Categoria"])),
+                        Imagen = reader["Imagen"].ToString(),
+                        Categoria = Convert.ToInt32(reader["Categoria"]),
                         Precio = Convert.ToDouble(reader["Precio"])
                     };
                     lista.Add(Producto);
@@ -214,6 +213,49 @@ namespace Datos
                 comando.Parameters.AddWithValue("@IdProducto", IdProducto);
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
                 comando.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+
+                conexion.Close();
+            }
+        }
+
+        public List<Producto> SeleccionarProductoIdCategoria(int idcategoira)
+        {
+            List<Producto> Productos = new List<Producto>();
+            SqlConnection conexion = new SqlConnection(Conexion.Cadena);
+            try
+            {
+                conexion.Open();
+
+                string sql = "SP_SeleccionarProductoPorIdCategoria";
+
+                SqlCommand comando = new SqlCommand(sql, conexion);
+                comando.Parameters.AddWithValue("@Idcategoria", idcategoira);
+
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                SqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    CategoriaDatos datos = new CategoriaDatos();
+                    Producto Producto = new Producto()
+                    {
+                        //IdProducto = Convert.ToInt32(reader["IdProducto"]),
+                        Nombre = reader["Nombre"].ToString(),
+                        //Descripcion = reader["Descripcion"].ToString(),
+                        Imagen = reader["Imagen"].ToString(),
+                        //Categoria = Convert.ToInt32(reader["Categoria"]),
+                        Precio = Convert.ToDouble(reader["Precio"])
+                    };
+                    Productos.Add(Producto);
+                }
+                return Productos;
             }
             catch (Exception)
             {
