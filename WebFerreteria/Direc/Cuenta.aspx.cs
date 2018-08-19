@@ -24,6 +24,9 @@ namespace WebFerreteria.Direc
                     {
                         lblAdministrador4.Text = "<a id=\"active\" href=\"Administrador.aspx\" style=\"text-decoration:none;margin-top:8px;\">Administrador</a>";
                     }
+                }else
+                {
+                    Response.Redirect("../Inicio Sesion.aspx");
                 }
             }
             catch (Exception)

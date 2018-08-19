@@ -32,7 +32,13 @@ namespace WebFerreteria.Direc
                     if (Usuario.Rol == Rol.Administrador)
                     {
                         lblAdministrador4.Text = "<a id=\"active\" href=\"Administrador.aspx\" style=\"text-decoration:none;margin-top:8px;\">Administrador</a>";
+                    }else
+                    {
+                        Response.Redirect("Acceso No Autorizado.aspx");
                     }
+                }else
+                {
+                    Response.Redirect("../Inicio de Sesion.aspx");
                 }
             }
             catch (Exception)
@@ -219,7 +225,7 @@ namespace WebFerreteria.Direc
             txtDescripcionProducto.Text = Producto.Descripcion;
             for(int i = 0; i < cmbCategoria.Items.Count; i++)
             {
-                //if((new CategoriaLogica().SeleccionarPorID(Convert.ToInt32(cmbCategoria.Items[i].Value)).IdCategoria == Producto.Categoria.IdCategoria))
+                if((new CategoriaLogica().SeleccionarPorID(Convert.ToInt32(cmbCategoria.Items[i].Value)).IdCategoria == Producto.Categoria.IdCategoria))
                 {
                     cmbCategoria.SelectedIndex = i;
                     break;

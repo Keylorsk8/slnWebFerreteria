@@ -97,8 +97,8 @@ namespace Datos
                         IdProducto = Convert.ToInt32(reader["IDProducto"]),
                         Nombre = reader["Nombre"].ToString(),
                         Descripcion = reader["Descripcion"].ToString(),
-                        Imagen = reader["Imagen"].ToString(),
-                        Categoria = Convert.ToInt32(reader["Categoria"]),
+                        Imagen = (byte[])reader["Imagen"],
+                        Categoria = new CategoriaDatos().SeleccionarUsuarioPorId(Convert.ToInt32(reader["Categoria"])),
                         Precio = Convert.ToDouble(reader["Precio"])
                     };
                 }
@@ -138,8 +138,8 @@ namespace Datos
                         IdProducto = Convert.ToInt32(reader["IdProducto"]),
                         Nombre = reader["Nombre"].ToString(),
                         Descripcion = reader["Descripcion"].ToString(),
-                        Imagen = reader["Imagen"].ToString(),
-                        Categoria = Convert.ToInt32(reader["Categoria"]),
+                        Imagen = (byte[])reader["Imagen"],
+                        Categoria = new CategoriaDatos().SeleccionarUsuarioPorId(Convert.ToInt32(reader["Categoria"])),
                         Precio = Convert.ToDouble(reader["Precio"])
                     };
                     Productos.Add(Producto);
@@ -181,8 +181,8 @@ namespace Datos
                         IdProducto = Convert.ToInt32(reader["IdProducto"]),
                         Nombre = reader["Nombre"].ToString(),
                         Descripcion = reader["Descripcion"].ToString(),
-                        Imagen = reader["Imagen"].ToString(),
-                        Categoria = Convert.ToInt32(reader["Categoria"]),
+                        Imagen = (byte[])reader["Imagen"],
+                        Categoria = new CategoriaDatos().SeleccionarUsuarioPorId(Convert.ToInt32(reader["Categoria"])),
                         Precio = Convert.ToDouble(reader["Precio"])
                     };
                     lista.Add(Producto);
@@ -246,11 +246,11 @@ namespace Datos
                     CategoriaDatos datos = new CategoriaDatos();
                     Producto Producto = new Producto()
                     {
-                        //IdProducto = Convert.ToInt32(reader["IdProducto"]),
+                        IdProducto = Convert.ToInt32(reader["IdProducto"]),
                         Nombre = reader["Nombre"].ToString(),
-                        //Descripcion = reader["Descripcion"].ToString(),
-                        Imagen = reader["Imagen"].ToString(),
-                        //Categoria = Convert.ToInt32(reader["Categoria"]),
+                        Descripcion = reader["Descripcion"].ToString(),
+                        Imagen = (byte[])reader["Imagen"],
+                        Categoria = new CategoriaDatos().SeleccionarUsuarioPorId(Convert.ToInt32(reader["Categoria"])),
                         Precio = Convert.ToDouble(reader["Precio"])
                     };
                     Productos.Add(Producto);

@@ -45,7 +45,7 @@ namespace WebFerreteria
                     Response.Redirect("Inicio Sesion.aspx");
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 Response.Redirect("Inicio Sesion.aspx");
             }

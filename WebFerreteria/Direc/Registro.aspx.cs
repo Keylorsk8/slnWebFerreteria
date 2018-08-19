@@ -14,6 +14,7 @@ namespace WebFerreteria.Direc
                 {
                     UsuarioLogica logica = new UsuarioLogica();
                     Usuario Usuario = logica.SeleccionarPorID(Session["usuario"].ToString());
+                    Response.Redirect("Cuenta.aspx", false);
                 }
             }
             catch (Exception)
@@ -39,6 +40,7 @@ namespace WebFerreteria.Direc
             }else
             {
                 logica.Insertar(Usuario);
+                Session["usuario"] = Usuario.Email;
                 Response.Redirect("../default.aspx");
             }
         }

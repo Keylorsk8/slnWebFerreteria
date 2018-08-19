@@ -11,8 +11,8 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
     <script src="js/Products.js"></script>
-    <link href="css/estiloGeneral.css" rel="stylesheet" /> 
-    <link rel='stylesheet' id='carousel'  href='css/carousel.css' type='text/css' media='all' />     
+    <link href="css/estiloGeneral.css" rel="stylesheet" />
+    <link rel='stylesheet' id='carousel' href='css/carousel.css' type='text/css' media='all' />
 </head>
 <body>
     <form runat="server">
@@ -75,120 +75,104 @@
                     </div>
                 </div>
             </div>
+            </div>
             <div class="container">
-    <div class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="row">
-                    <div class="col-sm"><img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/01.png" alt="1 slide"/></div>
-                    <div class="col-sm"><img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/02.png" alt="2 slide"/></div>
-                    <div class="col-sm"><img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/03.png" alt="3 slide"/></div>
-                    <div class="col-sm"><img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/04.png" alt="2 slide"/></div>
-                    
+                <div class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-sm">
+                                    <img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/01.png" alt="1 slide" /></div>
+                                <div class="col-sm">
+                                    <img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/02.png" alt="2 slide" /></div>
+                                <div class="col-sm">
+                                    <img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/03.png" alt="3 slide" /></div>
+                                <div class="col-sm">
+                                    <img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/04.png" alt="2 slide" /></div>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-sm">
+                                    <img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/13.png" alt="4 slide" /></div>
+                                <div class="col-sm">
+                                    <img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/14.png" alt="5 slide" /></div>
+                                <div class="col-sm">
+                                    <img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/15.png" alt="6 slide" /></div>
+                                <div class="col-sm">
+                                    <img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/21.png" alt="3 slide" /></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-sm">
+                                    <img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/05.png" alt="1 slide" /></div>
+                                <div class="col-sm">
+                                    <img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/06.png" alt="2 slide" /></div>
+                                <div class="col-sm">
+                                    <img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/07.png" alt="3 slide" /></div>
+                                <div class="col-sm">
+                                    <img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/08.png" alt="2 slide" /></div>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-sm">
+                                    <img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/11.png" alt="4 slide" /></div>
+                                <div class="col-sm">
+                                    <img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/12.png" alt="5 slide" /></div>
+                                <div class="col-sm">
+                                    <img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/16.png" alt="6 slide" /></div>
+                                <div class="col-sm">
+                                    <img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/21.png" alt="3 slide" /></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="row">
-                    <div class="col-sm"><img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/13.png" alt="4 slide"/></div>
-                    <div class="col-sm"><img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/14.png" alt="5 slide"/></div>
-                    <div class="col-sm"><img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/15.png" alt="6 slide"/></div>
-                    <div class="col-sm"><img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/21.png" alt="3 slide"/></div>
-                </div>
-            </div>
-
-             <div class="carousel-item">
-                <div class="row">
-                    <div class="col-sm"><img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/05.png" alt="1 slide"/></div>
-                    <div class="col-sm"><img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/06.png" alt="2 slide"/></div>
-                    <div class="col-sm"><img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/07.png" alt="3 slide"/></div>
-                    <div class="col-sm"><img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/08.png" alt="2 slide"/></div>
-                    
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="row">
-                    <div class="col-sm"><img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/11.png" alt="4 slide"/></div>
-                    <div class="col-sm"><img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/12.png" alt="5 slide"/></div>
-                    <div class="col-sm"><img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/16.png" alt="6 slide"/></div>
-                    <div class="col-sm"><img class="d-block w-55" src="http://distribuidoramora.com.ar/wp-content/themes/grupotodo/images/ferreteria-logos/21.png" alt="3 slide"/></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-            
             <div class="container-fluid">
-            
-                <div style="min-height: 400px; height: auto" runat="server" id="DivProductos" onserverclick="Unnamed_Click()"> 
-                
-
-
-
-                     
-
+                <div style="min-height: 400px; height: auto" runat="server" id="DivProductos">
                 </div>
             </div>
-        
-            
-        
-        <div id="myModal" class="modal fade" role="dialog" runat="server">
-  <div class="modal-dialog">
-
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
-      </div>
-      <div class="modal-body">
-        <p>Some text in the modal.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-xs-12">
-                        <img src="Images/logo.png" style="width: 200px; height: 200px; float: left;" />
-                    </div>
-                    <div class="col-md-4 col-xs-12">
-                        <h3>Menu</h3>
-                        <ul class="menu">
-                            <li><i class="fa fa-home" aria-hidden="true"></i><a href="Default.aspx">Inicio</a></li>
-                            <li><i class="fa fa-users" aria-hidden="true"></i><a href="Nosotros.aspx">Nosotros</a></li>
-                            <li><i class="fa fa-box-open" aria-hidden="true"></i><a href="Productos.aspx">Productos</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-xs-12">
-                        <h3>Contacto</h3>
-                        <ul class="address">
-                            <li><i class="fa fa-phone" aria-hidden="true"></i><a href="Contacto.aspx">Teléfonos</a></li>
-                            <li><i class="fa fa-map-marker" aria-hidden="true"></i><a href="Contacto.aspx">Dirección</a></li>
-                            <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="Contacto.aspx">Correo Electrónico</a></li>
-                        </ul>
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-xs-12">
+                            <img src="Images/logo.png" style="width: 200px; height: 200px; float: left;" />
+                        </div>
+                        <div class="col-md-4 col-xs-12">
+                            <h3>Menu</h3>
+                            <ul class="menu">
+                                <li><i class="fa fa-home" aria-hidden="true"></i><a href="Default.aspx">Inicio</a></li>
+                                <li><i class="fa fa-users" aria-hidden="true"></i><a href="Nosotros.aspx">Nosotros</a></li>
+                                <li><i class="fa fa-box-open" aria-hidden="true"></i><a href="Productos.aspx">Productos</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-xs-12">
+                            <h3>Contacto</h3>
+                            <ul class="address">
+                                <li><i class="fa fa-phone" aria-hidden="true"></i><a href="Contacto.aspx">Teléfonos</a></li>
+                                <li><i class="fa fa-map-marker" aria-hidden="true"></i><a href="Contacto.aspx">Dirección</a></li>
+                                <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="Contacto.aspx">Correo Electrónico</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div id="Copyright">
-                <h4>@2018 , All rights reserved</h4>
-            </div>
-        </footer>
+                <div id="Copyright">
+                    <h4>@2018 , All rights reserved</h4>
+                </div>
+            </footer>
     </form>
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/popper.min.js"></script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var elems = document.querySelectorAll('.carousel');
-        var instances = M.Carousel.init(elems, options);
-    });
-</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems, options);
+        });
+    </script>
 </body>
 </html>
