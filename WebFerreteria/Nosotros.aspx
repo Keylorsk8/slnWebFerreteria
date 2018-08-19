@@ -53,6 +53,24 @@
         </div>
     </nav>
     <section id="Content">
+
+        <div>
+            <h1 style="text-align:center">Misión </h1>
+            <h3 style="text-align:center" >"Gestionar la mejor atencion para los clientes pormobiendo el bien social, con la calidad,
+                continuidad y confiabilidad, garantizando los mejores protuctos del mercado."
+            </h3>
+            <br />
+        </div>
+
+        <div>
+            <h1 style="text-align:center">Visión </h1>
+            <h3 style="text-align:center" >"Esta es una organizacion reconocida por sus buenas practicas sociales, ambientasles y economicas,
+                orentadas a satisfacer las necesidades de los grupos de interes, con un equipo de trabajo competitivo,
+                enfocado en la innovación e implementación de nuevas tecnologías para la gestion integral del servicio."
+            </h3>
+            <br />
+        </div>
+
     </section>
     <footer>
             <div class="container">
