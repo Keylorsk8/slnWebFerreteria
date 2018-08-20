@@ -1,5 +1,6 @@
 ﻿using Capa.Logica;
 using Entidades;
+using Entidades.clases;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -63,14 +64,12 @@ namespace WebFerreteria.Direc
             gridClientes.DataBind();
         }
 
-        protected void gridClientes_RowDeleting(object sender, GridViewDeleteEventArgs e)
-        {
-            
-        }
-
         protected void gridClientes_RowDataBound(object sender, GridViewRowEventArgs e)
         {
-
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                e.Row.ToolTip = "Click en Seleccionar para ver este Usuario";
+            }
         }
 
 
@@ -80,17 +79,60 @@ namespace WebFerreteria.Direc
             {
                 if (Session["usuario"] != null)
                 {
-                    Response.Redirect("Cuenta.aspx");
+                    Response.Redirect("Cuenta.aspx",false);
                 }
                 else
                 {
                     Response.Redirect("../Inicio Sesion.aspx");
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 Response.Redirect("../Inicio Sesion.aspx");
             }
+        }
+
+        protected void gridClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int IdCliente = Convert.ToInt32(gridClientes.SelectedRow.Cells[1].Text);
+            Usuario us = new UsuarioLogica().SeleccionarUsuariorId(IdCliente);
+            txtNombreCliente.Text = us.Nombre;
+            txtApellidos.Text = us.Apellidos;
+            txtEmail.Text = us.Email;
+            CargarNumeros(us.IdUsuario);
+        }
+
+        private void CargarNumeros(int idUsuario)
+        {
+            List<Telefono> Telefonos = new UsuarioLogica().SeleccionarTelefonosPorId(idUsuario);
+            DataTable table = new DataTable();
+            table.Columns.Add("ID");
+            table.Columns.Add("Número");
+            foreach(Telefono te in Telefonos)
+            {
+                DataRow row = table.NewRow();
+                row["ID"] = idUsuario;
+                row["Número"] = te.Numero;
+                table.Rows.Add(row);
+            }
+            gridTelefonos.DataSource =  table;
+            gridTelefonos.DataBind();
+        }
+
+        protected void gridTelefonos_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            return;
+        }
+
+        protected void gridTelefonos_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            return;
+        }
+
+        protected void Buscar_ServerClick(object sender, EventArgs e)
+        {
+            Session["producto"] = txtBusqueda.Value;
+            Response.Redirect("../Productos.aspx", false);
         }
     }
 }

@@ -56,7 +56,7 @@ namespace WebFerreteria.Direc
             {
                 if (Session["usuario"] != null)
                 {
-                    Response.Redirect("../Cuenta.aspx");
+                    Response.Redirect("Cuenta.aspx",false);
                 }
                 else
                 {
@@ -144,8 +144,8 @@ namespace WebFerreteria.Direc
             {
                 Nombre = txtNombreProducto.Text,
                 Descripcion = txtDescripcionProducto.Text,
-                //Categoria = new CategoriaLogica().SeleccionarPorID(Convert.ToInt32(cmbCategoria.SelectedItem.Value)),
-                //Imagen = imagen,
+                Categoria = new CategoriaLogica().SeleccionarPorID(Convert.ToInt32(cmbCategoria.SelectedItem.Value)),
+                Imagen = imagen,
                 Precio = Convert.ToDouble(NudPrecio.Text)
             };
             logica.Insertar(producto);
@@ -187,8 +187,8 @@ namespace WebFerreteria.Direc
                 IdProducto = Convert.ToInt32(txtIdProducto.Text),
                 Nombre = txtNombreProducto.Text,
                 Descripcion = txtDescripcionProducto.Text,
-                //Categoria = new CategoriaLogica().SeleccionarPorID(Convert.ToInt32(cmbCategoria.SelectedItem.Value.ToString())),
-                //Imagen = imagen,
+                Categoria = new CategoriaLogica().SeleccionarPorID(Convert.ToInt32(cmbCategoria.SelectedItem.Value.ToString())),
+                Imagen = imagen,
                 Precio = Convert.ToDouble(NudPrecio.Text)
             };
             logica.Insertar(producto);
@@ -237,6 +237,12 @@ namespace WebFerreteria.Direc
             btnActualizarProducto.Visible = true;
             btnBorrarProducto.Visible = true;
             btnAgregarProducto.Visible = false;
+        }
+
+        protected void Buscar_ServerClick(object sender, EventArgs e)
+        {
+            Session["producto"] = txtBusqueda.Value;
+            Response.Redirect("../Productos.aspx", false);
         }
     }
 }

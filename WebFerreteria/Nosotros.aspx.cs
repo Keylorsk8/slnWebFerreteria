@@ -50,5 +50,11 @@ namespace WebFerreteria
                 Response.Redirect("Inicio Sesion.aspx");
             }
         }
+
+        protected void Buscar_ServerClick(object sender, EventArgs e)
+        {
+            Session["producto"] = txtBusqueda.Value;
+            Response.Redirect("Productos.aspx", false);
+        }
     }
 }

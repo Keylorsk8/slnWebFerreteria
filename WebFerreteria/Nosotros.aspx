@@ -47,30 +47,26 @@
                 </li>
             </ul>
             <div class="form-inline my-2 my-lg-0" runat="server">
-                <input class="form-control mr-sm-2" type="search" placeholder="Producto..." aria-label="Search" />
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+                <input class="form-control mr-sm-2" type="search" placeholder="Producto..." aria-label="Search" runat="server" id="txtBusqueda" />
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit" onclick="" runat="server" onserverclick="Buscar_ServerClick" id="Buscar"><i class="fa fa-search"></i></button>
             </div>
         </div>
     </nav>
     <section id="Content">
 
-        <div>
-            <h1 style="text-align:center">Misión </h1>
-            <h3 style="text-align:center" >"Gestionar la mejor atencion para los clientes pormobiendo el bien social, con la calidad,
+        <div class="container" style="padding:5%">
+            <h1 style="text-align:center;color:white;">Misión </h1>
+            <p style="text-align:center;font-size:large" >"Gestionar la mejor atención para los clientes promobiendo el bien social, con la calidad,
                 continuidad y confiabilidad, garantizando los mejores protuctos del mercado."
-            </h3>
-            <br />
+            </p>
         </div>
-
-        <div>
-            <h1 style="text-align:center">Visión </h1>
-            <h3 style="text-align:center" >"Esta es una organizacion reconocida por sus buenas practicas sociales, ambientasles y economicas,
-                orentadas a satisfacer las necesidades de los grupos de interes, con un equipo de trabajo competitivo,
+        <div class="container" style="padding:5%">
+            <h1 style="text-align:center;color:white;">Visión </h1>
+            <p style="text-align:center;font-size:large" >"Esta es una organización reconocida por sus buenas prácticas sociales, ambientasles y económicas,
+                orientadas a satisfacer las necesidades de los grupos de interes, con un equipo de trabajo competitivo,
                 enfocado en la innovación e implementación de nuevas tecnologías para la gestion integral del servicio."
-            </h3>
-            <br />
+            </p>
         </div>
-
     </section>
     <footer>
             <div class="container">

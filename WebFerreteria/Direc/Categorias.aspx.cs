@@ -72,7 +72,7 @@ namespace WebFerreteria.Direc
             {
                 if (Session["usuario"] != null)
                 {
-                    Response.Redirect("../Cuenta.aspx");
+                    Response.Redirect("Cuenta.aspx",false);
                 }
                 else
                 {
@@ -172,6 +172,12 @@ namespace WebFerreteria.Direc
             btnBorrarCategoria.Visible = false;
             btnAgregarCategoria.Visible = true;
             gridCategorias.SelectedIndex = -1;
+        }
+
+        protected void Buscar_ServerClick(object sender, EventArgs e)
+        {
+            Session["producto"] = txtBusqueda.Value;
+            Response.Redirect("../Productos.aspx", false);
         }
     }
 }

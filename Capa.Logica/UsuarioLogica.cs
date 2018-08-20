@@ -1,5 +1,6 @@
 ﻿using Datos;
 using Entidades;
+using Entidades.clases;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -30,6 +31,18 @@ namespace Capa.Logica
             }
         }
 
+        public List<Telefono> SeleccionarTelefonosPorId(int IdUsuario)
+        {
+            UsuarioDatos datos = new UsuarioDatos();
+            return datos.SeleccionarTelefonosPorId(IdUsuario);
+        }
+
+        public Usuario SeleccionarUsuariorId(int IdUsuario)
+        {
+            UsuarioDatos datos = new UsuarioDatos();
+            return datos.SeleccionarUsuarioPorId(IdUsuario);
+        }
+
         public Usuario SeleccionarPorID(string Email)
         {
             UsuarioDatos datos = new UsuarioDatos();
@@ -46,6 +59,12 @@ namespace Capa.Logica
         {
             UsuarioDatos datos = new UsuarioDatos();
             datos.Eliminar(IdUsuario);
+        }
+
+        public void EliminarTelefono(int IdUsuario,string numero)
+        {
+            UsuarioDatos datos = new UsuarioDatos();
+            datos.EliminarTelefono(IdUsuario,numero);
         }
     }
 }

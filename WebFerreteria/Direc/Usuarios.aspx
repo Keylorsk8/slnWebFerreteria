@@ -47,8 +47,8 @@
                     </li>
                 </ul>
                 <div class="form-inline my-2 my-lg-0" runat="server">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Producto..." aria-label="Search" />
-                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+                   <input class="form-control mr-sm-2" type="search" placeholder="Producto..." aria-label="Search" runat="server" id="txtBusqueda" />
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit" onclick="" runat="server" onserverclick="Buscar_ServerClick" id="Buscar"><i class="fa fa-search"></i></button>
                 </div>
             </div>
         </nav>
@@ -56,12 +56,43 @@
             <div class="container" style="background-color:white;padding:0px;margin-bottom:2%;">
                 <h1 style="color: white;background-color:coral;padding:10px;">Usuarios</h1>
                 <div class="container">
-                <asp:GridView runat="server" ID="gridClientes" CssClass="table" DataKeyNames="Id" CellPadding="4" GridLines="None"
-                    AllowPaging="True" PageSize="5" OnRowDeleting="gridClientes_RowDeleting" OnRowDataBound="gridClientes_RowDataBound" AutoGenerateSelectButton="True" ForeColor="#333333">
+                <div class="container">
+                    <div class="InputProducto1">
+                        <h4>Nombre</h4>
+                        <asp:TextBox ID="txtNombreCliente" CssClass="form-text form-control" runat="server" ReadOnly></asp:TextBox>
+                    </div>
+                    <div class="InputProducto2">
+                        <h4>Apellidos</h4>
+                        <asp:TextBox ID="txtApellidos" CssClass="form-text form-control" runat="server" ReadOnly></asp:TextBox>
+                    </div>
+                    <div class="InputProducto3">
+                        <h4>Email</h4>
+                        <asp:TextBox ID="txtEmail" CssClass="form-text form-control" runat="server" ReadOnly></asp:TextBox>
+                    </div>
+                    <div class="table-responsive">
+                    <h3>Teléfonos</h3>
+                    <asp:GridView runat="server" ID="gridTelefonos" CssClass="table" DataKeyNames="ID" CellPadding="4" GridLines="None"
+                        AllowPaging="True" PageSize="99999" OnRowDeleting="gridTelefonos_RowDeleting" OnRowDataBound="gridTelefonos_RowDataBound" ForeColor="#333333">
+                        <AlternatingRowStyle BackColor="White" />
+                        <Columns>
+                            <asp:CommandField ShowDeleteButton="True" />
+                        </Columns>
+                        <EditRowStyle BackColor="#7C6F57"/>
+                        <FooterStyle BackColor="#1C5E55" ForeColor="White" Font-Bold="True"/>
+                        <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White"/>
+                        <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center"/>
+                        <RowStyle BackColor="#E3EAEB"/>
+                        <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333"/>
+                        <SortedAscendingCellStyle BackColor="#F8FAFA"/>
+                        <SortedAscendingHeaderStyle BackColor="#246B61"/>
+                        <SortedDescendingCellStyle BackColor="#D4DFE1"/>
+                        <SortedDescendingHeaderStyle BackColor="#15524A"/>
+                    </asp:GridView>
+                </div>
+                </div>
+                <asp:GridView runat="server" ID="gridClientes" CssClass="table" DataKeyNames="Id" CellPadding="4" GridLines="None" AutoGenerateSelectButton="true"
+                    AllowPaging="True" PageSize="5" OnRowDataBound="gridClientes_RowDataBound" OnSelectedIndexChanged="gridClientes_SelectedIndexChanged" ForeColor="#333333">
                     <AlternatingRowStyle BackColor="White" />
-                    <Columns>
-                        <asp:CommandField ShowDeleteButton="True" />
-                    </Columns>
                     <EditRowStyle BackColor="#7C6F57" />
                     <FooterStyle BackColor="#1C5E55" ForeColor="White" Font-Bold="True" />
                     <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />

@@ -15,10 +15,23 @@ namespace WebFerreteria
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
+                if (Session["producto"].ToString() != "")
+                {
+                    txtBusqueda.Value = Session["producto"].ToString();
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+            
             if (!IsPostBack)
             {
                 LlenarCategorias();
                 MostrarProductos();
+                Session["producto"] = "";
             }
             else
             {
@@ -159,6 +172,12 @@ namespace WebFerreteria
         protected void Filtrar_Click(object sender, EventArgs e)
         {
             MostrarProductos();
+        }
+
+        protected void Buscar_ServerClick(object sender, EventArgs e)
+        {
+            Session["producto"] = txtBusqueda.Value;
+            Response.Redirect("Productos.aspx", false);
         }
     }
 }

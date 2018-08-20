@@ -13,6 +13,7 @@ namespace WebFerreteria
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session["producto"] = "";
             try
             {
                 if(Session["usuario"] != null)
@@ -49,6 +50,12 @@ namespace WebFerreteria
             {
                 Response.Redirect("Inicio Sesion.aspx");
             }
+        }
+
+        protected void Buscar_ServerClick(object sender, EventArgs e)
+        {
+            Session["producto"] = txtBusqueda.Value;
+            Response.Redirect("Productos.aspx",false);
         }
     }
 }

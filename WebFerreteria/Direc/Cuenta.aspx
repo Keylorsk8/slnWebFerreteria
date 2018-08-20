@@ -9,8 +9,9 @@
     <meta name="viewport" content="=device-width, initial-scale=1, shrink-to-fit=no" />
     <script src="../Scripts/jquery-3.3.1.slim.min.js"></script>
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"/>
     <link href="../css/estiloGeneral.css" rel="stylesheet" />
+    <script src="../js/Contraseña.js"></script>
 </head>
 <body>
     <form runat="server">
@@ -43,18 +44,79 @@
                 </ul>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="cuenta">
                     <li class="nav-item">
-                        <asp:LinkButton ID="lblUsuario8" CssClass="nav-link" runat="server" OnClick="lblUsuario8_Click">Cuenta  <i class="fa fa-user-circle"></i></asp:LinkButton>
+                        <asp:LinkButton ID="lblUsuario10" CssClass="nav-link" runat="server" OnClick="lblUsuario8_Click">Cuenta  <i class="fa fa-user-circle"></i></asp:LinkButton>
                     </li>
                 </ul>
                 <div class="form-inline my-2 my-lg-0" runat="server">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Producto..." aria-label="Search" />
-                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+                   <input class="form-control mr-sm-2" type="search" placeholder="Producto..." aria-label="Search" runat="server" id="txtBusqueda" />
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit" onclick="" runat="server" onserverclick="Buscar_ServerClick" id="Buscar"><i class="fa fa-search"></i></button>
                 </div>
             </div>
         </nav>
         <section id="Content">
-            <h1 class="title" style="color: white">Hola </h1>
-            <asp:LinkButton Text="Cerrar Sesión" runat="server" ID="CerrarSesion" OnClick="CerrarSesion_Click"/>
+            <div class="container" style="background-color:white;padding:0px;margin-bottom:2%;">
+                <h1 style="color: white;background-color:coral;padding:10px;">Cuenta</h1>
+                <div class="container">
+                <div id="Cliente">
+                    <div class="Cliente">
+                        <h3>Cuenta</h3>
+                    </div>
+                    <div class="InputProducto1">
+                        <h4>Nombre</h4>
+                        <asp:TextBox ID="txtNombreCliente" CssClass="form-text form-control" runat="server" required OnTextChanged="txtNombreCliente_TextChanged"></asp:TextBox>
+                    </div>
+                    <div class="InputProducto2">
+                        <h4>Apellidos</h4>
+                        <asp:TextBox ID="txtApellidos" CssClass="form-text form-control" runat="server" required OnTextChanged="txtApellidos_TextChanged"></asp:TextBox>
+                    </div>
+                    <div class="InputProducto3">
+                        <h4>Email</h4>
+                        <asp:TextBox ID="txtEmail" CssClass="form-text form-control" runat="server" ReadOnly></asp:TextBox>
+                    </div>
+                    <br />
+                    <br />
+                    <div class="InputProducto4">
+                        <h4>Cambiar Contraseña</h4>
+                        <asp:Label Text="Digite su Contraseña Actual" for="txtConstraseña" runat="server"/>
+                        <asp:TextBox ID="txtContraseña" type="password" CssClass="form-text form-control" runat="server"></asp:TextBox>
+                        <asp:Label Text="Digite su nueva constraseña" for="txtContraseña2" runat="server"/>
+                        <asp:TextBox ID="txtContraseña2" type="password" CssClass="form-text form-control" runat="server"></asp:TextBox>
+                        <input type="button" onclick="ModificarContra()" class="btn btn-success" value="Modificar Contraseña"/>
+                    </div>
+                </div>
+                <br />
+                <br />
+                <div class="table-responsive">
+                    <h3>Teléfonos</h3>
+                    <asp:GridView runat="server" ID="gridTelefonos" CssClass="table" DataKeyNames="ID" CellPadding="4" GridLines="None"
+                        AllowPaging="True" PageSize="99999" OnRowDeleting="gridTelefonos_RowDeleting" ForeColor="#333333">
+                        <AlternatingRowStyle BackColor="White" />
+                        <Columns>
+                            <asp:CommandField ShowDeleteButton="True" />
+                        </Columns>
+                        <EditRowStyle BackColor="#7C6F57"/>
+                        <FooterStyle BackColor="#1C5E55" ForeColor="White" Font-Bold="True"/>
+                        <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White"/>
+                        <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center"/>
+                        <RowStyle BackColor="#E3EAEB"/>
+                        <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333"/>
+                        <SortedAscendingCellStyle BackColor="#F8FAFA"/>
+                        <SortedAscendingHeaderStyle BackColor="#246B61"/>
+                        <SortedDescendingCellStyle BackColor="#D4DFE1"/>
+                        <SortedDescendingHeaderStyle BackColor="#15524A"/>
+                    </asp:GridView>
+                    <br />
+                    <h3>Agregar Nuevo Teléfono</h3>
+                    <asp:Label Text="Digite su nuevo número" runat="server" for="txtNuevoNumero"/>
+                     <asp:TextBox ID="txtNuevoNumero" CssClass="form-text form-control" runat="server"></asp:TextBox>
+                    <asp:Button Text="Agregar Teléfono" runat="server" CssClass="btn btn-outline-success" ID="AgregarTelefono" OnClick="AgregarTelefono_Click"/>
+                </div>
+                    <br />
+                <asp:Button Text="Guardar Cambios" runat="server" CssClass="btn btn-success" ID="GuardarCambios" OnClick="GuardarCambios_Click"/>
+                    <br />
+                <asp:LinkButton Text="Cerrar Sesión" runat="server" ID="CerrarSesion" OnClick="CerrarSesion_Click"/>
+            </div>
+        </div>
         </section>
         <footer>
             <div class="container">

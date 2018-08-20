@@ -47,8 +47,8 @@
                     </li>
                 </ul>
                 <div class="form-inline my-2 my-lg-0" runat="server">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Producto..." aria-label="Search" />
-                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+                   <input class="form-control mr-sm-2" type="search" placeholder="Producto..." aria-label="Search" runat="server" id="txtBusqueda" />
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit" onclick="" runat="server" onserverclick="Buscar_ServerClick" id="Buscar"><i class="fa fa-search"></i></button>
                 </div>
             </div>
         </nav>

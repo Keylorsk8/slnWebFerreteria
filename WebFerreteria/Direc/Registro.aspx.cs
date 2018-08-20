@@ -1,6 +1,8 @@
 ﻿using Capa.Logica;
 using Entidades;
+using Entidades.clases;
 using System;
+using System.Collections.Generic;
 
 namespace WebFerreteria.Direc
 {
@@ -33,6 +35,9 @@ namespace WebFerreteria.Direc
                 contraseña = txtContraseña.Text,
                 Rol = Rol.Usuario
             };
+            List<Telefono> Telefonos = new List<Telefono>();
+            Telefonos.Add(new Telefono() { Numero = txtTelefono.Text });
+            Usuario.SetTelefonos(Telefonos);
             UsuarioLogica logica = new UsuarioLogica();
             if(logica.SeleccionarPorID(Usuario.Email) != null)
             {

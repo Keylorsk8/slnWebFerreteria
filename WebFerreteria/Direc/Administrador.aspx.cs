@@ -47,7 +47,7 @@ namespace WebFerreteria.Direc
             {
                 if (Session["usuario"] != null)
                 {
-                    Response.Redirect("../Cuenta.aspx");
+                    Response.Redirect("Cuenta.aspx",false);
                 }
                 else
                 {
@@ -58,6 +58,12 @@ namespace WebFerreteria.Direc
             {
                 Response.Redirect("../Inicio Sesion.aspx");
             }
+        }
+
+        protected void Buscar_ServerClick(object sender, EventArgs e)
+        {
+            Session["producto"] = txtBusqueda.Value;
+            Response.Redirect("../Productos.aspx", false);
         }
     }
 }

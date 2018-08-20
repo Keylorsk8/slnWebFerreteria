@@ -9,7 +9,7 @@
     <meta name="viewport" content="=device-width, initial-scale=1, shrink-to-fit=no" />
     <script src="../Scripts/jquery-3.3.1.slim.min.js"></script>
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"/>
     <link href="../css/estiloGeneral.css" rel="stylesheet" />
 </head>
 <body>
@@ -47,8 +47,8 @@
                     </li>
                 </ul>
                 <div class="form-inline my-2 my-lg-0" runat="server">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Producto..." aria-label="Search" />
-                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+                    <input class="form-control mr-sm-2" type="search" placeholder="Producto..." id="txtBusqueda" aria-label="Search" runat="server"/>
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit" onclick="" runat="server" onserverclick="Buscar_ServerClick" id="Buscar"><i class="fa fa-search"></i></button>
                 </div>
             </div>
         </nav>

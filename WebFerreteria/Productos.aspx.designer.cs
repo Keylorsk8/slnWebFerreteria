@@ -40,6 +40,24 @@ namespace WebFerreteria {
         protected global::System.Web.UI.WebControls.LinkButton lblUsuario3;
         
         /// <summary>
+        /// Control Search1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl Search1;
+        
+        /// <summary>
+        /// Control Buscar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton Buscar;
+        
+        /// <summary>
         /// Control txtBusqueda.
         /// </summary>
         /// <remarks>

@@ -24,8 +24,8 @@ namespace Datos
 
                 comando.Parameters.AddWithValue("@Nombre", Producto.Nombre);
                 comando.Parameters.AddWithValue("@Descripcion", Producto.Descripcion);
-                comando.Parameters.AddWithValue("@Categoria", Producto.Categoria);
-                comando.Parameters.Add("@Imagen", SqlDbType.NVarChar).Value = Producto.Imagen;
+                comando.Parameters.AddWithValue("@Categoria", Producto.Categoria.IdCategoria);
+                comando.Parameters.Add("@Imagen", SqlDbType.Image).Value = Producto.Imagen;
                 comando.Parameters.AddWithValue("@Precio", Producto.Precio);
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
                 comando.ExecuteNonQuery();
@@ -57,7 +57,7 @@ namespace Datos
                 comando.Parameters.AddWithValue("@IdProducto", Producto.IdProducto);
                 comando.Parameters.AddWithValue("@Nombre", Producto.Nombre);
                 comando.Parameters.AddWithValue("@Descripcion", Producto.Descripcion);
-                comando.Parameters.AddWithValue("@Categoria", Producto.Categoria);
+                comando.Parameters.AddWithValue("@Categoria", Producto.Categoria.IdCategoria);
                 comando.Parameters.AddWithValue("@Imagen", Producto.Imagen);
                 comando.Parameters.AddWithValue("@Precio", Producto.Precio);
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
